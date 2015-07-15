@@ -188,9 +188,9 @@ function setLinks() {
 		url: base,
 		el: "mapB1",
 		mapViews: [{
-			columns: [{dimension: 'in', items: [{id: 'Uvn6LCg7dVU'}]}], // data
-			rows: [{dimension: 'ou', items: [{id: 'LEVEL-3'}, {id: 'ImspTQPwCqd'}]}], // organisation units
-			filters: [{dimension: 'pe', items: [{id: 'LAST_3_MONTHS'}]}], // period
+			columns: [{dimension: 'dx', items: [{id: 'DHP2lGgo4kH'}]}], // data
+			rows: [{dimension: 'ou', items: [{id: 'LEVEL-3'}, {id: 'm0frOspS7JY'}]}], // organisation units
+			filters: [{dimension: 'pe', items: [{id: 'LAST_YEAR'}]}], // period
 			classes: 7,
 			colorLow: '02079c',
 			colorHigh: 'e5ecff',
@@ -198,7 +198,21 @@ function setLinks() {
 			//legendSet: {id: 'fqs276KXCXi'}
 		}]
 	});
-	
+//	GIS.plugin.getMap({
+//		url: base,
+//		el: "mapB1",
+//		mapViews: [{
+//			columns: [{dimension: 'in', items: [{id: 'Uvn6LCg7dVU'}]}], // data
+//			rows: [{dimension: 'ou', items: [{id: 'LEVEL-3'}, {id: 'ImspTQPwCqd'}]}], // organisation units
+//			filters: [{dimension: 'pe', items: [{id: 'LAST_3_MONTHS'}]}], // period
+//			classes: 7,
+//			colorLow: '02079c',
+//			colorHigh: 'e5ecff',
+//			opacity: 0.9
+//			//legendSet: {id: 'fqs276KXCXi'}
+//		}]
+//	});
+//
 	
 	PT.plugin.getTable({
 	  url: base,
