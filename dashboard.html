@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/css1.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap-fileinput/css/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/nvd3/nv.d3.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/OwlCarousel/owl-carousel/owl.carousel.css">
+    
+    <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/ol.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/angular-openlayers-directive.css">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&amp;subset=latin,latin-ext">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap-fileinput/css/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/nvd3/nv.d3.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/OwlCarousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/realsite-admin.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/realsite.css">
+
+
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery-transit/jquery.transit.js"></script>
+    <script type="text/javascript" src="assets/js/angular/angular.js"></script>
+    <script type="text/javascript" src="assets/js/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="assets/js/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="assets/js/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/bootstrap/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap/assets/javascripts/bootstrap/collapse.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-fileinput/js/fileinput.min.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/autosize/jquery.autosize.js"></script>
+    <script type="text/javascript" src="assets/libraries/isotope/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/jquery-google-map/infobox.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery-google-map/markerclusterer.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery-google-map/jquery-google-map.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/nvd3/lib/d3.v3.js"></script>
+    <script type="text/javascript" src="assets/libraries/nvd3/lib/d3.v3.js"></script>
+    <script type="text/javascript" src="assets/libraries/nvd3/nv.d3.min.js"></script>
+    
+    <script type="text/javascript" src="assets/js/portal.js"></script>
+    <script type="text/javascript" src="assets/js/resources/ext-ux/carousel/Carousel.js"></script>
+    <link href="https://apps.dhis2.org/portal/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://dhis2-cdn.org/v217/ext/resources/css/ext-plugin-gray.css" />
+    <script src="https://dhis2-cdn.org/v217/ext/ext-all.js"></script>
+    <script src="https://dhis2-cdn.org/v217/plugin/chart.js"></script>
+    <script type="text/javascript" src="assets/js/crossdomain/jquery.ajax-cross-origin.min.js"></script>
+    <script src="assets/js/openlayermaps/ol.js"></script>
+    <script src="assets/js/openlayermaps/angular-openlayers-directive.js"></script>
+    <script type="text/javascript" src="app/portalApp.js"></script>
+    <title> Dashboard - Web Portal | HMIS </title>
+</head>
+
+
+<style type="text/css">
+
+    li {
+        /*float: left;*/
+    }
+
+    .chart {
+        border: 1px solid #ddd;
+        margin: 10px;
+    }
+    .chart.wide {
+        width: 800px;
+        height: 450px;
+    }
+    .chart.tall {
+        width: 600px;
+        height: 920px;
+    }
+
+
+</style>
+<body class="open hide-secondary-sidebar" ng-app="portalApp">
+<div class="page-wrapper" ng-controller="portalController">
+<div class="header header-standard">
+    <div class="header-topbar">
+        <div class="container">
+            <div class="header-topbar-left">
+                <ol class="breadcrumb">
+                    <li><a href="#">Portal</a></li>
+                    <li class="active">Dashboard</li>
+                </ol>
+            </div>
+            <div class="header-topbar-right">
+                <ul class="header-topbar-social ml30">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>  
+            </div> 
+        </div> 
+    </div> 
+    <div class="container">
+        <div class="header-inner">
+            <div class="header-main">
+                <div class="header-title">
+                    <a href="index.html">
+                        <img style="height:40px;" src="assets/img/flag.gif" alt="Tanzania Flag">
+
+                        <span>HMIS - Web Portal </span>
+                    </a>
+                </div> 
+                <div class="header-navigation">
+                    <div class="nav-main-wrapper">
+                        <div class="nav-main-title visible-xs">
+                            <a href="index.html">
+                                <img src="assets/img/flag.gif" alt="Tanzania Flag">
+
+                                <span> HMIS - Web Portal </span>
+                            </a>
+                        </div>
+                        <div class="nav-main-inner">
+                            <nav>
+                                <ul id="nav-main" class="nav nav-pills">
+
+                                    <li class="important">
+                                        <a href="index.html#">Home</a>
+                                    </li>
+                                    <li class="important">
+                                        <a href="dashboard.html#">Dashboard</a>
+                                    </li>
+                                    <li class="important">
+                                        <a href="analysis.html#">Analysis</a>
+                                    </li>
+                                </ul> 
+                            </nav>
+                        </div>
+                    </div> 
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>  
+            </div>  
+        </div>
+    </div> 
+</div>
+<div class="main" ng-controller="dashboardController">
+
+
+<div class="admin-wrapper">
+<div class="admin-navigation">
+    <div class="admin-navigation-inner">
+        <nav>
+            <ul class="menu">
+
+                <li ng-repeat="dashboard in dashboards" class="">
+                    <a href="#" ng-click="particularDashboard(dashboard.id)">
+                        <strong><i class="fa fa-dashboard"></i></strong>
+                        <span>{{dashboard.name}}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="layer"></div>
+    </div> 
+</div>  
+    <style type="text/css">
+
+        li {
+            /*float: left;*/
+            list-style:none;
+        }
+
+        .chart {
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+        .chart.wide {
+            width: 800px;
+            height: 450px;
+        }
+        .chart.tall {
+            width: 600px;
+            height: 920px;
+        }
+
+
+
+        #chartCarousel {
+            width: 900px;
+            height: 550px;
+            margin: 20px;
+        }
+
+        .dv-chart-tips { border-radius: 2px; padding: 0px 3px 1px; border: 2px solid #000; background-color: #000; }
+    .dv-chart-tips .x-tip-body { background-color: #000; font-size: 13px; font-weight: normal; color: #fff; -webkit-text-stroke: 0; }
+    .dv-chart-tips .x-tip-body div { font-family: arial,sans-serif,ubuntu,consolas !important; }
+    .x-mask-msg { padding: 0; border: 0 none; background-image: none; background-color: transparent; }
+    .x-mask-msg div { background-position: 11px center; }
+    .x-mask-msg .x-mask-loading { border: 0 none;
+        background-color: #000; color: #fff; border-radius: 2px; padding: 12px 14px 12px 30px; opacity: 0.65; }
+    .x-mask { opacity: 0; }
+    </style>
+<div class="admin-content">
+<div class="admin-content-inner">
+<div class="admin-content-main">
+<div class="admin-content-main-inner">
+<div class="container-fluid">
+<div class="row">
+        <script>
+        var base = 'http://localhost:8000/';
+
+        Ext.onReady( function() {
+            Ext.Ajax.request({
+                url: base + "dhis-web-commons-security/login.action?authOnly=true",
+                method: 'POST',
+                params: { j_username: "portal", j_password: "Portal123" },
+                success: setLinks
+            });
+        });
+
+        function setLinks() {
+            DV.plugin.getChart({ url: base, el: 'chartA1', id: 'UlfTKWZWV4u' });
+
+            DV.plugin.getChart({ url: base, el: 'chartA2', id: 'LW0O27b7TdD' });
+
+            DV.plugin.getChart({ url: base, el: 'chartA3', id: 'R0DVGvXDUNP' });
+
+            DV.plugin.getChart({
+                url: base,
+                el: 'chartB1',
+                type: 'stackedBar',
+                columns: [
+                    {dimension: 'de', items: [{id: 'YtbsuPPo010'}, {id: 'l6byfWFUGaP'}, {id: 's46m5MS0hxu'}]}
+                ],
+                rows: [
+                    {dimension: 'pe', items: [{id: 'LAST_12_MONTHS'}]}
+                ],
+                filters: [
+                    {dimension: 'ou', items: [{id: 'USER_ORGUNIT'}]}
+                ],
+                showData: false,
+                targetLineValue: 70,
+                baseLineValue: 20,
+                showTrendLine: true,
+                hideLegend: true,
+                title: 'My chart title',
+                domainAxisTitle: 'Periods',
+                rangeAxisTitle: 'Percent'
+            });
+
+            DV.plugin.getChart({
+                url: base,
+                el: 'chartB2',
+                type: 'line',
+                columns: [
+                    {dimension: 'de', items: [{id: 'Jtf34kNZhzP'}, {id: 'cYeuwXTCPkU'}, {id: 'fbfJHSPpUQD'}, {id: 'hfdmMSPBgLG'}]}
+                ],
+                rows: [
+                    {dimension: 'pe', items: [{id: 'LAST_12_MONTHS'}]}
+                ],
+                filters: [
+                    {dimension: 'ou', items: [{id: 'USER_ORGUNIT'}]}
+                ]
+            });
+
+            DV.plugin.getChart({
+                url: base,
+                el: 'chartB3',
+                type: 'area',
+                columns: [
+                    {dimension: 'de', items: [{id: 'O05mAByOgAv'}, {id: 'pikOziyCXbM'}, {id: 'vI2csg55S9C'}, {id: 'x3Do5e7g4Qo'}]}
+                ],
+                rows: [
+                    {dimension: 'pe', items: [{id: 'LAST_12_MONTHS'}]}
+                ],
+                filters: [
+                    {dimension: 'ou', items: [{id: 'USER_ORGUNIT'}]}
+                ]
+            });
+            
+            
+            DV.plugin.getChart({
+                url: base,
+                el: 'TEST',
+                type: 'pie',
+                columns: [
+                    {dimension: 'de', items: [{id: 'hfdmMSPBgLG'}]}
+                ],
+                rows: [
+                    {dimension: 'pe', items: [{id: '2015'}]}
+                ],
+                filters: [
+                    {dimension: 'ou', items: [{id: 'ImspTQPwCqd'}]}
+                ]
+            });
+
+        }
+    </script>
+    
+    <div class="col-sm-12 " >
+
+
+        <ul>
+            <li><div id="chartA1" class="chart wide"></div></li>
+            <li><div id="chartA2" class="chart wide"></div></li>
+            <li><div id="chartA3" class="chart wide"></div></li>
+        </ul>
+
+        <p style="clear:both"></p>
+
+
+        <ul>
+            <li><div id="chartB1" class="chart wide"></div></li>
+            <li><div id="chartB2" class="chart wide"></div></li>
+            <li><div id="chartB3" class="chart wide"></div></li>
+        </ul>
+
+        <p style="clear:both"></p>
+    </div>
+</div>
+<div class="admin-content-footer">
+    <div class="admin-content-footer-inner">
+        <div class="container-fluid">
+            <div class="admin-content-footer-left">
+                &copy; 2015 HMIS - Web Portal.
+            </div> 
+            <div class="admin-content-footer-right">
+                Created by <a href="http://hisptanzania.or.tz">HISP Tanzania</a>
+            </div>  
+        </div> 
+    </div>  
+</div>  
+</div>  
+</div>  
+</div>  
+</div>
+</div>
+</body>
+</html>
+
+

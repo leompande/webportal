@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/css1.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap-fileinput/css/fileinput.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/nvd3/nv.d3.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libraries/OwlCarousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/resources/ext-ux/carousel/css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/realsite.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/ol.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/angular-openlayers-directive.css">
+
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery-transit/jquery.transit.js"></script>
+    <script type="text/javascript" src="assets/js/angular/angular.js"></script>
+    <script type="text/javascript" src="assets/js/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="assets/js/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="assets/js/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/bootstrap/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap/assets/javascripts/bootstrap/collapse.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/bootstrap-fileinput/js/fileinput.min.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/autosize/jquery.autosize.js"></script>
+    <script type="text/javascript" src="assets/libraries/isotope/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/jquery-google-map/infobox.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery-google-map/markerclusterer.js"></script>
+    <script type="text/javascript" src="assets/libraries/jquery-google-map/jquery-google-map.js"></script>
+
+    <script type="text/javascript" src="assets/libraries/nvd3/lib/d3.v3.js"></script>
+    <script type="text/javascript" src="assets/libraries/nvd3/lib/d3.v3.js"></script>
+    <script type="text/javascript" src="assets/libraries/nvd3/nv.d3.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/portal.js"></script>
+    <script type="text/javascript" src="assets/js/charts.js"></script>
+    <script type="text/javascript" src="assets/js/resources/ext-ux/carousel/Carousel.js"></script>
+    <script type="text/javascript" src="assets/js/crossdomain/jquery.ajax-cross-origin.min.js"></script>
+    <script src="assets/js/openlayermaps/ol.js"></script>
+    <script src="assets/js/openlayermaps/angular-openlayers-directive.js"></script>
+    <script type="text/javascript" src="app/portalApp.js"></script>
+
+    <title> Analysis - Web Portal | HMIS </title>
+</head>
+
+<body ng-app="portalApp">
+
+<div class="page-wrapper" ng-controller="portalController">
+<div class="header header-standard">
+    <div class="header-topbar">
+        <div class="container">
+            <div class="header-topbar-left">
+                <ol class="breadcrumb">
+                    <li><a href="#">Portal</a></li>
+                    <li><a href="#" class="active">Analysis</a></li>
+                </ol>
+            </div><!-- /.header-topbar-left -->
+
+            <div class="header-topbar-right">
+                <ul class="header-topbar-social ml30">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul><!-- /.header-topbar-social -->
+            </div><!-- /.header-topbar-right -->
+        </div><!-- /.container -->
+    </div><!-- /.header-topbar -->
+
+    <div class="container">
+        <div class="header-inner">
+            <div class="header-main">
+                <div class="header-title">
+                    <a href="index.html">
+                        <img style="height:40px;" src="assets/img/flag.gif" alt="Tanzania Flag">
+
+                        <span>HMIS - Web Portal </span>
+                    </a>
+                </div><!-- /.header-title -->
+
+                <div class="header-navigation">
+                    <div class="nav-main-wrapper">
+                        <div class="nav-main-title visible-xs">
+                            <a href="index.html">
+                                <img src="assets/img/flag.gif" alt="Tanzania Flag">
+
+                                <span> HMIS - Web Portal </span>
+                            </a>
+                        </div><!-- /.nav-main-title -->
+
+                        <div class="nav-main-inner">
+                            <nav>
+                                <ul id="nav-main" class="nav nav-pills">
+
+                                    <li class="important">
+                                        <a href="index.html#">Home</a>
+                                    </li>
+                                    <li class="important">
+                                        <a href="dashboard.html#">Dashboard</a>
+                                    </li>
+                                    <li class="important">
+                                        <a href="analysis.html#">Analysis</a>
+                                    </li>
+
+                                </ul><!-- /.nav -->
+                            </nav>
+                        </div><!-- /.nav-main-inner -->
+                    </div><!-- /.nav-main-wrapper -->
+
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div><!-- /.header-navigation -->
+            </div><!-- /.header-main -->
+        </div><!-- /.header-inner -->
+    </div><!-- /.container -->
+</div><!-- /.header-->
+
+
+<div class="main" ng-controller="analysisController">
+
+<div class="fullwidth background-grey  block center mb0">
+<div class="container">
+<div class="row" >
+    <!-- Standard button -->
+    <div class="col-md-12" style="float: left;">
+        <div class="col-md-2">
+
+            <label >Data Group</label>
+            <select class="form-control">
+                <option disabled >--Data Group--</option>
+                <option value="Vlw8KFHG4cV">Antenatal Care</option>
+                <option value="YoqOtBfLCIQ">Completeness</option>
+                <option value="rzoxJFEBzqD">Death Registry</option>
+                <option value="ZLSs1nw1b5x">Human Resource</option>
+
+            </select>
+        </div>
+        <!--<div class="col-md-2">-->
+            <!--<label>Category</label>-->
+            <!--<select class="form-control">-->
+                <!--<option>Human Resource</option>-->
+                <!--<option selected>Facility</option>-->
+            <!--</select>-->
+        <!--</div>-->
+        <div class="col-md-2">
+            <label>Organisation Unit (Regions)</label>
+            <select class="form-control">
+                <option selected>Tanzania(MOH)</option>
+                <option>abcd</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>Period</label>
+            <select class="form-control">
+                <option>2015</option>
+                <option>2014</option>
+            </select>
+        </div>
+
+
+    </div>
+</div>
+    <br/>
+    <div class="row" >
+    <!-- Standard button -->
+        <div class="col-md-12" >
+            <div style="float: left;">
+                <button type="button" class="btn">Table</button>
+                <button type="button" class="btn">Column</button>
+                <button type="button" class="btn">Line</button>
+                <button type="button" class="btn">Area</button>
+                <button type="button" class="btn">Spline</button>
+                <button type="button" class="btn">Spline Area</button>
+                <button type="button" class="btn">Pie</button>
+                <button type="button" class="btn">Map</button>
+            </div>
+
+        </div>
+
+</div>
+<div class="row"></div>
+
+</div><!-- /.container -->
+</div>
+</div><!-- /.main -->
+
+<div id="footer" class="footer footer-simple">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-top-inner">
+                <div class="row">
+                    <div class="widget col-sm-3">
+                        <h2>Important Links</h2>
+
+                        <nav>
+                            <ul class="nav nav-stacked">
+                                <li><a href="#">MOHW - Ministry Of Health</a></li>
+                                <li><a href="#">HMIS</a></li>
+                                <li><a href="#">HISP Tanzania</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="widget col-sm-3">
+                        <h2></h2>
+
+                        <nav>
+                            <ul class="nav nav-stacked">
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="widget col-sm-3">
+                        <h2></h2>
+
+                        <nav>
+                            <ul class="nav nav-stacked">
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="widget col-sm-3">
+                        <h2></h2>
+
+                        <nav>
+                            <ul class="nav nav-stacked">
+                            </ul>
+                        </nav>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.footer-top-inner -->
+        </div><!-- /.container -->
+    </div><!-- /.footer-top -->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-inner">
+                <div class="footer-bottom-left">
+                    &copy; 2015 HMIS.
+                </div><!-- /.footer-bottom-left -->
+
+                <div class="footer-bottom-right">
+                    Created by <a href="www.hisptanzania.or.tz">HISP Tanzania</a>
+                </div><!-- /.footer-bottom-right -->
+            </div><!-- /.footer-bottom-inner -->
+        </div><!-- /.container -->
+    </div><!-- /.footer-bottom -->
+</div><!-- /.footer -->
+</div><!-- /.page-wrapper-->
+
+</body>
+</html>

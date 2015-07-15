@@ -1,0 +1,4169 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+      {
+         "type": "Feature",
+         "id": "ksctXPBiIHv",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.25135,
+               -3.19663
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Nkweshoo Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "I2RwvxAn1qe",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.365,
+               -3.41212
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mabogini Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "TVWaGBLiEH9",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.22091,
+               -3.22526
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kisiki Rural Health Center",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "TYBgMyJ1b6s",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.68513,
+               -3.97595
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Vutima Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "D4c22hdrtlO",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.95143,
+               -4.13593
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kisiwani RHC Health Center",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "ffIUzwYPXiw",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.64645,
+               -3.20577
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kirokomu Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "t09jO9GKmWz",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.263152,
+               -3.26601335
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Manushi Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "z0wXyNKnRgR",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.57812381,
+               -3.66140314
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mwanga KKKT Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "S2OYCTXDVdU",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.41068959,
+               -3.31784972
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Anne Kiilu (Mdawi) Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "jjP8BuuQhaw",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.63612,
+               -3.56838
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kivisini Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "kg70BCA6831",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.35164344,
+               -3.34429094
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Majengo Health Center",
+            "level": "4",
+            "parent": "Y8sOGpb4AFE",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Y8sOGpb4AFE"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "ZDXwcl0LuBr",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.99250901,
+               -4.39108738
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mamba Myamba Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "dFR9QtW8RSd",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.89645,
+               -4.26267
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Shengena Rural Health Center",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Y2FcBp2r3Q4",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.53683,
+               -2.97437
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kikelelelwa Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "eNzgjwgAjk8",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.52599239,
+               -3.30380031
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Marangu Hospital",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "RNXMvwkZbEK",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.22343,
+               -3.20648
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Machame Hospital",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "tcKspC7PLLg",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.38893,
+               -3.5936
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mikocheni Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "xIzvMLfmTQL",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.16597,
+               -3.23507
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Lemira Lutheran Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "LMCETOXvwcz",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.92852,
+               -4.427
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ntambwe Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "dGVqrJriO0G",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.56242,
+               -3.0214
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Nanjara Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Vr4NH5XYeLi",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.59916306,
+               -3.75296303
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kisangara Juu RC Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "WgqX9PqQ98C",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               35.192833,
+               -3.2429167
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kibosho Barazani Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "zxsI1apJULJ",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.84325,
+               -4.15332
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mwembe Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "hsrp9uSXEB0",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.55985,
+               -3.53497
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kifaru Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "H83LApfI6dE",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.60993,
+               -3.23518
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Keni Health Center",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "uxwMwoC0ov7",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.91112,
+               -4.50848
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Hedaru Msamaria Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "NYmdG5mE0YM",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.32532,
+               -3.53183
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "TPC Hospital",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "TlefekDKrQi",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.27846205,
+               -3.27374884
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kindi RC Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "MVEdbb8SjGw",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               38.02838,
+               -4.29088
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mpirani KKKT Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "DLqVPcXpFHr",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.85825,
+               -4.33708
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kasapo Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "ftieujAbNdD",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.36878,
+               -3.25063
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Njari Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "h90FKxGsLXd",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.52599239,
+               -3.30380031
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Marangu HQ Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "K5IUSH0YkxH",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.51338,
+               -3.33155
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mandaka Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "gAwBzO4X0L4",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.59023,
+               -3.17743
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ushiri Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "rHgnkyLPAXb",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.42087,
+               -3.34097
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Sango Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "mYfrFPLDiIc",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.46022,
+               -3.48675
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kahe Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "mQEIPuG7TBd",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.73338,
+               -3.56897
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Jipe Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "mVQzhv2bdnU",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6753,
+               -3.62243
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mriti Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "pCAhpap5Y1m",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.82557,
+               -4.3606
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Makanya Kitivo Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "dPL0x1UyrnO",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.55949855,
+               -2.99452015
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Tarakea Health Center",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "YWmXXYXmwfM",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.91112,
+               -4.50848
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Hedaru COGI Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "wYhjrGD6FxA",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.20701,
+               -3.19407
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kyeeri Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "OYTlWAmDQL1",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.71583378,
+               -3.64675828
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Butu Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "i1VucwF7ilc",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               38.02838,
+               -4.29088
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Upendo COGI Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "c60RlrHkfA5",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.3045167,
+               -3.29025
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kirima Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "hYrK9z53v9O",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.65267849,
+               -3.67630013
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ndanda Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "A3Y90vP3QEN",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.60093,
+               -3.67005
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mfinga Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "kEn5eAiwrFU",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.98042,
+               -4.50082
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Vunta Rural Health Center",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Eh2Ic1VPSY3",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.54609287,
+               -3.26664635
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mboni Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "juEJS7uYLtm",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.49637008,
+               -3.30552765
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kilema Pofo Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "O2LwsTm7xyl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.64426667,
+               -3.2652
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ngoyoni Hospital",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Y6AXpF5jBb9",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.15215683,
+               -3.24050554
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Nkwansira Rural Health Center",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "zMhnkY5xEjx",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.31335,
+               -3.36326
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Shirimatunda Dispensary",
+            "level": "4",
+            "parent": "Y8sOGpb4AFE",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Y8sOGpb4AFE"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "RMk0BpOYgJn",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.9058,
+               -4.13192
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kwizu Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "hZGbTy42NTH",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.32813656,
+               -3.31948587
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "KCMC Referal Hospital",
+            "level": "4",
+            "parent": "Y8sOGpb4AFE",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Y8sOGpb4AFE"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "k0W0brUHiJw",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.14706,
+               -3.33399
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Upendo Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "HCIJt4uSFFm",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.5861,
+               -3.70832
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kiruru Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "a7JXKbpPQMm",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.8852,
+               -4.21043
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Vudee Lutheran Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "NsbAjGOjyC7",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               38.05812,
+               -4.59303
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Bendera Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "T80mtrb1VgC",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.91112,
+               -4.50848
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Hedaru RN Nina Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Um7pGeekQ9r",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.21163,
+               -3.19875
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Nronga Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "cn6BjzwiMec",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.46162474,
+               -3.35970827
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Uparo Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "GB78pu0DKO8",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.88377,
+               -4.17155
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mteke Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "PZFe6gRbc1P",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.98547,
+               -4.22693
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ntenga Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "pe8G9ExpX50",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.99355,
+               -4.26022
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Gonja Bombo Hospital",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "UfrvUtXbxP9",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.39888,
+               -3.45418
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Chekereni Govt Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "sFLtUJEri2q",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.72632,
+               -3.94615
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mbono Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "K4D6ViEVBc9",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.39503622,
+               -3.30673465
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Tella Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "yC9Cj1K4WpR",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6610148,
+               -3.69473
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Usangi Sec Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "hwwY3xaXGds",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.36682,
+               -3.4737
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mtakuja Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "nHjcetZlS5g",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.63692,
+               -3.62642
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mruma Dspensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "CwraNm1ORjj",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.64985,
+               -3.13703
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mahorosha Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "tPyumBiHqeC",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.37005,
+               -3.2795
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Uru Kyaseni Health Center",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "MypalYeNdxf",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6496,
+               -3.70177
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kirongaya Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "IbpfcHeyyBf",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               35.192833,
+               -3.2429167
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kibosho Hospital",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "UO1BBOq9LM3",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.83997178,
+               -4.34221753
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Makanya RuralHealth Center",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "RJi8t1jd0lI",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6728,
+               -3.72778
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ndorwe Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Hohfqal1vOI",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.19425678,
+               -3.25018295
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Masama Rural Health Center",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "o6jcxuUh0Je",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.71623,
+               -3.68568
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kigonigoni Health Center",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "cCtAjWMyy9t",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.56269574,
+               -3.2861621
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mwika Health Center",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "cSZc0JYEe46",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.22438,
+               -3.2827
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Lambo Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "lnOyHhoLzre",
+         "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+               [
+                  [
+                     [
+                        37.3787,
+                        -2.8816
+                     ],
+                     [
+                        37.3825,
+                        -2.8827
+                     ],
+                     [
+                        37.405,
+                        -2.9005
+                     ],
+                     [
+                        37.4085,
+                        -2.9027
+                     ],
+                     [
+                        37.4294,
+                        -2.9064
+                     ],
+                     [
+                        37.548,
+                        -2.975
+                     ],
+                     [
+                        37.6706,
+                        -3.0586
+                     ],
+                     [
+                        37.6931,
+                        -3.19
+                     ],
+                     [
+                        37.7115,
+                        -3.309
+                     ],
+                     [
+                        37.6848,
+                        -3.3212
+                     ],
+                     [
+                        37.6848,
+                        -3.3488
+                     ],
+                     [
+                        37.6634,
+                        -3.3565
+                     ],
+                     [
+                        37.6119,
+                        -3.4071
+                     ],
+                     [
+                        37.5846,
+                        -3.438
+                     ],
+                     [
+                        37.5846,
+                        -3.4597
+                     ],
+                     [
+                        37.6171,
+                        -3.459
+                     ],
+                     [
+                        37.6252,
+                        -3.4846
+                     ],
+                     [
+                        37.6065,
+                        -3.5035
+                     ],
+                     [
+                        37.6027,
+                        -3.5182
+                     ],
+                     [
+                        37.6211,
+                        -3.5236
+                     ],
+                     [
+                        37.6639,
+                        -3.5033
+                     ],
+                     [
+                        37.6842,
+                        -3.5115
+                     ],
+                     [
+                        37.6927,
+                        -3.5246
+                     ],
+                     [
+                        37.7267,
+                        -3.5363
+                     ],
+                     [
+                        37.7403,
+                        -3.6029
+                     ],
+                     [
+                        37.7624,
+                        -3.6132
+                     ],
+                     [
+                        37.785,
+                        -3.6747
+                     ],
+                     [
+                        37.9532,
+                        -3.7936
+                     ],
+                     [
+                        38.0276,
+                        -3.8439
+                     ],
+                     [
+                        38.2472,
+                        -3.9983
+                     ],
+                     [
+                        38.4036,
+                        -4.1088
+                     ],
+                     [
+                        38.3688,
+                        -4.1624
+                     ],
+                     [
+                        38.274,
+                        -4.3119
+                     ],
+                     [
+                        38.1647,
+                        -4.4721
+                     ],
+                     [
+                        38.1509,
+                        -4.4896
+                     ],
+                     [
+                        38.119,
+                        -4.5332
+                     ],
+                     [
+                        38.1188,
+                        -4.5673
+                     ],
+                     [
+                        38.1186,
+                        -4.5726
+                     ],
+                     [
+                        38.1179,
+                        -4.575
+                     ],
+                     [
+                        38.1162,
+                        -4.5799
+                     ],
+                     [
+                        38.1153,
+                        -4.5826
+                     ],
+                     [
+                        38.1089,
+                        -4.596
+                     ],
+                     [
+                        38.0789,
+                        -4.6126
+                     ],
+                     [
+                        38.0498,
+                        -4.6137
+                     ],
+                     [
+                        38.0374,
+                        -4.5935
+                     ],
+                     [
+                        38.0056,
+                        -4.5916
+                     ],
+                     [
+                        37.9974,
+                        -4.6117
+                     ],
+                     [
+                        37.963,
+                        -4.5956
+                     ],
+                     [
+                        37.9413,
+                        -4.5995
+                     ],
+                     [
+                        37.9323,
+                        -4.5747
+                     ],
+                     [
+                        37.9107,
+                        -4.5827
+                     ],
+                     [
+                        37.887,
+                        -4.576
+                     ],
+                     [
+                        37.8754,
+                        -4.5864
+                     ],
+                     [
+                        37.843,
+                        -4.5701
+                     ],
+                     [
+                        37.8106,
+                        -4.5952
+                     ],
+                     [
+                        37.7738,
+                        -4.6051
+                     ],
+                     [
+                        37.7545,
+                        -4.6042
+                     ],
+                     [
+                        37.7419,
+                        -4.5799
+                     ],
+                     [
+                        37.7193,
+                        -4.5749
+                     ],
+                     [
+                        37.7184,
+                        -4.5642
+                     ],
+                     [
+                        37.6873,
+                        -4.5494
+                     ],
+                     [
+                        37.685,
+                        -4.5316
+                     ],
+                     [
+                        37.6566,
+                        -4.5154
+                     ],
+                     [
+                        37.63,
+                        -4.5204
+                     ],
+                     [
+                        37.617,
+                        -4.5036
+                     ],
+                     [
+                        37.5923,
+                        -4.4938
+                     ],
+                     [
+                        37.5696,
+                        -4.4683
+                     ],
+                     [
+                        37.5534,
+                        -4.4666
+                     ],
+                     [
+                        37.5249,
+                        -4.4402
+                     ],
+                     [
+                        37.5006,
+                        -4.4013
+                     ],
+                     [
+                        37.4914,
+                        -4.3781
+                     ],
+                     [
+                        37.4912,
+                        -4.3506
+                     ],
+                     [
+                        37.5058,
+                        -4.3396
+                     ],
+                     [
+                        37.4935,
+                        -4.3102
+                     ],
+                     [
+                        37.5118,
+                        -4.2805
+                     ],
+                     [
+                        37.4946,
+                        -4.2256
+                     ],
+                     [
+                        37.4956,
+                        -4.1699
+                     ],
+                     [
+                        37.5128,
+                        -4.1389
+                     ],
+                     [
+                        37.508,
+                        -4.0795
+                     ],
+                     [
+                        37.4902,
+                        -4.05
+                     ],
+                     [
+                        37.4883,
+                        -4.0186
+                     ],
+                     [
+                        37.4795,
+                        -4.018
+                     ],
+                     [
+                        37.4628,
+                        -3.9771
+                     ],
+                     [
+                        37.4662,
+                        -3.9435
+                     ],
+                     [
+                        37.4635,
+                        -3.8888
+                     ],
+                     [
+                        37.4483,
+                        -3.8833
+                     ],
+                     [
+                        37.4609,
+                        -3.83
+                     ],
+                     [
+                        37.4684,
+                        -3.8239
+                     ],
+                     [
+                        37.4625,
+                        -3.8019
+                     ],
+                     [
+                        37.4274,
+                        -3.7479
+                     ],
+                     [
+                        37.4157,
+                        -3.711
+                     ],
+                     [
+                        37.4143,
+                        -3.7074
+                     ],
+                     [
+                        37.4101,
+                        -3.6613
+                     ],
+                     [
+                        37.4305,
+                        -3.6938
+                     ],
+                     [
+                        37.4599,
+                        -3.7543
+                     ],
+                     [
+                        37.4714,
+                        -3.7631
+                     ],
+                     [
+                        37.4933,
+                        -3.7528
+                     ],
+                     [
+                        37.4953,
+                        -3.7395
+                     ],
+                     [
+                        37.4812,
+                        -3.7141
+                     ],
+                     [
+                        37.471,
+                        -3.6805
+                     ],
+                     [
+                        37.4746,
+                        -3.6503
+                     ],
+                     [
+                        37.49,
+                        -3.6073
+                     ],
+                     [
+                        37.5297,
+                        -3.5379
+                     ],
+                     [
+                        37.5127,
+                        -3.5254
+                     ],
+                     [
+                        37.4624,
+                        -3.5473
+                     ],
+                     [
+                        37.3967,
+                        -3.5875
+                     ],
+                     [
+                        37.384,
+                        -3.6011
+                     ],
+                     [
+                        37.3832,
+                        -3.624
+                     ],
+                     [
+                        37.3989,
+                        -3.6443
+                     ],
+                     [
+                        37.3664,
+                        -3.6463
+                     ],
+                     [
+                        37.3506,
+                        -3.637
+                     ],
+                     [
+                        37.3489,
+                        -3.6362
+                     ],
+                     [
+                        37.3414,
+                        -3.6284
+                     ],
+                     [
+                        37.33,
+                        -3.5911
+                     ],
+                     [
+                        37.3119,
+                        -3.5735
+                     ],
+                     [
+                        37.2971,
+                        -3.5298
+                     ],
+                     [
+                        37.3,
+                        -3.4998
+                     ],
+                     [
+                        37.2772,
+                        -3.491
+                     ],
+                     [
+                        37.2613,
+                        -3.4954
+                     ],
+                     [
+                        37.229,
+                        -3.4869
+                     ],
+                     [
+                        37.215,
+                        -3.4552
+                     ],
+                     [
+                        37.1941,
+                        -3.4485
+                     ],
+                     [
+                        37.1828,
+                        -3.4581
+                     ],
+                     [
+                        37.1638,
+                        -3.4523
+                     ],
+                     [
+                        37.1375,
+                        -3.4851
+                     ],
+                     [
+                        37.1004,
+                        -3.4772
+                     ],
+                     [
+                        37.0881,
+                        -3.4879
+                     ],
+                     [
+                        37.0606,
+                        -3.4901
+                     ],
+                     [
+                        37.0605,
+                        -3.4755
+                     ],
+                     [
+                        37.0599,
+                        -3.4739
+                     ],
+                     [
+                        37.0584,
+                        -3.4683
+                     ],
+                     [
+                        37.0582,
+                        -3.466
+                     ],
+                     [
+                        37.0582,
+                        -3.4631
+                     ],
+                     [
+                        37.0582,
+                        -3.4611
+                     ],
+                     [
+                        37.058,
+                        -3.4571
+                     ],
+                     [
+                        37.0557,
+                        -3.4453
+                     ],
+                     [
+                        37.0558,
+                        -3.4415
+                     ],
+                     [
+                        37.0553,
+                        -3.4294
+                     ],
+                     [
+                        37.0551,
+                        -3.4191
+                     ],
+                     [
+                        37.0556,
+                        -3.391
+                     ],
+                     [
+                        37.0553,
+                        -3.3894
+                     ],
+                     [
+                        37.0552,
+                        -3.3859
+                     ],
+                     [
+                        37.0552,
+                        -3.3845
+                     ],
+                     [
+                        37.0549,
+                        -3.3808
+                     ],
+                     [
+                        37.0547,
+                        -3.379
+                     ],
+                     [
+                        37.0546,
+                        -3.3774
+                     ],
+                     [
+                        37.0544,
+                        -3.3737
+                     ],
+                     [
+                        37.0543,
+                        -3.3722
+                     ],
+                     [
+                        37.0604,
+                        -3.3684
+                     ],
+                     [
+                        37.0632,
+                        -3.3672
+                     ],
+                     [
+                        37.0643,
+                        -3.3559
+                     ],
+                     [
+                        37.0643,
+                        -3.3548
+                     ],
+                     [
+                        37.063,
+                        -3.3452
+                     ],
+                     [
+                        37.0629,
+                        -3.3446
+                     ],
+                     [
+                        37.058,
+                        -3.3323
+                     ],
+                     [
+                        37.0574,
+                        -3.3312
+                     ],
+                     [
+                        37.0536,
+                        -3.3256
+                     ],
+                     [
+                        37.0534,
+                        -3.325
+                     ],
+                     [
+                        37.0532,
+                        -3.3243
+                     ],
+                     [
+                        37.053,
+                        -3.3235
+                     ],
+                     [
+                        37.0527,
+                        -3.3205
+                     ],
+                     [
+                        37.0524,
+                        -3.3202
+                     ],
+                     [
+                        37.0444,
+                        -3.2941
+                     ],
+                     [
+                        37.0444,
+                        -3.2934
+                     ],
+                     [
+                        37.0446,
+                        -3.2916
+                     ],
+                     [
+                        37.0447,
+                        -3.291
+                     ],
+                     [
+                        37.0454,
+                        -3.2874
+                     ],
+                     [
+                        37.0454,
+                        -3.287
+                     ],
+                     [
+                        37.0416,
+                        -3.2727
+                     ],
+                     [
+                        37.0413,
+                        -3.2722
+                     ],
+                     [
+                        37.033,
+                        -3.2605
+                     ],
+                     [
+                        37.0327,
+                        -3.2599
+                     ],
+                     [
+                        37.017,
+                        -3.2531
+                     ],
+                     [
+                        37.0164,
+                        -3.2531
+                     ],
+                     [
+                        37.0016,
+                        -3.2533
+                     ],
+                     [
+                        37.0009,
+                        -3.2535
+                     ],
+                     [
+                        36.9973,
+                        -3.2491
+                     ],
+                     [
+                        36.9974,
+                        -3.2487
+                     ],
+                     [
+                        36.9898,
+                        -3.2288
+                     ],
+                     [
+                        36.9888,
+                        -3.2288
+                     ],
+                     [
+                        36.9798,
+                        -3.2113
+                     ],
+                     [
+                        36.9798,
+                        -3.2107
+                     ],
+                     [
+                        36.9724,
+                        -3.2069
+                     ],
+                     [
+                        36.9717,
+                        -3.2067
+                     ],
+                     [
+                        36.9703,
+                        -3.2062
+                     ],
+                     [
+                        36.9698,
+                        -3.2061
+                     ],
+                     [
+                        36.9669,
+                        -3.2064
+                     ],
+                     [
+                        36.9662,
+                        -3.2064
+                     ],
+                     [
+                        36.9524,
+                        -3.2056
+                     ],
+                     [
+                        36.9516,
+                        -3.2057
+                     ],
+                     [
+                        36.9512,
+                        -3.2057
+                     ],
+                     [
+                        36.9508,
+                        -3.2057
+                     ],
+                     [
+                        36.9397,
+                        -3.2052
+                     ],
+                     [
+                        36.9396,
+                        -3.205
+                     ],
+                     [
+                        36.9395,
+                        -3.2023
+                     ],
+                     [
+                        36.9395,
+                        -3.2015
+                     ],
+                     [
+                        36.9353,
+                        -3.1819
+                     ],
+                     [
+                        36.935,
+                        -3.1818
+                     ],
+                     [
+                        36.9227,
+                        -3.1854
+                     ],
+                     [
+                        36.9218,
+                        -3.1853
+                     ],
+                     [
+                        36.9203,
+                        -3.185
+                     ],
+                     [
+                        36.9194,
+                        -3.1847
+                     ],
+                     [
+                        36.9177,
+                        -3.1846
+                     ],
+                     [
+                        36.9169,
+                        -3.1845
+                     ],
+                     [
+                        36.915,
+                        -3.1844
+                     ],
+                     [
+                        36.9141,
+                        -3.1844
+                     ],
+                     [
+                        36.9085,
+                        -3.1851
+                     ],
+                     [
+                        36.9084,
+                        -3.1848
+                     ],
+                     [
+                        36.9083,
+                        -3.1761
+                     ],
+                     [
+                        36.9083,
+                        -3.1755
+                     ],
+                     [
+                        36.9083,
+                        -3.1746
+                     ],
+                     [
+                        36.9083,
+                        -3.1737
+                     ],
+                     [
+                        36.9088,
+                        -3.1703
+                     ],
+                     [
+                        36.9088,
+                        -3.1694
+                     ],
+                     [
+                        36.9033,
+                        -3.1562
+                     ],
+                     [
+                        36.9028,
+                        -3.1552
+                     ],
+                     [
+                        36.8918,
+                        -3.1363
+                     ],
+                     [
+                        36.8911,
+                        -3.1353
+                     ],
+                     [
+                        36.8903,
+                        -3.1343
+                     ],
+                     [
+                        36.8961,
+                        -3.1257
+                     ],
+                     [
+                        36.8967,
+                        -3.1252
+                     ],
+                     [
+                        36.9002,
+                        -3.1226
+                     ],
+                     [
+                        36.9005,
+                        -3.1223
+                     ],
+                     [
+                        36.9011,
+                        -3.1216
+                     ],
+                     [
+                        36.9069,
+                        -3.1104
+                     ],
+                     [
+                        36.9072,
+                        -3.1097
+                     ],
+                     [
+                        36.9096,
+                        -3.1021
+                     ],
+                     [
+                        36.9098,
+                        -3.1013
+                     ],
+                     [
+                        36.9152,
+                        -3.0774
+                     ],
+                     [
+                        36.9155,
+                        -3.0766
+                     ],
+                     [
+                        36.9168,
+                        -3.0741
+                     ],
+                     [
+                        36.9173,
+                        -3.0731
+                     ],
+                     [
+                        36.928,
+                        -3.0533
+                     ],
+                     [
+                        36.9284,
+                        -3.0525
+                     ],
+                     [
+                        36.9344,
+                        -3.0399
+                     ],
+                     [
+                        36.9316,
+                        -2.9944
+                     ],
+                     [
+                        36.9408,
+                        -2.979
+                     ],
+                     [
+                        36.9415,
+                        -2.9787
+                     ],
+                     [
+                        36.9529,
+                        -2.9768
+                     ],
+                     [
+                        36.9534,
+                        -2.9767
+                     ],
+                     [
+                        36.9793,
+                        -2.9724
+                     ],
+                     [
+                        36.992,
+                        -2.9778
+                     ],
+                     [
+                        37.012,
+                        -2.9694
+                     ],
+                     [
+                        37.0136,
+                        -2.9687
+                     ],
+                     [
+                        37.0339,
+                        -2.9612
+                     ],
+                     [
+                        37.0365,
+                        -2.9479
+                     ],
+                     [
+                        37.0629,
+                        -2.9356
+                     ],
+                     [
+                        37.0648,
+                        -2.9273
+                     ],
+                     [
+                        37.0654,
+                        -2.9262
+                     ],
+                     [
+                        37.0662,
+                        -2.9244
+                     ],
+                     [
+                        37.0666,
+                        -2.9238
+                     ],
+                     [
+                        37.0706,
+                        -2.9175
+                     ],
+                     [
+                        37.071,
+                        -2.9172
+                     ],
+                     [
+                        37.0788,
+                        -2.9098
+                     ],
+                     [
+                        37.0791,
+                        -2.9094
+                     ],
+                     [
+                        37.0799,
+                        -2.9085
+                     ],
+                     [
+                        37.0801,
+                        -2.9082
+                     ],
+                     [
+                        37.0814,
+                        -2.9059
+                     ],
+                     [
+                        37.0816,
+                        -2.9055
+                     ],
+                     [
+                        37.0841,
+                        -2.9014
+                     ],
+                     [
+                        37.0842,
+                        -2.9011
+                     ],
+                     [
+                        37.091,
+                        -2.8909
+                     ],
+                     [
+                        37.0912,
+                        -2.8906
+                     ],
+                     [
+                        37.1163,
+                        -2.8651
+                     ],
+                     [
+                        37.1167,
+                        -2.8649
+                     ],
+                     [
+                        37.1308,
+                        -2.8572
+                     ],
+                     [
+                        37.1313,
+                        -2.8571
+                     ],
+                     [
+                        37.1435,
+                        -2.8566
+                     ],
+                     [
+                        37.1439,
+                        -2.8565
+                     ],
+                     [
+                        37.1506,
+                        -2.8562
+                     ],
+                     [
+                        37.1511,
+                        -2.8562
+                     ],
+                     [
+                        37.1725,
+                        -2.855
+                     ],
+                     [
+                        37.173,
+                        -2.8549
+                     ],
+                     [
+                        37.184,
+                        -2.8543
+                     ],
+                     [
+                        37.1845,
+                        -2.8543
+                     ],
+                     [
+                        37.1961,
+                        -2.8536
+                     ],
+                     [
+                        37.1967,
+                        -2.8536
+                     ],
+                     [
+                        37.2003,
+                        -2.8533
+                     ],
+                     [
+                        37.2008,
+                        -2.8533
+                     ],
+                     [
+                        37.2018,
+                        -2.8533
+                     ],
+                     [
+                        37.2022,
+                        -2.8532
+                     ],
+                     [
+                        37.2239,
+                        -2.8513
+                     ],
+                     [
+                        37.2246,
+                        -2.8512
+                     ],
+                     [
+                        37.2372,
+                        -2.8505
+                     ],
+                     [
+                        37.2376,
+                        -2.8505
+                     ],
+                     [
+                        37.2466,
+                        -2.8499
+                     ],
+                     [
+                        37.2469,
+                        -2.8499
+                     ],
+                     [
+                        37.3138,
+                        -2.8645
+                     ],
+                     [
+                        37.3787,
+                        -2.8816
+                     ]
+                  ]
+               ]
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kilimanjaro Region",
+            "level": "2",
+            "parent": "m0frOspS7JY",
+            "parentGraph": "/m0frOspS7JY"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "GmqV2nJaEfk",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.33235836,
+               -3.33449014
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "CCP Health Center",
+            "level": "4",
+            "parent": "Y8sOGpb4AFE",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Y8sOGpb4AFE"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "fdSht9ZTFYl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               38.07588,
+               -4.47007
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kihurio Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "GiKHtdHLPIZ",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.60356188,
+               -3.22182127
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Shimbi Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "DjW6cYINSAE",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.18878,
+               -3.20851
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Saawe Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "QNG8iIHMP2m",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.38336325,
+               -3.3003939
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mbokomu Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "CARm5AWnVMt",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.57352,
+               -3.26275
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Lole Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "wExPiA8SWjh",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.56602168,
+               -4.18943354
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ruvu Mferejini Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "ZsdHQ7NJI7H",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.26117,
+               -3.46737
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mkalama Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "rLmspD5lVzz",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.2930167,
+               -3.24465
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mango Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "vGx6rMzf5mB",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.68278,
+               -3.69918
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mbore Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "z4a4q5TAPsw",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.1164,
+               -3.38932
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Sanya Station Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "gyAxdsAAWyl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6610148,
+               -3.69473
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Usangi District Hospital",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "sM1L3XXeft5",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.57812381,
+               -3.66140314
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mwanga Health Center",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "HkrdBUMefcI",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.14931,
+               -3.27869
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kware Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "yjoPJa1FdJU",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6451,
+               -3.65192
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kikweni Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "NoZJDiVBOFx",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.06678,
+               -3.4215
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "KIA Govt Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "r0J967uGnGS",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.83997178,
+               -4.34221753
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Makanya SDA Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Xe1hFpy36yX",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.38702347,
+               -3.327497098
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kikarara Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "n9eRUBt0qBl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.84822,
+               -4.23113
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Bangalala Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "QeIXLY3DWfs",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.18615651,
+               -3.23690065
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Masama Lutheran Health Center",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Jl6ehgSbhlS",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.22093,
+               -3.46035
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kawaya Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "sTVvvCIWU3Z",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.33881176,
+               -3.37039419
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Pasua Health Center",
+            "level": "4",
+            "parent": "Y8sOGpb4AFE",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Y8sOGpb4AFE"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "wNSrrsTOamc",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.47236431,
+               -3.77720484
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kiti cha Mungu Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "nlLiWIeofRR",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.41387069,
+               -3.32389542
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Shia Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "c0Vb126VuV7",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.60303,
+               -3.24583
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Manda Juu RC Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "UYP3HtsVgOS",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6508166,
+               -3.18155
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ikuuini Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "wq4GBO1hJsP",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.88022,
+               -4.14942
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mhezi Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "TsbtXBtIAce",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.2536,
+               -3.40682
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Longoi Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "pwu9SvOQ3l8",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.398617,
+               -3.38555
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Uchira Lutheran Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "BVOcGdgLSmT",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.33986318,
+               -3.35999795
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Bondeni Dispensary",
+            "level": "4",
+            "parent": "Y8sOGpb4AFE",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Y8sOGpb4AFE"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "ZmA4SNTR4l4",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.616866,
+               -3.18875
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Huruma Hospital",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "dkqZuXv3j09",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.83392,
+               -3.77172
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Karamba Mwanga DC Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "OzXzYbX0q1C",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.4872613,
+               -3.92443665
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kirya Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "yCxtqC7zPkj",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.27538824,
+               -3.22905787
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Umbwe Health Center",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "oyBCwxw7EWZ",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.46345937,
+               -3.31037172
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kirua Health Center",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "EGT4vpbEIyl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.51338,
+               -3.33155
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mandaka Mnono Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "J7uQJlRxTri",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.62568474,
+               -3.07372578
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kingachi Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "fuygORLuIb7",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.72832,
+               -3.88078
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Pangaro Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "DrpkvB7gepM",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.79205,
+               -3.71428
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Toloha Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Ly7YgH9cDhf",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.89928079,
+               -4.28827831
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Chome Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "Gy2IV6ghdfd",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.34913,
+               -3.35834
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Njoro Dispensary",
+            "level": "4",
+            "parent": "Y8sOGpb4AFE",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Y8sOGpb4AFE"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "SP0GcXjhYGE",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.59743,
+               -3.15605
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kirwa Mashati Health Center",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "t35FJbqnW2x",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               38.05113,
+               -4.26838
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Gonja Maore Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "eFxaWhmCEjl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.9126,
+               -4.42495
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Gavao Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "FJvizUPFGpq",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.2918731,
+               -3.29846808
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mary Bennett Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "ewcUGFpIRcX",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               38.0031,
+               -4.39848
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Parane SDA Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "p2RzEkFWQ1w",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               38.0083,
+               -4.3409
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Lugulu (Same) Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "agt4HLzVZoK",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.10582972,
+               -3.19631347
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Uroki Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "cgZIMXjHMj9",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.67178655,
+               -3.62975844
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kifula Health Center",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "JSNpm3VdhxE",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.53858268,
+               -3.27059456
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kokirie Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "rWAT7L6THaD",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.99840987,
+               -4.31558856
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mtii Kanza Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "zy3mkIWHDUD",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               35.192833,
+               -3.2429167
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kibo Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "uxaBFappLRn",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.7355,
+               -4.02352
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Vumari Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "HGff25ZmiNv",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.12688,
+               -3.2219
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mashua Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "KK8aiV0QPJZ",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.59916306,
+               -3.75296303
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kisangara Health Center",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "BQyA5DOmPQl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.91745,
+               -4.17277
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Manka Lutheran Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "mDSrPRmLEEj",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.55949855,
+               -2.99452015
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Tarakea RC Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "fk5LaOcifah",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.59463,
+               -3.20075
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mokala Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "XcP6QwkEbYM",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.57812381,
+               -3.66140314
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mwanga Sec Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "MkDukcWQBRR",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.4354837,
+               -3.3067167
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Uchira RC St. Joseph Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "p43LaqLezCm",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.60993,
+               -3.23518
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Keni Aleni RC Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "rvIE3EuNcFe",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.49637008,
+               -3.30552765
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kilema Kisao Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "XqSRV77vCQz",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.57352,
+               -3.26275
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Lole Lutheran Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "u3Pd8M18Lb9",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.91112,
+               -4.50848
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Hedaru Rural Health Center",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "fb5S8XxVgRM",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.57152,
+               -3.05303
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Ubetu Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "xdYjgTgn1fj",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.68625,
+               -3.7161
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Vuagha Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "LrZhNAEAAD7",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.29972,
+               -3.42015
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Weruweru Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "xXZbtbbuuqq",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.29982853,
+               -3.21457394
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Nkombole Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "mG12ydtQxEH",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.1541363,
+               -3.20576557
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Losaa Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "rETQOHM3bFM",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.90132,
+               -4.38533
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Suji Gonjanza Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "h0LRlTp2fBm",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.66163,
+               -3.5989
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mangio Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "boeCiFUSS9R",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.14243,
+               -3.33253
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Hai District Hospital",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "yELQ1NVTFl9",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.33345807,
+               -3.22583922
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Mweka Omi Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "FFwEvnOuEVC",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.44283319,
+               -3.3155162
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Manu Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "JcQXf2HJhBt",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.49637008,
+               -3.30552765
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kilema Hospital",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "oTrFsBajNHB",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.46811569,
+               -3.31941077
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Iwa Dispensary",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "PggcGu9CbKd",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.215,
+               -3.26328
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Uswaa Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "RW9owfURJdE",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.1924,
+               -3.41428
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Rundugai Dispensary",
+            "level": "4",
+            "parent": "MiLb81EwC7j",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/MiLb81EwC7j"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "vUDtTfsw0Gg",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.60678,
+               -3.12358
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Olele Dispensary",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "vVgafV2i2K7",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.71107,
+               -3.78458
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kwakoa Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "ZX30bx8U8Mj",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.74686158,
+               -4.06406173
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Same Hospital",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "jztWEPwnnyx",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.4136167,
+               -3.3031667
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Kidia Health Center",
+            "level": "4",
+            "parent": "VMTJLxcFH9o",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/VMTJLxcFH9o"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "tCaULQNzfGl",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.59257555,
+               -3.08074244
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Karume Health Center",
+            "level": "4",
+            "parent": "Hob4dzCAW2W",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/Hob4dzCAW2W"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "HiDvxq2KgJ7",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.89462,
+               -4.33775
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Tae Dispensary",
+            "level": "4",
+            "parent": "WCTbfnMiNF3",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/WCTbfnMiNF3"
+         }
+      },
+      {
+         "type": "Feature",
+         "id": "str4ESE6sEm",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.6652,
+               -3.65572
+            ]
+         },
+         "properties": {
+            "code": null,
+            "name": "Sungo Dispensary",
+            "level": "4",
+            "parent": "OHu1VHzyA0x",
+            "parentGraph": "/m0frOspS7JY/lnOyHhoLzre/OHu1VHzyA0x"
+         }
+      }
+   ]
+}
