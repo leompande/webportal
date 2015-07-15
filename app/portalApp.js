@@ -11,7 +11,7 @@ var portal =angular
  * */
     .controller("portalController",['$scope','$http','shared',function($scope,$http,shared){
 
-        var url = "portal-module/dashboards.json";
+        var url = "http://hrhis.moh.go.tz:9090/api/dashboards.json?paging=false";
         $scope.dashboards = null;
         $scope.dashboards = function(){
             $http({
