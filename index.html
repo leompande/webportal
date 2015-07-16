@@ -236,19 +236,26 @@ function setLinks() {
 	  id: 'C0rhAq1oklh'
   });
 
-  PT.plugin.getTable({
-    url: base,
-    el: 'table2',
-	columns: [
-		{dimension: 'de', items: [{id: 'Uvn6LCg7dVU'}, {id: 'OdiHJayrsKo'}, {id: 'sB79w2hiLp8'}]},
-		{dimension: 'pe', items: [{id: 'LAST_3_MONTHS'}]}
-	],
-	rows: [
-		{dimension: 'J5jldMd8OHv', items: [{id: 'CXw2yu5fodb'}, {id: 'tDZVQ1WtwpA'}]},
-		{dimension: 'ou', items: [{id: 'LEVEL-4'}, {id:'C9uduqDZr9d'}]}
-	],
-hideEmptyRows: true
-  });
+    DHIS.getTable({
+        url: base,
+        el: 'table2',
+        "id": "lO4OwYxdZa8"
+    });
+
+//    {id:'GzvLb3XVZbR'},{id:'LQHYnrTVHJp'},{id:'QntdhuQfgvT'},{id:'TfoI3vTGv1f'},{id:'ZOvFj2vtlor'},{id:'cap79mdf6Co'},{id:'qpcwPcj8D6u'},{id:'rm3y3VHPiFD'},{id:'tgItMSP1gzz'},{id:'v6wdME3ouXu'},{id:'zeEp4Xu2GOm'}
+//  PT.plugin.getTable({
+//    url: base,
+//    el: 'table2',
+//	columns: [
+//		{dimension: 'de', items: [{id:'GzvLb3XVZbR'},{id:'LQHYnrTVHJp'},{id:'QntdhuQfgvT'},{id:'TfoI3vTGv1f'},{id:'ZOvFj2vtlor'},{id:'cap79mdf6Co'},{id:'qpcwPcj8D6u'},{id:'rm3y3VHPiFD'},{id:'tgItMSP1gzz'},{id:'v6wdME3ouXu'},{id:'zeEp4Xu2GOm'}]},
+//		{dimension: 'pe', items: [{id: 'LAST_3_MONTHS'}]}
+//	],
+//	rows: [
+//		{dimension: 'J5jldMd8OHv', items: [{id: 'CXw2yu5fodb'}, {id: 'tDZVQ1WtwpA'}]},
+//		{dimension: 'ou', items: [{id: 'LEVEL-4'}, {id:'C9uduqDZr9d'}]}
+//	],
+//hideEmptyRows: true
+//  });
   
   
   // DV.plugin.getChart({ uid: 'UlfTKWZWV4u', el: 'chartA5', url: base });
@@ -301,7 +308,7 @@ hideEmptyRows: true
          
         </div><!-- /.property-box -->
     </div>
-
+table2
     <div class="col-sm-12 col-md-12">
         <div class="property-box">
             <div class="property-box-image" id="table2" style="min-height:300px;">
