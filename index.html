@@ -189,11 +189,15 @@ function setLinks() {
         "el": "mapB1"
     });
 
-	PT.plugin.getTable({
-	  url: base,
-	  el: 'table1',
-	  id: 'C0rhAq1oklh'
-  });
+    DHIS.getMap({
+        "id": "jkjF3z75ul5",
+        "el": "table1"
+    });
+
+    DHIS.getChart({
+        "id": "gF5I2uQnIB8",
+        "el": "map3"
+    });
 
     DHIS.getTable({
         url: base,
@@ -201,33 +205,6 @@ function setLinks() {
         "id": "lO4OwYxdZa8"
     });
 
-//    {id:'GzvLb3XVZbR'},{id:'LQHYnrTVHJp'},{id:'QntdhuQfgvT'},{id:'TfoI3vTGv1f'},{id:'ZOvFj2vtlor'},{id:'cap79mdf6Co'},{id:'qpcwPcj8D6u'},{id:'rm3y3VHPiFD'},{id:'tgItMSP1gzz'},{id:'v6wdME3ouXu'},{id:'zeEp4Xu2GOm'}
-//  PT.plugin.getTable({
-//    url: base,
-//    el: 'table2',
-//	columns: [
-//		{dimension: 'de', items: [{id:'GzvLb3XVZbR'},{id:'LQHYnrTVHJp'},{id:'QntdhuQfgvT'},{id:'TfoI3vTGv1f'},{id:'ZOvFj2vtlor'},{id:'cap79mdf6Co'},{id:'qpcwPcj8D6u'},{id:'rm3y3VHPiFD'},{id:'tgItMSP1gzz'},{id:'v6wdME3ouXu'},{id:'zeEp4Xu2GOm'}]},
-//		{dimension: 'pe', items: [{id: 'LAST_3_MONTHS'}]}
-//	],
-//	rows: [
-//		{dimension: 'J5jldMd8OHv', items: [{id: 'CXw2yu5fodb'}, {id: 'tDZVQ1WtwpA'}]},
-//		{dimension: 'ou', items: [{id: 'LEVEL-4'}, {id:'C9uduqDZr9d'}]}
-//	],
-//hideEmptyRows: true
-//  });
-  
-  
-  // DV.plugin.getChart({ uid: 'UlfTKWZWV4u', el: 'chartA5', url: base });
-  // DV.plugin.getChart({ uid: 'LW0O27b7TdD', el: 'chartA6', url: base });
-  // DV.plugin.getChart({ uid: 'R0DVGvXDUNP', el: 'chartA7', url: base });
-
-  // new Ext.ux.carousel.Carousel( 'chartCarousel', {
-  //   autoPlay: true,
-  //   itemSelector: 'div.charts',
-  //   interval: 5,
-  //   showPlayButton: true
-  // });
-  
 
 }
 
@@ -304,29 +281,25 @@ function setLinks() {
         </div><!-- /.property-box -->
     </div>
 
-<!--    <div class="col-sm-12 col-md-12">-->
-<!--        <div class="property-box">-->
-       
+<div class="col-sm-12 col-md-6">
+        <div class="property-box">
+            <div class="property-box-image" id="map3" style="min-height:250px;">
 
-<!--</div>-->
-<!--            <div class="property-box-image" >-->
+            </div><!-- /.property-image -->
 
-<!--            <div class="property-box-content">-->
-<!--                <div class="property-box-meta">-->
-<!--  <div id="chartCarousel">-->
+            <div class="property-box-content">
+                <div class="property-box-meta">
+                </div>
+            </div>
 
-<!--<div id="chartA5" class="charts"></div>-->
-<!--<div id="chartA6" class="charts"></div>-->
-<!--<div id="chartA7" class="charts"></div>-->
-<!--            </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="property-box-bottom">
 
-<!--            <div class="property-box-bottom">-->
+            </div><!-- /.property-box-bottom -->
+        </div><!-- /.property-box -->
+    </div>
 
-<!--            </div>-->
-<!--        </div><!-- /.property-box -->
-<!--    </div>-->
+
+
     </div><!-- /.row -->
     <div class="row">
         <div class="center">
