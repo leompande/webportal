@@ -176,44 +176,7 @@
         </nav>
         <div class="layer"></div>
     </div> 
-</div>  
-    <style type="text/css">
-
-        li {
-            /*float: left;*/
-            list-style:none;
-        }
-
-        .chart {
-            border: 1px solid #ddd;
-            margin: 10px;
-        }
-        .chart.wide {
-            width: 800px;
-            height: 450px;
-        }
-        .chart.tall {
-            width: 600px;
-            height: 920px;
-        }
-
-
-
-        #chartCarousel {
-            width: 900px;
-            height: 550px;
-            margin: 20px;
-        }
-
-        .dv-chart-tips { border-radius: 2px; padding: 0px 3px 1px; border: 2px solid #000; background-color: #000; }
-    .dv-chart-tips .x-tip-body { background-color: #000; font-size: 13px; font-weight: normal; color: #fff; -webkit-text-stroke: 0; }
-    .dv-chart-tips .x-tip-body div { font-family: arial,sans-serif,ubuntu,consolas !important; }
-    .x-mask-msg { padding: 0; border: 0 none; background-image: none; background-color: transparent; }
-    .x-mask-msg div { background-position: 11px center; }
-    .x-mask-msg .x-mask-loading { border: 0 none;
-        background-color: #000; color: #fff; border-radius: 2px; padding: 12px 14px 12px 30px; opacity: 0.65; }
-    .x-mask { opacity: 0; }
-    </style>
+</div>
 <div class="admin-content">
 <div class="admin-content-inner">
 <div class="admin-content-main">
@@ -233,103 +196,113 @@
         });
 
         function setLinks() {
-            DV.plugin.getChart({ url: base, el: 'chartA1', id: 'UlfTKWZWV4u' });
-
-            DV.plugin.getChart({ url: base, el: 'chartA2', id: 'LW0O27b7TdD' });
-
-            DV.plugin.getChart({ url: base, el: 'chartA3', id: 'R0DVGvXDUNP' });
-
-            DV.plugin.getChart({
-                url: base,
-                el: 'chartB1',
-                type: 'stackedBar',
-                columns: [
-                    {dimension: 'de', items: [{id: 'YtbsuPPo010'}, {id: 'l6byfWFUGaP'}, {id: 's46m5MS0hxu'}]}
-                ],
-                rows: [
-                    {dimension: 'pe', items: [{id: 'LAST_12_MONTHS'}]}
-                ],
-                filters: [
-                    {dimension: 'ou', items: [{id: 'USER_ORGUNIT'}]}
-                ],
-                showData: false,
-                targetLineValue: 70,
-                baseLineValue: 20,
-                showTrendLine: true,
-                hideLegend: true,
-                title: 'My chart title',
-                domainAxisTitle: 'Periods',
-                rangeAxisTitle: 'Percent'
+            /**
+             * Antinatal
+             * */
+            DHIS.getTable({
+                "id": "sgwYc0KgE0I",
+                "el": "antenatalA1"
             });
 
-            DV.plugin.getChart({
-                url: base,
-                el: 'chartB2',
-                type: 'line',
-                columns: [
-                    {dimension: 'de', items: [{id: 'Jtf34kNZhzP'}, {id: 'cYeuwXTCPkU'}, {id: 'fbfJHSPpUQD'}, {id: 'hfdmMSPBgLG'}]}
-                ],
-                rows: [
-                    {dimension: 'pe', items: [{id: 'LAST_12_MONTHS'}]}
-                ],
-                filters: [
-                    {dimension: 'ou', items: [{id: 'USER_ORGUNIT'}]}
-                ]
+            DHIS.getMap({
+                "id": "sH8VxKeS9If",
+                "el": "antenatalA2"
             });
 
-            DV.plugin.getChart({
-                url: base,
-                el: 'chartB3',
-                type: 'area',
-                columns: [
-                    {dimension: 'de', items: [{id: 'O05mAByOgAv'}, {id: 'pikOziyCXbM'}, {id: 'vI2csg55S9C'}, {id: 'x3Do5e7g4Qo'}]}
-                ],
-                rows: [
-                    {dimension: 'pe', items: [{id: 'LAST_12_MONTHS'}]}
-                ],
-                filters: [
-                    {dimension: 'ou', items: [{id: 'USER_ORGUNIT'}]}
-                ]
+            DHIS.getChart({
+                "id": "RRLvv7ReFPd",
+                "el": "antenatalA3"
             });
-            
-            
-            DV.plugin.getChart({
-                url: base,
-                el: 'TEST',
-                type: 'pie',
-                columns: [
-                    {dimension: 'de', items: [{id: 'hfdmMSPBgLG'}]}
-                ],
-                rows: [
-                    {dimension: 'pe', items: [{id: '2015'}]}
-                ],
-                filters: [
-                    {dimension: 'ou', items: [{id: 'ImspTQPwCqd'}]}
-                ]
+            DHIS.getMap({
+                "id": "gqIrjvP3VyL",
+                "el": "antenatalA4"
+            });
+            DHIS.getChart({
+                "id": "YcVdlhgPTBS",
+                "el": "antenatalA5"
             });
 
+
+            /**
+             * Death
+             * */
+
+
+            /**
+             * human resource
+             * */
+            DHIS.getMap({
+                "id": "jkjF3z75ul5",
+                "el": "resourceA1"
+            });
+            DHIS.getTable({
+                "id": "g5GCAdLi8nu",
+                "el": "resourceA2"
+            });
+            DHIS.getMap({
+                "id": "gF5I2uQnIB8",
+                "el": "resourceA3"
+            });
+
+            /**
+             * immunisation
+             * */
         }
     </script>
     
     <div class="col-sm-12 " >
+        <div id="antenatal">
+            <ul>
+                <li><div id="antenatalA1" class="chart wide"></div></li>
+                <li><div id="antenatalA2" class="chart wide"></div></li>
+                <li><div id="antenatalA3" class="chart wide"></div></li>
+                <li><div id="antenatalA4" class="chart wide"></div></li>
+                <li><div id="antenatalA5" class="chart wide"></div></li>
+            </ul>
+
+            <p style="clear:both"></p>
+        </div>
+
+        <div id="completenes">
+            <ul>
+                <li><div id="completenesA1" class="chart wide"></div></li>
+                <li><div id="completenesA2" class="chart wide"></div></li>
+                <li><div id="completenesA3" class="chart wide"></div></li>
+            </ul>
+
+            <p style="clear:both"></p>
+        </div>
+        <div id="death">
+            <ul>
+                <li><div id="deathA1" class="chart wide"></div></li>
+                <li><div id="deathA2" class="chart wide"></div></li>
+                <li><div id="deathA3" class="chart wide"></div></li>
+            </ul>
+
+            <p style="clear:both"></p>
+        </div>
+        <div id="resource">
+            <ul>
+                <li><div id="resourceA1" class="chart wide"></div></li>
+                <li><div id="resourceA2" class="chart wide"></div></li>
+                <li><div id="resourceA3" class="chart wide"></div></li>
+            </ul>
+
+            <p style="clear:both"></p>
+        </div>
+        <div id="immunization">
+            <ul>
+                <li><div id="immunizationA1" class="chart wide"></div></li>
+                <li><div id="immunizationA2" class="chart wide"></div></li>
+                <li><div id="immunizationA3" class="chart wide"></div></li>
+            </ul>
+
+            <p style="clear:both"></p>
+        </div>
 
 
-        <ul>
-            <li><div id="chartA1" class="chart wide"></div></li>
-            <li><div id="chartA2" class="chart wide"></div></li>
-            <li><div id="chartA3" class="chart wide"></div></li>
-        </ul>
-
-        <p style="clear:both"></p>
 
 
-        <ul>
-            <li><div id="chartB1" class="chart wide"></div></li>
-            <li><div id="chartB2" class="chart wide"></div></li>
-            <li><div id="chartB3" class="chart wide"></div></li>
-        </ul>
-
-        <p style="clear:both"></p>
     </div>
 </div>
 <div class="admin-content-footer">
