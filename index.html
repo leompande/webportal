@@ -179,57 +179,16 @@ Ext.onReady( function() {
 
 function setLinks() {
 
-	GIS.plugin.getMap({
-		url: base,
-		el: 'mapA1',
-		id: 'G4dFbWXw1Nd'
-	});
-//
-//	GIS.plugin.getMap({
-//		url: base,
-//		el: "mapA1",
-//		mapViews: [{
-//			columns: [{dimension: 'dx', items: [{id: 'e5AvJDiQ7FE'}]}], // data
-//			rows: [{dimension: 'ou', items: [{id:'YtVMnut7Foe'},{id:'acZHYslyJLt'},{id:'Cpd5l15XxwA'},{id:'MAL4cfZoFhJ'},{id:'sWOWPBvwNY2'},{id:'Crkg9BoUo5w'},{id:'DWSo42hunXH'},{id:'RD96nI1JXVV'},{id:'lnOyHhoLzre'},{id:'VMgrQWSVIYn'},{id:'qg5ySBw9X5l'},{id:'vYT08q7Wo33;A3b5mw8DJYC'},{id:'Sj50oz9EHvD'},{id:'bN5q5k5DgLA'},{id:'hAFRrgDK0fy'},{id:'qarQhOt2OEh'},{id:'yyW17iCz9As'},{id:'vAtZ8a924Lx'},{id:'ZYYX8Q9SGoV'},{id:'EO3Ps3ny0Nr'},{id:'IgTAEKMqKRe'},{id:'LGTVRhKSn1V'},{id:'kZ6RlMnt2bp'},{id:'vU0Qt1A5IDz'}]}], // organisation units
-//			filters: [{dimension: 'pe', items: [{id: '2014'}]}], // period
-//			classes: 7,
-//			colorLow: '02079c',
-//			colorHigh: 'e5ecff',
-//			opacity: 0.9
-//			//legendSet: {id: 'fqs276KXCXi'}
-//		}]
-//	});
+    DHIS.getMap({
+        "id": "gqIrjvP3VyL",
+        "el": "mapA1"
+    });
 
-    GIS.plugin.getMap({
-		url: base,
-		el: "mapB1",
-		mapViews: [{
-			columns: [{dimension: 'dx', items: [{id: 'DHP2lGgo4kH'}]}], // data
-			rows: [{dimension: 'ou', items: [{id: 'LEVEL-3'}, {id: 'm0frOspS7JY'}]}], // organisation units
-			filters: [{dimension: 'pe', items: [{id: 'LAST_YEAR'}]}], // period
-			classes: 7,
-			colorLow: '02079c',
-			colorHigh: 'e5ecff',
-			opacity: 0.9
-			//legendSet: {id: 'fqs276KXCXi'}
-		}]
-	});
-//	GIS.plugin.getMap({
-//		url: base,
-//		el: "mapB1",
-//		mapViews: [{
-//			columns: [{dimension: 'in', items: [{id: 'Uvn6LCg7dVU'}]}], // data
-//			rows: [{dimension: 'ou', items: [{id: 'LEVEL-3'}, {id: 'ImspTQPwCqd'}]}], // organisation units
-//			filters: [{dimension: 'pe', items: [{id: 'LAST_3_MONTHS'}]}], // period
-//			classes: 7,
-//			colorLow: '02079c',
-//			colorHigh: 'e5ecff',
-//			opacity: 0.9
-//			//legendSet: {id: 'fqs276KXCXi'}
-//		}]
-//	});
-//
-	
+    DHIS.getMap({
+        "id": "sH8VxKeS9If",
+        "el": "mapB1"
+    });
+
 	PT.plugin.getTable({
 	  url: base,
 	  el: 'table1',
@@ -308,10 +267,10 @@ function setLinks() {
          
         </div><!-- /.property-box -->
     </div>
-table2
+
     <div class="col-sm-12 col-md-12">
         <div class="property-box">
-            <div class="property-box-image" id="table2" style="min-height:300px;overflow-y:hidden;overflow-x:scroll;"><!--border:1px solid black;width:150px;height:100px;-->
+            <div class="property-box-image" id="table2" style="height: 357px; overflow-y: scroll; overflow-x: scroll; opacity: 1;"><!--border:1px solid black;width:150px;height:100px;-->
               
             </div><!-- /.property-image -->
 
