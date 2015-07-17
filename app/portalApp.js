@@ -30,7 +30,41 @@ var portal =angular
         $scope.antenatal = true;
 
         $scope.particularDashboard = function(menu){
-            console.log(menu);
+            if(menu.indexOf("Immunization")>=0){
+                $scope.antenatal = false;
+                $scope.completenes = false;
+                $scope.death = false;
+                $scope.resource = false;
+                $scope.immunization = true;
+            }
+            if(menu.indexOf("Resource")>=0){
+                $scope.antenatal = false;
+                $scope.completenes = false;
+                $scope.death = false;
+                $scope.resource = true;
+                $scope.immunization = false;
+            }
+            if(menu.indexOf("Death")>=0){
+                $scope.antenatal = false;
+                $scope.completenes = false;
+                $scope.death = true;
+                $scope.resource = false;
+                $scope.immunization = false;
+            }
+            if(menu.indexOf("Completeness")>=0){
+                $scope.antenatal = false;
+                $scope.completenes = true;
+                $scope.death = false;
+                $scope.resource = false;
+                $scope.immunization = false;
+            }
+            if(menu.indexOf("Antenatal")>=0){
+                $scope.antenatal = true;
+                $scope.completenes = false;
+                $scope.death = false;
+                $scope.resource = false;
+                $scope.immunization = false;
+            }
         }
 
         //http://localhost:8000/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed
