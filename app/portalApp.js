@@ -136,6 +136,7 @@ portal.controller("analysisController",['$scope','$http','shared',function($scop
  * */
 portal.controller("dashboardController",['$scope','$http','shared',function($scope,$http){
     $scope.page = "antenatal";
+    console.log($scope.page);
 }]);
 
 
