@@ -135,7 +135,7 @@ portal.controller("analysisController",['$scope','$http','shared',function($scop
  * THE BEGINNING OF DASHBOARDS CONTROLLER FUNCTION
  * */
 portal.controller("dashboardController",['$scope','$http','shared',function($scope,$http){
-    $scope.page = "antenatal";
+    $scope.antenatal = true;
     console.log($scope.page);
     console.log($scope.dashboards);
 }]);
