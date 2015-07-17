@@ -194,10 +194,9 @@
 <div class="row">
         <script>
             $("#Vlw8KFHG4cV").parent("li").addClass("active");
-            console.log($("#Vlw8KFHG4cV").parent("li"));
-        var base = 'http://hrhis.moh.go.tz:9090/';
+            var base = 'http://hrhis.moh.go.tz:9090/';
 
-        Ext.onReady( function() {
+            Ext.onReady( function() {
             Ext.Ajax.request({
                 url: base + "dhis-web-commons-security/login.action?authOnly=true",
                 method: 'POST',
@@ -206,7 +205,7 @@
             });
         });
 
-        function setLinks() {
+            function setLinks() {
             /**
              * Antinatal
              * */

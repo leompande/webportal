@@ -8721,7 +8721,7 @@ button.btn, button.btn-secondary {
   position: relative; }
   .property-box-image:before {
     color: rgba(0, 0, 0, 0.2);
-    content: "";
+    /*content: "";*/
     display: block;
     font-family: 'FontAwesome';
     font-size: 50px;
