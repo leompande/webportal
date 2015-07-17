@@ -30,10 +30,11 @@ var portal =angular
         $scope.antenatal = true;
 
         $scope.particularDashboard = function(menu,id){
-            angular.element(".dashboard_menus").removeClass("active");
-            var link = angular.element("#"+id);
+            var el = document.body.querySelector("li");
+
+            angular.element(".dashboard_menus").parent().removeClass("active");
+            var link = angular.element("#"+id).parent();
             link.addClass("active");
-            console.log(link.attr("class"));
             if(menu.indexOf("Immunization")>=0){
 
                 $scope.antenatal = false;
