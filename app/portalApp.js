@@ -27,6 +27,10 @@ var portal =angular
 
         $scope.dashboards();
 
+        $scope.antenatal = true;
+        console.log($scope.page);
+        console.log($scope.dashboards);
+
         //http://localhost:8000/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed
     }]);
 /**
@@ -135,9 +139,7 @@ portal.controller("analysisController",['$scope','$http','shared',function($scop
  * THE BEGINNING OF DASHBOARDS CONTROLLER FUNCTION
  * */
 portal.controller("dashboardController",['$scope','$http','shared',function($scope,$http){
-    $scope.antenatal = true;
-    console.log($scope.page);
-    console.log($scope.dashboards);
+
 }]);
 
 
