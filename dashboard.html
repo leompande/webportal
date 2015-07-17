@@ -176,7 +176,7 @@
             <ul class="menu">
 
                 <li ng-repeat="dashboard in dashboards" class="">
-                    <a href="#" ng-click="particularDashboard(dashboard.name)" class="dashboard_menus">
+                    <a href="#" ng-click="particularDashboard(dashboard.name,dashboard.id)" class="dashboard_menus" id="dashboard.id">
                         <strong><i class="fa fa-dashboard"></i></strong>
                         <span>{{dashboard.name}}</span>
                     </a>

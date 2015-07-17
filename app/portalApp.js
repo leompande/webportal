@@ -29,8 +29,11 @@ var portal =angular
 
         $scope.antenatal = true;
 
-        $scope.particularDashboard = function(menu){
+        $scope.particularDashboard = function(menu,id){
+            $(".dashboard_menus").removeClass("active");
+            $("#"+id).addClass("active");
             if(menu.indexOf("Immunization")>=0){
+
                 $scope.antenatal = false;
                 $scope.completenes = false;
                 $scope.death = false;
