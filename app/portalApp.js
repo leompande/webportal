@@ -22,7 +22,7 @@ var portal =angular
                 function(data) {
                     $scope.dashboards = data.dashboards;
                     console.log($scope.dashboards);
-                    angular.element("#Vlw8KFHG4cV").parent().addClass("active");
+
                 });
         };
 
