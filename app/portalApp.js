@@ -29,6 +29,7 @@ var portal =angular
 
         $scope.antenatal = true;
         angular.element("#Vlw8KFHG4cV").parent().addClass("active");
+        console.log(angular.element("#Vlw8KFHG4cV").parent());
         $scope.particularDashboard = function(menu,id){
             var el = document.body.querySelector("li");
 
