@@ -72,6 +72,128 @@
 
     <script type="text/javascript" src="app/portalApp.js"></script>
     <title> Dashboard - Web Portal | HMIS </title>
+
+    <!-- START IMPORT-->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="//dhis2-cdn.org/v217/ext/resources/css/ext-plugin-gray.css">
+    <script src="//dhis2-cdn.org/v217/ext/ext-all.js"></script>
+    <script src="//maps.google.com/maps/api/js?sensor=false"></script><script src="https://maps.gstatic.com/maps-api-v3/api/js/21/6/main.js"></script>
+    <script src="//dhis2-cdn.org/v217/openlayers/OpenLayers.js"></script>
+    <script src="//dhis2-cdn.org/v217/plugin/map.js"></script>
+
+    <!-- Custom CSS -->
+
+    <style type="text/css">
+
+        li {
+            float: left;
+        }
+
+        .map {
+            border: 0;
+            margin: 10px;
+        }
+        .map.wide {
+            width: 900px;
+            height: 500px;
+        }
+
+
+    </style>
+    <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/21/6/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/21/6/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/21/6/stats.js"></script><script type="text/javascript" src="https://apps.dhis2.org/demo/dhis-web-commons/javascripts/jQuery/jquery.min.js"></script><script type="text/javascript" src="https://apps.dhis2.org/demo/dhis-web-commons/javascripts/dhis2/dhis2.util.js"></script><script type="text/javascript" src="https://apps.dhis2.org/demo/dhis-web-commons/javascripts/dhis2/dhis2.storage.js"></script><script type="text/javascript" src="https://apps.dhis2.org/demo/dhis-web-commons/javascripts/dhis2/dhis2.storage.idb.js"></script><script type="text/javascript" src="https://apps.dhis2.org/demo/dhis-web-commons/javascripts/dhis2/dhis2.storage.ss.js"></script><script type="text/javascript" src="https://apps.dhis2.org/demo/dhis-web-commons/javascripts/dhis2/dhis2.storage.memory.js"></script><style type="text/css">.gis-plugin, .gis-plugin * { font-family: arial, sans-serif, liberation sans, consolas; }
+.x-panel-body, .x-window-body * { font-size: 11px; }
+.x-panel-header { height: 30px; padding: 7px 4px 4px 7px; border: 0 none; }
+.gis-container-default .x-window-body { padding: 5px; background: #fff; }
+.olControlPanel { position: absolute; top: 0; right: 0; border: 0 none; }
+.olControlButtonItemActive { background: #556; color: #fff; width: 24px; height: 24px; opacity: 0.75; filter: alpha(opacity=75); -ms-filter: "alpha(opacity=75)"; cursor: pointer; cursor: hand; text-align: center; font-size: 21px !important; text-shadow: 0 0 1px #ddd; }
+.olControlPanel.zoomIn { right: 72px; }
+.olControlPanel.zoomIn .olControlButtonItemActive { border-bottom-left-radius: 2px; }
+.olControlPanel.zoomOut { right: 48px; }
+.olControlPanel.zoomVisible { right: 24px; }
+.olControlPermalink { display: none !important; }
+.olControlMousePosition { background: #fff !important; opacity: 0.8 !important; filter: alpha(opacity=80) !important; -ms-filter: "alpha(opacity=80)" !important; right: 0 !important; bottom: 0 !important; border-top-left-radius: 2px !important; padding: 2px 2px 2px 5px !important; color: #000 !important; -webkit-text-stroke-width: 0.2px; -webkit-text-stroke-color: #555; }
+.olControlMousePosition * { font-size: 10px !important; }
+.text-mouseposition-lonlat { color: #555; }
+.olLayerGoogleCopyright, .olLayerGoogleV3.olLayerGooglePoweredBy { display: none; }
+#google-logo { background: url("https://apps.dhis2.org/demo/dhis-web-mapping/images/google-logo.png") no-repeat; width: 40px; height: 13px; margin-left: 6px; display: inline-block; vertical-align: bottom; cursor: pointer; cursor: hand; }
+.olControlScaleLine { left: 5px !important; bottom: 5px !important; }
+.olControlScaleLineBottom { display: none; }
+.olControlScaleLineTop { font-weight: bold; }
+.x-mask-msg { padding: 0; border: 0 none; background-image: none; background-color: transparent; }
+.x-mask-msg div { background-position: 11px center; }
+.x-mask-msg .x-mask-loading { border: 0 none; background-color: #000; color: #fff; border-radius: 2px; padding: 12px 14px 12px 30px; opacity: 0.65; }
+.gis-window-widget-feature { padding: 0; border: 0 none; border-radius: 0; background: transparent; box-shadow: none; }
+.gis-window-widget-feature .x-window-body-default { border: 0 none; background: transparent; }
+.gis-window-widget-feature .x-window-body-default .x-panel-body-default { border: 0 none; background: #556; opacity: 0.92; filter: alpha(opacity=92); -ms-filter: "alpha(opacity=92)"; padding: 5px 8px 5px 8px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; color: #fff; font-weight: bold; letter-spacing: 1px; }
+.x-menu-body { border:1px solid #bbb; border-radius: 2px; padding: 0; background-color: #fff !important; }
+.x-menu-item-active .x-menu-item-link {	border-radius: 0; border-color: #e1e1e1; background-color: #e1e1e1; background-image: none; }
+.x-menu-item-link { padding: 4px 5px 4px 26px; }
+.x-menu-item-text { color: #111; }
+.disabled { opacity: 0.4; cursor: default !important; }
+.el-opacity-1 { opacity: 1 !important; }
+.el-border-0, .el-border-0 .x-panel-body { border: 0 none !important; }
+.el-fontsize-10 { font-size: 10px !important; }
+.gis-grid-row-icon-disabled * { cursor: default !important; }
+.gis-toolbar-btn-menu { margin-top: 4px; }
+.gis-toolbar-btn-menu .x-panel-body-default { border-radius: 2px; border-color: #999; }
+.gis-grid .link, .gis-grid .link * { cursor: pointer; cursor: hand; color: blue; text-decoration: underline; }
+.gis-menu-item-icon-drill, .gis-menu-item-icon-float { left: 6px; }
+.gis-menu-item-first.x-menu-item-active .x-menu-item-link {	border-radius: 0; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+.gis-menu-item-last.x-menu-item-active .x-menu-item-link { border-radius: 0; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; }
+.gis-menu-item-icon-drill {
+    background: url("https://apps.dhis2.org/demo/dhis-web-mapping/images/drill_16.png") no-repeat; }
+.gis-menu-item-icon-float { background: url("https://apps.dhis2.org/demo/dhis-web-mapping/images/float_16.png") no-repeat; }
+.x-color-picker a { padding: 0; }
+.x-color-picker em span { width: 14px; height: 14px; }
+</style><link rel="stylesheet" type="text/css" href="//dhis2-cdn.org/v217/openlayers/theme/default/style.css"><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/21/6/map.js"></script><style type="text/css">.gis-plugin, .gis-plugin * { font-family: arial, sans-serif, liberation sans, consolas; }
+.x-panel-body, .x-window-body * { font-size: 11px; }
+.x-panel-header { height: 30px; padding: 7px 4px 4px 7px; border: 0 none; }
+.gis-container-default .x-window-body { padding: 5px; background: #fff; }
+.olControlPanel { position: absolute; top: 0; right: 0; border: 0 none; }
+.olControlButtonItemActive { background: #556; color: #fff; width: 24px; height: 24px; opacity: 0.75; filter: alpha(opacity=75); -ms-filter: "alpha(opacity=75)"; cursor: pointer; cursor: hand; text-align: center; font-size: 21px !important; text-shadow: 0 0 1px #ddd; }
+.olControlPanel.zoomIn { right: 72px; }
+.olControlPanel.zoomIn .olControlButtonItemActive { border-bottom-left-radius: 2px; }
+.olControlPanel.zoomOut { right: 48px; }
+.olControlPanel.zoomVisible { right: 24px; }
+.olControlPermalink { display: none !important; }
+.olControlMousePosition { background: #fff !important; opacity: 0.8 !important; filter: alpha(opacity=80) !important; -ms-filter: "alpha(opacity=80)" !important; right: 0 !important; bottom: 0 !important; border-top-left-radius: 2px !important; padding: 2px 2px 2px 5px !important; color: #000 !important; -webkit-text-stroke-width: 0.2px; -webkit-text-stroke-color: #555; }
+.olControlMousePosition * { font-size: 10px !important; }
+.text-mouseposition-lonlat { color: #555; }
+.olLayerGoogleCopyright, .olLayerGoogleV3.olLayerGooglePoweredBy { display: none; }
+#google-logo { background: url("https://apps.dhis2.org/demo/dhis-web-mapping/images/google-logo.png") no-repeat; width: 40px; height: 13px; margin-left: 6px; display: inline-block; vertical-align: bottom; cursor: pointer; cursor: hand; }
+.olControlScaleLine { left: 5px !important; bottom: 5px !important; }
+.olControlScaleLineBottom { display: none; }
+.olControlScaleLineTop { font-weight: bold; }
+.x-mask-msg { padding: 0; border: 0 none; background-image: none; background-color: transparent; }
+.x-mask-msg div { background-position: 11px center; }
+.x-mask-msg .x-mask-loading { border: 0 none; background-color: #000; color: #fff; border-radius: 2px; padding: 12px 14px 12px 30px; opacity: 0.65; }
+.gis-window-widget-feature { padding: 0; border: 0 none; border-radius: 0; background: transparent; box-shadow: none; }
+.gis-window-widget-feature .x-window-body-default { border: 0 none; background: transparent; }
+.gis-window-widget-feature .x-window-body-default .x-panel-body-default { border: 0 none; background: #556; opacity: 0.92; filter: alpha(opacity=92); -ms-filter: "alpha(opacity=92)"; padding: 5px 8px 5px 8px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; color: #fff; font-weight: bold; letter-spacing: 1px; }
+.x-menu-body { border:1px solid #bbb; border-radius: 2px; padding: 0; background-color: #fff !important; }
+.x-menu-item-active .x-menu-item-link {	border-radius: 0; border-color: #e1e1e1; background-color: #e1e1e1; background-image: none; }
+.x-menu-item-link { padding: 4px 5px 4px 26px; }
+.x-menu-item-text { color: #111; }
+.disabled { opacity: 0.4; cursor: default !important; }
+.el-opacity-1 { opacity: 1 !important; }
+.el-border-0, .el-border-0 .x-panel-body { border: 0 none !important; }
+.el-fontsize-10 { font-size: 10px !important; }
+.gis-grid-row-icon-disabled * { cursor: default !important; }
+.gis-toolbar-btn-menu { margin-top: 4px; }
+.gis-toolbar-btn-menu .x-panel-body-default { border-radius: 2px; border-color: #999; }
+.gis-grid .link, .gis-grid .link * { cursor: pointer; cursor: hand; color: blue; text-decoration: underline; }
+.gis-menu-item-icon-drill, .gis-menu-item-icon-float { left: 6px; }
+.gis-menu-item-first.x-menu-item-active .x-menu-item-link {	border-radius: 0; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+.gis-menu-item-last.x-menu-item-active .x-menu-item-link { border-radius: 0; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; }
+.gis-menu-item-icon-drill {
+    background: url("https://apps.dhis2.org/demo/dhis-web-mapping/images/drill_16.png") no-repeat; }
+.gis-menu-item-icon-float { background: url("https://apps.dhis2.org/demo/dhis-web-mapping/images/float_16.png") no-repeat; }
+.x-color-picker a { padding: 0; }
+.x-color-picker em span { width: 14px; height: 14px; }
+</style><link rel="stylesheet" type="text/css" href="//dhis2-cdn.org/v217/openlayers/theme/default/style.css"><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/21/6/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.gstatic.com/maps-api-v3/api/js/21/6/controls.js"></script></head>
+    <!-- END OF IMPORT-->
 </head>
 
 
