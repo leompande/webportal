@@ -73,6 +73,7 @@ var portal =angular
                 $scope.immunization = false;
             }
         }
+        $scope.particularDashboard("Antenatal Care","Vlw8KFHG4cV");
 
         //http://localhost:8000/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed
     }]);
