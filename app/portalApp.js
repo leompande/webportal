@@ -32,6 +32,7 @@ var portal =angular
         console.log($scope.dashboards);
 
         var links = angular.element($("a.dashboard_menus"));
+        console.log(links);
         links.bind("click",function(){
             console.log(links);
         });
