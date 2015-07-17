@@ -135,34 +135,7 @@ portal.controller("analysisController",['$scope','$http','shared',function($scop
  * THE BEGINNING OF DASHBOARDS CONTROLLER FUNCTION
  * */
 portal.controller("dashboardController",['$scope','$http','shared',function($scope,$http){
-
-
-    $scope.particularDashboard = function(dashboardId){
-        //console.log(dashboardId);
-        Ext.onReady( function() {
-            Ext.Ajax.request({
-                url: base + "dhis-web-commons-security/login.action?authOnly=true",
-                method: 'POST',
-                params: { j_username: "portal", j_password: "Portal123" },
-                success: setLinks
-            });
-        });
-
-        function setLinks(data) {
-            var url = "portal-module/"+dashboardId+".json";
-            $http({
-                method: 'GET',
-                url: url
-            }).success(
-                function(data) {
-                    $scope.dashboardItems = data.dashboardItems;
-                });
-        }
-
-
-
-    }
-
+    $scope.page = "antenatal";
 }]);
 
 
