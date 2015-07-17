@@ -4,10 +4,10 @@ $(window).load(function() {
     /**
      * Isotope
      */
-    var isotope_properties = $('.properties-isotope');
-    isotope_properties.isotope({
-        'itemSelector': '.item'
-    });
+    //var isotope_properties = $('.properties-isotope');
+    //isotope_properties.isotope({
+    //    'itemSelector': '.item'
+    //});
 
     $('.properties-filter a').click(function() {
         $(this).parent().parent().find('li').removeClass('selected');
