@@ -154,7 +154,7 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','shared', funct
             feat: {}
             ,facility:shared.facility
         });
-        var url = 'https://dhis.moh.go.tz/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed'
+        //var url = 'https://dhis.moh.go.tz/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed'
 
     })();
     /**
