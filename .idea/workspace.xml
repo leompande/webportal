@@ -57,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="portalApp.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="portalApp.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/portalApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.24" vertical-offset="449" max-vertical-offset="2340">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.3318078" vertical-offset="449" max-vertical-offset="2340">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding>
                 <element signature="e#3130#3189#0" expanded="false" />
                 <element signature="e#3227#5602#0" expanded="false" />
@@ -71,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51707315" vertical-offset="2578" max-vertical-offset="3636">
+            <state vertical-scroll-proportion="-4.076923" vertical-offset="2578" max-vertical-offset="3636">
               <caret line="178" column="136" selection-start-line="178" selection-start-column="136" selection-end-line="178" selection-end-column="136" />
               <folding>
                 <element signature="tag#style#0;tag#html#0" expanded="false" />
@@ -831,18 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/portalApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.24" vertical-offset="449" max-vertical-offset="2340">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <element signature="e#3130#3189#0" expanded="false" />
-            <element signature="e#3227#5602#0" expanded="false" />
-            <element signature="e#5637#5821#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7692308" vertical-offset="810" max-vertical-offset="7272">
@@ -860,7 +848,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51707315" vertical-offset="2578" max-vertical-offset="3636">
+        <state vertical-scroll-proportion="-4.076923" vertical-offset="2578" max-vertical-offset="3636">
           <caret line="178" column="136" selection-start-line="178" selection-start-column="136" selection-end-line="178" selection-end-column="136" />
           <folding>
             <element signature="tag#style#0;tag#html#0" expanded="false" />
@@ -873,6 +861,18 @@
             <element signature="n#style#0;n#p#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/portalApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3318078" vertical-offset="449" max-vertical-offset="2340">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#3130#3189#0" expanded="false" />
+            <element signature="e#3227#5602#0" expanded="false" />
+            <element signature="e#5637#5821#0" expanded="false" />
           </folding>
         </state>
       </provider>

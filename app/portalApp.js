@@ -30,7 +30,7 @@ var portal =angular
         $scope.antenatal = true;
 
         $scope.particularDashboard = function(menu,id){
-            $(".dashboard_menus").removeClass("active");
+            angular.element(".dashboard_menus").removeClass("active");
             var link = angular.element("#"+id);
             link.addClass("active");
             console.log(link.attr("class"));
