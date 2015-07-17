@@ -28,16 +28,9 @@ var portal =angular
         $scope.dashboards();
 
         $scope.antenatal = true;
-        console.log($scope.page);
-        console.log($scope.dashboards);
 
-        var links = angular.element($("a.dashboard_menus"));
-        console.log(links);
-        links.on("click",function(){
-            console.log(links);
-        });
-        $scope.changeDashbord = function(){
-
+        $scope.particularDashboard = function(menu){
+            console.log(menu);
         }
 
         //http://localhost:8000/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed
