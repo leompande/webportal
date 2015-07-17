@@ -31,6 +31,14 @@ var portal =angular
         console.log($scope.page);
         console.log($scope.dashboards);
 
+        var links = angular.element($("a.dashboard_menus"));
+        links.bind("click",function(){
+            console.log(links);
+        });
+        $scope.changeDashbord = function(){
+
+        }
+
         //http://localhost:8000/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed
     }]);
 /**
