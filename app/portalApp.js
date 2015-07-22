@@ -82,8 +82,25 @@ var portal =angular
  * */
 portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','shared', function($scope, $http, olData,olHelpers,shared) {
 
+
 /// indicators URL
-    var Indicators = {anc_12:'TRoamv0YPt3',anc_fisrt:'oazOp512ShT',inst:'bzTuXoKa87E',post:'S0cn3ephUSs'};
+    var Indicators = {
+        anc_12:'TRoamv0YPt3',
+        anc_fisrt:'QiA9L6tNHFy',
+        inst:'bzTuXoKa87E',
+        post:'S0cn3ephUSs',
+        measle:'wM0Lz10TaMU',
+        penta3:'U10A7hLOxgq',
+        vitaminA:'j1mwtqSyifi',
+        child:'uOOJi6b0pzm',
+        cervical:'oBTUbnPkrMT'
+        //,
+        //doctor:'',
+        //nurse:'',
+        //complete:''
+
+    };
+
     var ANIC_Before_12_weeks_URL = "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:TRoamv0YPt3&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
     var ANC_first_visit_URL = "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:oazOp512ShT&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
     var Institutional_delivery_URL = "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:bzTuXoKa87E&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
