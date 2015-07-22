@@ -11,7 +11,8 @@ var portal =angular
  * */
     .controller("portalController",['$scope','$http','shared',function($scope,$http,shared){
 
-        var url = "portal-module/dashboards.json";
+        var url = "http://hrhis.moh.go.tz:9090/api/dashboards.json?paging=false";
+        //var url = "https://dhis.moh.go.tz/api/dashboards.json?paging=false";
         $scope.dashboards = null;
         $scope.dashboards = function(){
             $http({
@@ -21,10 +22,58 @@ var portal =angular
                 function(data) {
                     $scope.dashboards = data.dashboards;
                     console.log($scope.dashboards);
+
                 });
         };
 
         $scope.dashboards();
+
+        $scope.antenatal = true;
+
+        $scope.particularDashboard = function(menu,id){
+            var el = document.body.querySelector("li");
+
+            angular.element(".dashboard_menus").parent().removeClass("active");
+            var link = angular.element("#"+id).parent();
+            link.addClass("active");
+            if(menu.indexOf("Immunization")>=0){
+
+                $scope.antenatal = false;
+                $scope.completenes = false;
+                $scope.death = false;
+                $scope.resource = false;
+                $scope.immunization = true;
+            }
+            if(menu.indexOf("Resource")>=0){
+                $scope.antenatal = false;
+                $scope.completenes = false;
+                $scope.death = false;
+                $scope.resource = true;
+                $scope.immunization = false;
+            }
+            if(menu.indexOf("Death")>=0){
+                $scope.antenatal = false;
+                $scope.completenes = false;
+                $scope.death = true;
+                $scope.resource = false;
+                $scope.immunization = false;
+            }
+            if(menu.indexOf("Completeness")>=0){
+                $scope.antenatal = false;
+                $scope.completenes = true;
+                $scope.death = false;
+                $scope.resource = false;
+                $scope.immunization = false;
+            }
+            if(menu.indexOf("Antenatal")>=0){
+                $scope.antenatal = true;
+                $scope.completenes = false;
+                $scope.death = false;
+                $scope.resource = false;
+                $scope.immunization = false;
+            }
+        }
+        $scope.particularDashboard("Antenatal Care","Vlw8KFHG4cV");
 
         //http://localhost:8000/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed
     }]);
@@ -386,33 +435,6 @@ portal.controller("analysisController",['$scope','$http','shared',function($scop
  * THE BEGINNING OF DASHBOARDS CONTROLLER FUNCTION
  * */
 portal.controller("dashboardController",['$scope','$http','shared',function($scope,$http){
-
-
-    $scope.particularDashboard = function(dashboardId){
-        //console.log(dashboardId);
-        Ext.onReady( function() {
-            Ext.Ajax.request({
-                url: base + "dhis-web-commons-security/login.action?authOnly=true",
-                method: 'POST',
-                params: { j_username: "portal", j_password: "Portal123" },
-                success: setLinks
-            });
-        });
-
-        function setLinks(data) {
-            var url = "portal-module/"+dashboardId+".json";
-            $http({
-                method: 'GET',
-                url: url
-            }).success(
-                function(data) {
-                    $scope.dashboardItems = data.dashboardItems;
-                });
-        }
-
-
-
-    }
 
 }]);
 
