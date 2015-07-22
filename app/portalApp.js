@@ -100,86 +100,6 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
     /**
      * THE BEGINNING OF THE FUNCTION THAT HANDLES HOME PAGE FUNCTIONALITY OF MAP
      * */
-    //(function(){
-    //    $scope.shared = shared;
-    //    shared.facility =3029;
-    //    var url = 'portal-module/geoFeatures.json';
-    //    var url1 = 'https://dhis.moh.go.tz/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed';
-    //    $http({
-    //        method: 'GET',
-    //        url: url
-    //    }).success(
-    //        function(data) {
-    //            var features = [];
-    //            shared.facility = data.length;
-    //            angular.forEach(data, function (value, index) {
-    //                var feat={
-    //                    type: "Feature",
-    //                    geometry: {
-    //                        type: "Point",
-    //                        coordinates:JSON.parse(value.co)
-    //                    },
-    //                    properties: {
-    //                        name: value.na,
-    //                        radius: 2.5,
-    //                        image:"",
-    //                        color: "green"
-    //                    }
-    //                };
-    //                features.push(feat);
-    //            });
-    //            $scope.feat = {
-    //                source: {
-    //                    type: 'GeoJSON',
-    //                    geojson: {
-    //                        object:{
-    //                            type: "FeatureCollection",
-    //                            features: features
-    //                        },
-    //                        projection: 'EPSG:3857'
-    //                    }
-    //                },
-    //                style: (function() {
-    //                    var someStyle = [new ol.style.Style({
-    //                        fill: new ol.style.Fill({
-    //                            color: 'blue'
-    //                        }),
-    //                        stroke: new ol.style.Stroke({
-    //                            color: 'olive',
-    //                            width: 1
-    //                        })
-    //                    })];
-    //                    var otherStyle = function(r,c){ return [new ol.style.Style({
-    //                        image: new ol.style.Circle({
-    //                            radius: r,
-    //                            fill: new ol.style.Fill({
-    //                                color: c
-    //                            })
-    //                        })
-    //                    })]};
-    //                    return function(feature, resolution) {
-    //                        if (feature.get('class') === "someClass") {
-    //                            return someStyle;
-    //                        } else {
-    //                            return otherStyle(feature.get('radius'), feature.get('color'));
-    //                        }
-    //                    };
-    //                }())
-    //            }
-    //        });
-    //
-    //    angular.extend($scope, {
-    //        Africa: {
-    //            lat: -6.45,
-    //            lon: 35,
-    //            zoom: 6
-    //        },
-    //        feat: {}
-    //        ,facility:shared.facility
-    //    });
-    //    var url = 'https://dhis.moh.go.tz/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed'
-    //
-    //})();
 
     (function(){
         $scope.shared = shared;
@@ -202,6 +122,9 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
                     "features":[]
                 };
                 var districtProperties = [];
+
+                var dateObject = new Date();
+                $scope.thisyear = dateObject.getFullYear();
                 $scope.districts = {};
                 $scope.DistrictFreeObject = [];
                 angular.forEach(data.features, function (value, index) {
@@ -212,6 +135,7 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
                     // prepare objects of district for properties to display on tooltip
                     districtProperties[value.id] = {
                         district_id:value.id,
+                        year:$scope.thisyear,
                         name:value.properties.name,
                         "color":hue,
                         "facility":Math.floor(Math.random() * 256),
@@ -338,12 +262,12 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
                             if(feature) {
                                 // looping throught indicator types
                                 angular.forEach(Indicators,function(value,index){
-                                    console.log(index);
+
 
                                     $http({
                                         method: 'GET',
-                                        //url: "https://dhis.moh.go.tz/api/analytics.json?dimension=dx:"+value+"&dimension=pe:2014&filter=ou:"+$scope.id+"&displayProperty=NAME",
-                                        url:"portal-module/testIndicatorType.json",
+                                        url: "https://dhis.moh.go.tz/api/analytics.json?dimension=dx:"+value+"&dimension=pe:"+$scope.thisyear+"&filter=ou:"+feature.getId()+"&displayProperty=NAME",
+                                        //url:"portal-module/testIndicatorType.json",
                                         dataType: "json",
                                         cache: true,
                                         ifModified: true
@@ -359,7 +283,6 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
                                         });
                                 });
                                 scope.selectedDistrict = feature ? $scope.districts[feature.getId()] : '';
-                                console.log(scope.selectedDistrict);
                             }
                         });
 
