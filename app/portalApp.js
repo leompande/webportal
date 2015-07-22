@@ -291,11 +291,13 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
                                     }).success(
                                         function(data) {
                                             var currentDistrict = $scope.districts[feature.getId()];
+                                            if(data.rows[0]){
+                                                if(value==data.rows[0][0]){
 
-                                            if(value==data.rows[0][0]){
-
-                                                currentDistrict[index] = data.rows[0][2];
+                                                    currentDistrict[index] = data.rows[0][2];
+                                                }
                                             }
+
                                             $scope.districts[feature.getId()] = currentDistrict;
                                         });
                                 });
