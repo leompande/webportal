@@ -80,7 +80,7 @@ var portal =angular
 /**
  * THE BEGINNING OF MAP CONTROLLER FUNCTION
  * */
-portal.controller("mapController", [ '$scope', '$http', 'olData','shared', function($scope, $http, olData,shared) {
+portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','shared', function($scope, $http, olData,olHelpers,shared) {
 
 /// indicators URL
     var Indicators = {anc_12:'TRoamv0YPt3',anc_fisrt:'oazOp512ShT',inst:'bzTuXoKa87E',post:'S0cn3ephUSs'};
