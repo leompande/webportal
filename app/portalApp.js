@@ -84,10 +84,10 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
 
 /// indicators URL
     var Indicators = {anc_12:'TRoamv0YPt3',anc_fisrt:'oazOp512ShT',inst:'bzTuXoKa87E',post:'S0cn3ephUSs'};
-    var ANIC_Before_12_weeks_URL = "https://dhis.moh.go.tz/api/analytics.json?dimension=dx:TRoamv0YPt3&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
-    var ANC_first_visit_URL = "https://dhis.moh.go.tz/api/analytics.json?dimension=dx:oazOp512ShT&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
-    var Institutional_delivery_URL = "https://dhis.moh.go.tz/api/analytics.json?dimension=dx:bzTuXoKa87E&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
-    var Postinatal_care_URL = "https://dhis.moh.go.tz/api/analytics.json?dimension=dx:S0cn3ephUSs&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
+    var ANIC_Before_12_weeks_URL = "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:TRoamv0YPt3&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
+    var ANC_first_visit_URL = "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:oazOp512ShT&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
+    var Institutional_delivery_URL = "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:bzTuXoKa87E&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
+    var Postinatal_care_URL = "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:S0cn3ephUSs&dimension=pe:2014&filter=ou:lgZ6HfZaj3f&displayProperty=NAME";
     var Measles_vaccination_less_than_12_URL = "";
     var Penta_3_URL = "";
     var Vitamin_A_URL = "";
@@ -104,10 +104,10 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
     (function(){
         $scope.shared = shared;
         shared.facility =3029;
-        var pullDistricts = 'https://dhis.moh.go.tz/api/organisationUnits.json?fields=id,name&level=3';
+        var pullDistricts = 'http://hrhis.moh.go.tz:9090//api/organisationUnits.json?fields=id,name&level=3';
         //var url = 'portal-module/geoFeatures.json';
         var url = 'portal-module/organisationUnits.geojson';
-        var url1 = 'https://dhis.moh.go.tz/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed';
+        var url1 = 'http://hrhis.moh.go.tz:9090/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed';
 
         $http({
             method: 'GET',
@@ -266,7 +266,7 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
 
                                     $http({
                                         method: 'GET',
-                                        url: "https://dhis.moh.go.tz/api/analytics.json?dimension=dx:"+value+"&dimension=pe:"+$scope.thisyear+"&filter=ou:"+feature.getId()+"&displayProperty=NAME",
+                                        url: "http://hrhis.moh.go.tz:9090/api/analytics.json?dimension=dx:"+value+"&dimension=pe:"+$scope.thisyear+"&filter=ou:"+feature.getId()+"&displayProperty=NAME",
                                         //url:"portal-module/testIndicatorType.json",
                                         dataType: "json",
                                         cache: true,
