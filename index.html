@@ -75,6 +75,54 @@
     <title>  Web Portal | HMIS </title>
 </head>
 
+<style>
+    html, body {
+        height: 98.5%;
+    }
+    .info {
+        background-color: #fff;
+        border: 2px #444 solid;
+        border-radius: 7px;
+        -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+        color: #111;
+        font-size: 13px;
+        position: absolute;
+        bottom: 15em;
+        left: 75em;
+        z-index: 100;
+        font-weight: bold;
+        padding: .2em .5em;
+        white-space: nowrap;
+        line-height: 1.1em;
+        text-align: center;
+        z-index: 100;
+    }
+    .info:before {
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        content: "";
+        border-right: 6px solid black;
+        border-right-color: inherit;
+        position: absolute;
+        left: -8px;
+        top: 20px;
+    }
+
+    tr td{
+        text-align:center;
+        padding:2px;
+    }
+
+    tr td b{
+        text-align:right!important;
+    }
+
+    td.header_style{
+        text-align: left;
+    }
+</style>
 <body ng-app="portalApp">
 
 <div class="page-wrapper" ng-controller="portalController">
@@ -152,11 +200,58 @@
     
     <div class="main">
     <div id="maps" class="maps" ng-controller="mapController" style="width: 100%; height: 500px!important;" >
-
-        <openlayers ol-center="Africa" height="500px" >
-            <ol-layer ol-layer-properties="feat"></ol-layer>
-            <ol-marker name="Tanzania"  lat="-2" lon="42.5" message=" <i class='fa fa-circle alert-success'></i> Over {{facility}} health facilities in Tanzania "></ol-marker>
+        <openlayers ol-center="Africa" ol-defaults="defaults" custom-layers="true"  height="400px">
+            <ol-layer ol-layer-properties="layer" name="test" ng-repeat="layer in layers"></ol-layer>
         </openlayers>
+
+        <!--<div id="countrybox" class="info country f32">-->
+        <!--<div ng-show="selectedCountry" class="flag" ng-class="selectedCountry['alpha-2']|lowercase"></div>-->
+        <!--{{ selectedCountry.name || 'No country'}}-->
+        <!--</div>-->
+
+        <div id="districtbox" ng-if="selectedDistrict" class="info district f32">
+            <table >
+                <caption class="invoice-header" style="text-align: center">{{selectedDistrict.name}}</caption>
+                <thead></thead>
+                <tbody>
+                <tr>
+                    <td class="header_style"><b>ANC before 12 weeks: </b></td><td>{{selectedDistrict.anc_12}}</td>
+                </tr>
+                <td class="header_style"><b>ANC 4th Visit: </b></td><td>{{selectedDistrict.anc_fisrt}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Postnatal Care within 7 days: </b></td><td>{{selectedDistrict.post}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Measles Vaccination < 1 yr : </b></td><td>{{selectedDistrict.measle}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Child Under weight: </b></td><td>{{selectedDistrict.child}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Penta 3 < 1 yr: </b></td><td>{{selectedDistrict.penta3}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Cervical Cancer screening: </b></td><td>{{selectedDistrict.cervical}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Institutional Delivery: </b></td><td>{{selectedDistrict.inst}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Doctors & AMOs per 10,000 people: </b></td><td>{{selectedDistrict.doctor}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Nurse & Midwives per 10,000: </b></td><td>{{selectedDistrict.nurse}}</td>
+                </tr>
+                <tr>
+                    <td class="header_style"><b>Completeness: </b></td><td>{{selectedDistrict.complete}}</td>
+                </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+
     </div><!-- /.map -->
 
 
