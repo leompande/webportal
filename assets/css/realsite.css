@@ -73,9 +73,9 @@ audio:not([controls]) {
   display: none;
   height: 0; }
 
-/*[hidden],*/
-/*template {*/
-/*  display: none; }*/
+[hidden],
+template {
+  display: none; }
 
 a {
   background-color: transparent; }
@@ -6427,7 +6427,8 @@ input[type=checkbox] {
 [ 9. Buttons ]
 */
 .btn:not(.dropdown-toggle), .btn-secondary:not(.dropdown-toggle) {
-  background-color: #E91E63;
+  /*background-color: #E91E63;*/
+    background-color: #1E88E5;
   border-radius: 2px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   color: #fff;
@@ -8721,7 +8722,7 @@ button.btn, button.btn-secondary {
   position: relative; }
   .property-box-image:before {
     color: rgba(0, 0, 0, 0.2);
-    /*content: "";*/
+    content: "";
     display: block;
     font-family: 'FontAwesome';
     font-size: 50px;
