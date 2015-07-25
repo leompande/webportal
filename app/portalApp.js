@@ -4,7 +4,7 @@
 
 
 var portal =angular
-    .module('portalApp', ['openlayers-directive'])
+    .module('portalApp', ['openlayers-directive','ui.bootstrap', 'ui.bootstrap.treeview'])
 
 /**
  * THE BEGINNING OF PORTAL CONTROLLER FUNCTION (MAIN COTROLLER)
@@ -368,10 +368,406 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
 /**
  * THE BEGINNING OF ANALYSIS CONTROLLER FUNCTION
  * */
-portal.controller("analysisController",['$scope','$http','shared',function($scope,$http){
+
+portal.factory('multipleSelectFactory',function(){
+    var factory = {};
+    factory.selectedItems =[];
+
+    //factory.availableAction = function(){
+    //    console.log($scope.myOptionAvailable);
+    //}
+
+    factory.selectedAction = function(selected){
+        factory.selectedItems = selected;
+    }
+    return factory;
+
+});
+portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSelectFactory){
+    return {
+        link:function($scope,element,attrs,ngModel){
+            $scope.myOptionSelected=[];
+            $scope.myOptionAvailable=[];
+            $scope.Selects=[];
+            var single_select = angular.element(document.querySelector('#single_select'));
+            var single_return = angular.element(document.querySelector('#single_return'));
+            var mult_select = angular.element(document.querySelector('#mult_select'));
+            var mult_return = angular.element(document.querySelector('#mult_return'));
+            var available_selection = angular.element(document.querySelector('#available_selection'));
+
+            single_select.on("click",function(){
+                $scope.$apply(function() {
+                    angular.forEach($scope.myOptionAvailable,function(value,index){
+                        angular.forEach($scope.Items,function(valueI,indexI){
+                            if(valueI.id==value){
+                                $scope.myOptionAvailable.splice(index,1);
+                                $scope.Items.splice(indexI,1);
+                                $scope.myOptionSelected=[];
+                                $scope.Selects.push(valueI);
+                                angular.forEach($scope.Selects,function(valueS,indexS){
+                                    $scope.myOptionSelected.push(valueS.id);
+                                });
+
+                            }
+                        });
+                    });
+                });
+            });
+
+            single_return.on("click",function(){
+                $scope.$apply(function() {
+                    angular.forEach($scope.myOptionSelected,function(value,index){
+                        angular.forEach($scope.Selects,function(valueI,indexI){
+                            if(valueI.id==value){
+                                $scope.myOptionSelected.splice(index,1);
+                                $scope.Selects.splice(indexI,1);
+                                $scope.myOptionAvailable=[];
+                                $scope.myOptionAvailable.push(value);
+                                $scope.Items.push(valueI);
+                                angular.forEach($scope.Items,function(valueS,indexS){
+                                    $scope.myOptionAvailable.push(valueS.id);
+                                });
+
+                            }
+                        });
+                    });
+                });
+            });
+
+
+            mult_select.on("click",function(){
+                $scope.$apply(function() {
+                    if($scope.Items.length>0){
+                        $scope.Selects = $scope.Items;
+                        angular.forEach($scope.Selects,function(value,index){
+                            $scope.myOptionSelected.push(value.id);
+                        });
+                        $scope.Items = {};
+                        $scope.myOptionAvailable=[];
+                    }else{
+
+                    }
+                });
+
+            });
+
+            mult_return.on("click",function(){
+                $scope.$apply(function() {
+                    if($scope.Selects.length>0){
+                        $scope.Items = $scope.Selects;
+                        angular.forEach($scope.Selects,function(value,index){
+                            $scope.myOptionAvailable.push(value.id);
+                        });
+                        $scope.Selects = {};
+                        $scope.myOptionSelected =[];
+                    }
+                    var available_selection = angular.element(document.querySelector('#available_selection'));
+
+                });
+
+            });
+
+            $scope.availableAction = function(){
+            }
+
+            $scope.$watch(function() {
+                return $scope.myOptionSelected;
+            }, function() {
+                multipleSelectFactory.selectedAction($scope.myOptionSelected);
+            });
+
+        },
+        scope: {
+            Items: "=itemlist",
+            Selects: "=ItemsSelected",
+            collection: "=collection"
+        },
+        restrict:"E",
+        templateUrl:"portal-module/mult-select-directive.html"
+    }
+}]);
+portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService','multipleSelectFactory',function($scope,$http,shared,TreeViewService,multipleSelectFactory){
+    var indicatorsUrl = "portal-module/indicators.json";
+    var orgunitsUrl = "portal-module/organisationUnits_level_1.json";
+    $scope.analyticsUrl = null;;
+    $scope.arrowUp = false;
+    $scope.arrowDown = true;
+    $scope.showForm = false;
+    $scope.message = "Show the analysis menu";
+    $scope.toggleAnalysismenu = function(){
+        if($scope.arrowUp){
+            $scope.arrowUp = false;
+            $scope.showForm = false;
+            $scope.message = "Show the analysis menu";
+        }else{
+            $scope.showForm = true;
+            $scope.arrowUp = true;
+            $scope.message = "Hide the analysis menu";
+        }
+        if($scope.arrowDown){
+
+            $scope.arrowDown = false;
+        }else{
+
+            $scope.arrowDown = true;
+        }
+    }
+    $scope.getIndicators = function(url,callBack){
+        $http({
+            method: 'GET',
+            url: url
+        }).success(callBack);
+    }
+    $scope.getOrgunits = function(url,callBack){
+        $http({
+            method: 'GET',
+            url: url
+        }).success(callBack);
+    }
+
+    var getPeriods = function(){
+        var periods = [];
+        var dateObject = new Date();
+        var thisYear = dateObject.getFullYear();
+        var milestonYear = 2015;
+        var backTracer = 9;
+
+        var elaps = thisYear - milestonYear;
+        var begining = 0;
+        if(elaps>0){
+            newYear= milestonYear+elaps;
+            for(var i=0;i<elaps;i++){
+                var year = {id:newYear-i,value:newYear-i}
+                periods.push(year);
+            }
+        }
+        for(var i=0;i<backTracer;i++){
+            var year = {id:milestonYear-i,value:milestonYear-i}
+            periods.push(year);
+        }
+        return periods;
+    }
+    $scope.getIndicators(indicatorsUrl,function(data) {
+        var pagerInfo = data.pager;
+        var Indicators = data.indicators;
+        angular.forEach(Indicators,function(value,index){
+        });
+        $scope.listIndicators = Indicators
+        $scope.listperiods = getPeriods();
+
+    });
+    $scope.getOrgunits(orgunitsUrl,function(data) {
+        var orgunits = data.organisationUnits;
+        angular.forEach(orgunits,function(value,index){
+        });
+        $scope.listOrganisationUnits = orgunits;
+    });
+
+
+
+    $scope.selectedlistIndicators = [];
+    $scope.selectedlistPeriods = [];
+    $scope.selectedlistOrgunit = {};
+    $scope.jsonObject = {};
+
+    $scope.$watch(function() {
+        return TreeViewService.selectedNode;
+    }, function() {
+        $scope.selectedlistOrgunit = TreeViewService.selectedNode;
+    });
+
+    $scope.$watchCollection(function() {
+        return TreeViewService.selectedNodeMultiple;
+    }, function() {
+        $scope.selectedlistOrgunit = TreeViewService.selectedNodeMultiple;
+    });
+    $scope.$watchCollection(function() {
+        return multipleSelectFactory.selectedItems;
+    }, function() {
+        $scope.selectedlistPeriods = multipleSelectFactory.selectedItems;
+    });
+
+    $scope.getDataFromDHISApi = function(selectedlistIndicators,selectedlistPeriods,selectedlistOrgunit){
+        var data;
+        var periodString = "";
+        var periodlength = selectedlistPeriods.length;
+        if(periodlength>1){
+            selectedlistPeriods.sort();
+            angular.forEach(selectedlistPeriods,function(value,index){
+                console.log(value);
+                if(index==periodlength-1){
+                    periodString+=value;
+                }else{
+                    periodString+=value+";"
+                }
+            });
+        }else{
+            if(selectedlistPeriods[0]){
+
+                periodString += selectedlistPeriods[0];
+            }
+        }
+
+        var indicatorString = "";
+        var indicatorlength = selectedlistIndicators.length;
+        if(indicatorlength>1){
+            angular.forEach(selectedlistIndicators,function(value,index){
+                if(index==indicatorlength-1){
+                    console.log(value);
+                    indicatorString+=value.indicatorId;
+                }else{
+                    indicatorString+=value.indicatorId+";"
+                }
+            });
+        }else{
+            if(selectedlistIndicators[0]){
+                indicatorString = selectedlistIndicators[0].indicatorId;
+            }
+
+        }
+
+        var orgunitString = "";
+        var orgunitlength = selectedlistOrgunit.length;
+        if(orgunitlength>1){
+            angular.forEach(selectedlistOrgunit,function(value,index){
+                if(index==orgunitlength-1){
+                    console.log(value);
+                    orgunitString+=value.id;
+                }else{
+                    orgunitString+=value.id+";"
+                }
+            });
+        }else{
+            orgunitString = selectedlistOrgunit.id;
+        }
+        $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
+        console.log($scope.analyticsUrl);
+
+        return data;
+    }
+
+
+    $scope.getReport = function(reportType){
+
+        // Getting selected Indicators
+        var checker = 0;
+        angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
+            var indicator = {indicatorId:value.value};
+            $scope.selectedlistIndicators.push(indicator);
+            checker++;
+        });
+        if(checker<1){
+            $scope.selectedlistIndicators = [];
+        }
+
+        $scope.dataObject =  $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+
+
+
+    }
+
+
+
 
 }]);
 
+portal.directive('multiSelect', function($q) {
+    return {
+        restrict: 'E',
+        require: 'ngModel',
+        scope: {
+            selectedLabel: "@",
+            availableLabel: "@",
+            displayAttr: "@",
+            available: "=",
+            model: "=ngModel"
+        },
+        template: '<div class="multiSelect">' +
+        '<div class="select">' +
+        '<label class="control-label" for="multiSelectSelected" style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">{{ selectedLabel }} ' +
+        '</label>' +
+        '<select style="display:block!important;" class="form-control" id="currentRoles" ng-model="selected.current" multiple ' +
+        'class="pull-left" ><option ng-repeat="opt in model" value="{{opt}}">{{opt.value}}</option>' +
+        '</select>' +
+        '</div>' +
+        '<div class="select buttons">' +
+        '<button class="btn mover left btn-block" ng-click="add()" title="Add selected" ' +
+        'ng-disabled="selected.available.length == 0">' +
+        '<i class="glyphicon glyphicon-chevron-left"></i>' +
+        '</button>' +
+        '<button class="btn mover right btn-block " ng-click="remove()" title="Remove selected" ' +
+        'ng-disabled="selected.current.length == 0">' +
+        '<i class="glyphicon glyphicon-chevron-right"></i>' +
+        '</button>' +
+        '</div>' +
+        '<div class="select">' +
+        '<label class="control-label" for="multiSelectAvailable" style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">{{ availableLabel }} ' +
+        '</label>' +
+        '<select style="display:block!important;" class="form-control" id="multiSelectAvailable" ng-model="selected.available" multiple ' +
+        '><option ng-repeat="opt in available" value="{{opt}}">{{opt.value}}</option></select>' +
+        '</div>' +
+        '</div>',
+        link: function(scope, elm, attrs) {
+            scope.selected = {
+                available: [],
+                current: []
+            };
+
+            /* Handles cases where scope data hasn't been initialized yet */
+            var dataLoading = function(scopeAttr) {
+                var loading = $q.defer();
+                if(scope[scopeAttr]) {
+                    loading.resolve(scope[scopeAttr]);
+                } else {
+                    scope.$watch(scopeAttr, function(newValue, oldValue) {
+                        if(newValue !== undefined)
+                            loading.resolve(newValue);
+                    });
+                }
+                return loading.promise;
+            };
+
+            /* Filters out items in original that are also in toFilter. Compares by reference. */
+            var filterOut = function(original, toFilter) {
+                var filtered = [];
+                angular.forEach(original, function(entity) {
+                    var match = false;
+                    for(var i = 0; i < toFilter.length; i++) {
+                        if(toFilter[i][attrs.displayAttr] == entity) {
+                            match = true;
+                            break;
+                        }
+                    }
+                    if(!match) {
+                        filtered.push(entity);
+                    }
+                });
+                return filtered;
+            };
+
+            scope.refreshAvailable = function() {
+                scope.available = filterOut(scope.available, scope.model);
+                scope.selected.available = [];
+                scope.selected.current = [];
+            };
+
+            scope.add = function() {
+                scope.model = scope.model.concat(scope.selected.available);
+                scope.refreshAvailable();
+            };
+            scope.remove = function() {
+                scope.available = JSON.parse(scope.selected.current);//scope.available.concat(scope.selected.current);
+                var Item = filterOut(scope.model, JSON.parse(scope.selected.current));
+                scope.model = {id:Item,value:Item};
+                scope.refreshAvailable();
+            };
+
+            $q.all([dataLoading("model"), dataLoading("available")]).then(function(results) {
+                scope.refreshAvailable();
+            });
+        }
+    };
+});
 
 /**
  * THE BEGINNING OF DASHBOARDS CONTROLLER FUNCTION

@@ -1,0 +1,52 @@
+<style>
+    .option_btn{
+        /*font-weight: bold;*/
+        /*width: 10px!important;*/
+        /*text-align: center!important;*/
+        /*font-size: 10px!important;*/
+    }
+    ul#middle_sect{
+        position: relative;
+        margin-top: 20px;
+    }
+    ul#middle_sect li{list-style: none;}
+    .mult_select_plugin{
+        /*background-color: #FFFFF1;*/
+        padding: 3px;
+        /*width: 40%;*/
+        border-radius: 3px;
+    }
+    label.super_lable{
+        padding-bottom: 5px;border-bottom: 1px solid #ccc;
+    }
+
+    select#selected_selection option{
+        font-size: 11px!important;
+    }
+    select#available_selection option{
+        font-size: 11px!important;
+    }
+</style>
+<div class="mult_select_plugin row">
+    <div class="col-xs-5">
+        <label class="super_lable" >Available {{collection}}</label>
+        <select id="available_selection" ng-change="availableAction()"
+                ng-model="myOptionAvailable" class="btn-group bootstrap-select show-tick form-control" size="8" multiple name="available[]" style="display: block !important;overflow: auto;font-size: 14px;">
+            <option ng-repeat="item in Items" value="{{item.id}}">{{item.value}}</option>
+        </select>
+    </div>
+    <div class="col-xs-2">
+        <a class="btn option_btn btn-block" id="mult_select"><i class="glyphicon glyphicon-forward"></i></a>
+        <a class="btn option_btn btn-block" id="single_select"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        <a class="btn option_btn btn-block" id="single_return"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="btn option_btn btn-block" id="mult_return"><i class="glyphicon glyphicon-backward"></i></a>
+
+    </div>
+    <div class="col-xs-5">
+        <label class="super_lable" >Selected {{collection}}</label>
+        <select id="selected_selection" size="8" ng-change="selectedAction()"
+                ng-model="myOptionSelected" class="btn-group bootstrap-select show-tick form-control" multiple name="selected[]" style="display: block !important;overflow: auto;font-size: 14px;">
+            <option ng-repeat="item in Selects" value="{{item.id}}">{{item.value}}</option>
+        </select>
+    </div>
+</div>

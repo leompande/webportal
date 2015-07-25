@@ -13,10 +13,13 @@
     <link rel="stylesheet" type="text/css" href="assets/libraries/bootstrap-fileinput/css/fileinput.min.css">
     <link rel="stylesheet" type="text/css" href="assets/libraries/nvd3/nv.d3.min.css">
     <link rel="stylesheet" type="text/css" href="assets/libraries/OwlCarousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/resources/ext-ux/carousel/css/carousel.css">
     <link rel="stylesheet" type="text/css" href="assets/css/realsite.css">
     <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/ol.css">
     <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/angular-openlayers-directive.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/two-sided-discarded/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/js/mult-select-plugin/jquery-picklist.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/mult-select-plugin/jquery-picklist-ie7.css">
 
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/libraries/jquery-transit/jquery.transit.js"></script>
@@ -43,27 +46,212 @@
     <script type="text/javascript" src="assets/libraries/nvd3/lib/d3.v3.js"></script>
     <script type="text/javascript" src="assets/libraries/nvd3/nv.d3.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="assets/js/treeviw/style.css">
+    <script type="text/javascript" src="assets/js/treeviw/ui-bootstrap.tpls.js"></script>
+    <script type="text/javascript" src="assets/js/treeviw/treeview.js"></script>
+
+
+    <script type="text/javascript" src="assets/js/mult-select-plugin/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="assets/js/mult-select-plugin/jquery-picklist.js"></script>
+
+    <script type="text/javascript" src="assets/js/two-sided-discarded/js/multiselect.js"></script>
     <script type="text/javascript" src="assets/js/portal.js"></script>
     <script type="text/javascript" src="assets/js/charts.js"></script>
-    <script type="text/javascript" src="assets/js/resources/ext-ux/carousel/Carousel.js"></script>
     <script type="text/javascript" src="assets/js/crossdomain/jquery.ajax-cross-origin.min.js"></script>
     <script src="assets/js/openlayermaps/ol.js"></script>
     <script src="assets/js/openlayermaps/angular-openlayers-directive.js"></script>
     <script type="text/javascript" src="app/portalApp.js"></script>
 
     <title> Analysis - Web Portal | HMIS </title>
+    <style>
+        .multiSelect {
+            overflow: auto;
+        }
+        .multiSelect .select {
+            margin-right: 20px;
+            float: left;
+        }
+        .multiSelect .text {
+            clear: both;
+            font-size: 11px;
+        }
+        .multiSelect label::after {
+            content: ":";
+        }
+        .btn.mover {
+            display: block;
+            /*margin-top: 25px;*/
+            vertical-align: top;
+        }
+        .btn.mover.left {
+            /*padding: 3px 8px 2px 6px;*/
+        }
+        .btn.mover.right {
+            margin-top: 24px;
+            padding: 3px 7px 2px;
+        }
+        .btn.mover i {
+            margin: 0;
+        }
+
+        /* demo css */
+        li {
+            list-style-type: disc;
+        }
+
+    </style>
 </head>
 
 <body ng-app="portalApp">
 
+
+
 <div class="page-wrapper" ng-controller="portalController">
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".bootstrap-select").remove();
+        // make code pretty
+        window.prettyPrint && prettyPrint();
+
+        if ( window.location.hash ) {
+            scrollTo(window.location.hash);
+        }
+//
+        $('.nav').on('click', 'a', function(e) {
+            scrollTo($(this).attr('href'));
+        });
+//
+        $('#multiselect').multiselect();
+        $('#multiselect2').multiselect();
+        $('.multiselect').multiselect();
+        $('.js-multiselect').multiselect({
+            right: '#js_multiselect_to_1_2',
+            rightAll: '#js_right_All_1_2',
+            rightSelected: '#js_right_Selected_1_2',
+            leftSelected: '#js_left_Selected_1_2',
+            leftAll: '#js_left_All_1_2'
+        });
+//
+        $('#keepRenderingSort').multiselect({
+            keepRenderingSort: false
+        });
+        $('#undo_redo').multiselect();
+        $('#multi_d').multiselect({
+            right: '.multi_d_to, .multi_d_to_2',
+            rightSelected: '.multi_d_rightSelected, .multi_d_rightSelected_2',
+            leftSelected: '.multi_d_leftSelected, .multi_d_leftSelected_2',
+            rightAll: '.multi_d_rightAll, .multi_d_rightAll_2',
+            leftAll: '.multi_d_leftAll, .multi_d_leftAll_2',
+
+            moveToRight: function(Multiselect, options, event, silent, skipStack) {
+                var button = $(event.currentTarget).attr('class');
+
+                if (button == 'multi_d_rightSelected') {
+                    var left_options = Multiselect.left.find('option:selected');
+                    Multiselect.right.eq(0).append(left_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.right.eq(0).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(0));
+                    }
+                } else if (button == 'multi_d_rightAll') {
+                    var left_options = Multiselect.left.find('option');
+                    Multiselect.right.eq(0).append(left_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.right.eq(0).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(0));
+                    }
+                } else if (button == 'multi_d_rightSelected_2') {
+                    var left_options = Multiselect.left.find('option:selected');
+                    Multiselect.right.eq(1).append(left_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.right.eq(1).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(1));
+                    }
+                } else if (button == 'multi_d_rightAll_2') {
+                    var left_options = Multiselect.left.find('option');
+                    Multiselect.right.eq(1).append(left_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.right.eq(1).eq(1).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(1));
+                    }
+                }
+            },
+
+            moveToLeft: function(Multiselect, options, event, silent, skipStack) {
+                var button = $(event.currentTarget).attr('class');
+
+                if (button == 'multi_d_leftSelected') {
+                    var right_options = Multiselect.right.eq(0).find('option:selected');
+                    Multiselect.left.append(right_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+                    }
+                } else if (button == 'multi_d_leftAll') {
+                    var right_options = Multiselect.right.eq(0).find('option');
+                    Multiselect.left.append(right_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+                    }
+                } else if (button == 'multi_d_leftSelected_2') {
+                    var right_options = Multiselect.right.eq(1).find('option:selected');
+                    Multiselect.left.append(right_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+                    }
+                } else if (button == 'multi_d_leftAll_2') {
+                    var right_options = Multiselect.right.eq(1).find('option');
+                    Multiselect.left.append(right_options);
+
+                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+                    }
+                }
+            }
+        });
+
+
+
+
+        $("#advanced").pickList(
+                {
+                    sourceListLabel:	"Unadded",
+                    targetListLabel:	"Added",
+                    addAllLabel:		"Add All",
+                    addLabel:			"Add",
+                    removeAllLabel:		"Remove All",
+                    removeLabel:		"Remove",
+                    sortAttribute:		"value",
+                    items:[]
+                });
+
+        // Example of adding a regular item after picklist creation.
+        // Note there is no "element" property as that's for rich content only.
+//        $("#advanced").pickList("insert",
+//                {
+//                    value: 7,
+//                    label: "Afterwards #2",
+//                    selected: true
+//                });
+
+
+    });
+
+    function scrollTo( id ) {
+        if ( $(id).length ) {
+            $('html,body').animate({scrollTop: $(id).offset().top - 40},'slow');
+        }
+    }
+</script>
 <div class="header header-standard">
     <div class="header-topbar">
         <div class="container">
             <div class="header-topbar-left">
                 <ol class="breadcrumb">
-                    <li><a href="#">Portal</a></li>
-                    <li><a href="#" class="active">Analysis</a></li>
+                    <li><a href="#">Analysis</a></li>
+                    <li><a href="#"></a></li>
                 </ol>
             </div><!-- /.header-topbar-left -->
 
@@ -111,7 +299,9 @@
                                     <li class="important">
                                         <a href="analysis.html#">Analysis</a>
                                     </li>
-
+                                    <li class="important">
+                                        <a href="datacoverage.html#">Data Coverage</a>
+                                    </li>
                                 </ul><!-- /.nav -->
                             </nav>
                         </div><!-- /.nav-main-inner -->
@@ -132,70 +322,139 @@
 
 <div class="main" ng-controller="analysisController">
 
-<div class="fullwidth background-grey  block center mb0">
-<div class="container">
-<div class="row" >
-    <!-- Standard button -->
-    <div class="col-md-12" style="float: left;">
-        <div class="col-md-2">
-
-            <label >Data Group</label>
-            <select class="form-control">
-                <option disabled >--Data Group--</option>
-                <option value="Vlw8KFHG4cV">Antenatal Care</option>
-                <option value="YoqOtBfLCIQ">Completeness</option>
-                <option value="rzoxJFEBzqD">Death Registry</option>
-                <option value="ZLSs1nw1b5x">Human Resource</option>
-
-            </select>
-        </div>
-        <!--<div class="col-md-2">-->
-            <!--<label>Category</label>-->
-            <!--<select class="form-control">-->
-                <!--<option>Human Resource</option>-->
-                <!--<option selected>Facility</option>-->
-            <!--</select>-->
-        <!--</div>-->
-        <div class="col-md-2">
-            <label>Organisation Unit (Regions)</label>
-            <select class="form-control">
-                <option selected>Tanzania(MOH)</option>
-                <option>abcd</option>
-            </select>
-        </div>
-        <div class="col-md-2">
-            <label>Period</label>
-            <select class="form-control">
-                <option>2015</option>
-                <option>2014</option>
-            </select>
-        </div>
+    <div class="fullwidth background-grey  block center mb0">
+        <div class="container">
+            <div class="row" >
+                <!-- Standard button -->
+                <!--<div class="col-md-12" style="float: left;">
+                    <div class="col-md-2">
+                        <label>Data Group</label>
+                        <select class="form-control">
+                            <option disabled >--Data Group--</option>
+                            <option selected>Population</option>
+                            <option>Completeness</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Category</label>
+                        <select class="form-control">
+                            <option>Human Resource</option>
+                            <option selected>Facility</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Organisation Unit (Regions)</label>
+                        <select class="form-control">
+                            <option selected>Tanzania</option>
+                            <option>abcd</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Period</label>
+                        <select class="form-control">
+                            <option>2015</option>
+                            <option>2014</option>
+                        </select>
+                    </div>
 
 
-    </div>
-</div>
-    <br/>
-    <div class="row" >
-    <!-- Standard button -->
-        <div class="col-md-12" >
-            <div style="float: left;">
-                <button type="button" class="btn">Table</button>
-                <button type="button" class="btn">Column</button>
-                <button type="button" class="btn">Line</button>
-                <button type="button" class="btn">Area</button>
-                <button type="button" class="btn">Spline</button>
-                <button type="button" class="btn">Spline Area</button>
-                <button type="button" class="btn">Pie</button>
-                <button type="button" class="btn">Map</button>
+                </div>-->
+            </div>
+            <br/>
+            <!---div class="row" >
+                <div class="col-md-12" >
+                    <div style="float: left;">
+                        <button type="button" class="btn">Table</button>
+                        <button type="button" class="btn">Column</button>
+                        <button type="button" class="btn">Line</button>
+                        <button type="button" class="btn">Area</button>
+                        <button type="button" class="btn">Spline</button>
+                        <button type="button" class="btn">Spline Area</button>
+                        <button type="button" class="btn">Pie</button>
+                        <button type="button" class="btn">Map</button>
+                    </div>
+
+                </div>
+
+        </div-->
+            <div class="row">
+                <div class="row">
+                    <h1> HMIS - Web Portal Data Analysis</h1>
+                    <a class="btn btn-xs pull-left " ng-click="toggleAnalysismenu()" title="{{message}}"><i class="glyphicon glyphicon-arrow-up" ng-if="arrowUp"></i><i class="glyphicon glyphicon-arrow-down" ng-if="arrowDown"></i></a>
+                </div>
+                <div class="row" ng-show="showForm">
+                    <!--ng-if="showForm"-->
+                    <!--<multiple-select itemlist="listIndicators" ItemsSelected="selectedlistIndicators" collection="'Indicators'"></multiple-select>-->
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <label style="padding:20px;font-size: 16px;font-weight: bolder;">Indicators</label>
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <label style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">Available</label>
+                                    <select name="from" id="keepRenderingSort" style="display: block !important;font-size: 12px;overflow: auto;" class="form-control" size="8" multiple="multiple">
+                                        <option ng-repeat="indicator in listIndicators" value="{{indicator.id}}" data-position="1">{{indicator.name}}</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-2">
+                                    <button type="button" id="keepRenderingSort_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
+                                    <button type="button" id="keepRenderingSort_rightSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                                    <button type="button" id="keepRenderingSort_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                                    <button type="button" id="keepRenderingSort_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
+                                </div>
+
+                                <div class="col-xs-5">
+                                    <label style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">Selected</label>
+                                    <select name="to" ng-model="selectedlistIndicators" id="keepRenderingSort_to" style="display: block !important;font-size: 12px;overflow: auto;" class="form-control" size="8" multiple="multiple"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <label style="padding:20px;font-size: 16px;font-weight: bolder;">Organisation Unit</label>
+                            <div style="overflow: auto;height: 150px">
+                                <div tree-view="listOrganisationUnits" node-label="name" ></div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <label style="padding:20px;font-size: 16px;font-weight: bolder;">Period</label>
+                            <!--<multi-select ng-model="listperiods" available="roles" selected-label="Selected Periods" available-label="Available Periods" display-attr="id"></multi-select>-->
+                            <multiple-select itemlist="listperiods" ItemsSelected="" collection="periods"></multiple-select>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div style="float: left; margin-top:20px;">
+                            <button type="button" class="btn" ng-click="getReport('table')">Table</button>
+                            <button type="button" class="btn">Column</button>
+                            <button type="button" class="btn">Line</button>
+                            <button type="button" class="btn">Area</button>
+                            <button type="button" class="btn">Spline</button>
+                            <button type="button" class="btn">Spline Area</button>
+                            <button type="button" class="btn">Pie</button>
+                            <button type="button" class="btn">Map</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <analysis-charts ng-if="chart" dataobject="jsonObject"></analysis-charts>
+                            <analysis-table ng-if="table" dataobject="jsonObject"></analysis-table>
+                            <analysis-map ng-if="map" dataobject="jsonObject"></analysis-map>
+                            <analysis-column ng-if="column" dataobject="jsonObject"></analysis-column>
+                            <analysis-area ng-if="area" dataobject="jsonObject"> </analysis-area>
+                            <analysis-pie ng-if="pie" dataobject="jsonObject"></analysis-pie>
+                            <analysis-spline ng-if="spline" dataobject="jsonObject"></analysis-spline>
+                            <analysis-splinearea ng-if="splinearea" dataobject="jsonObject"></analysis-splinearea>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
-
-</div>
-<div class="row"></div>
-
-</div><!-- /.container -->
-</div>
+        </div><!-- /.container -->
+    </div>
 </div><!-- /.main -->
 
 <div id="footer" class="footer footer-simple">
@@ -220,6 +479,11 @@
 
                         <nav>
                             <ul class="nav nav-stacked">
+                                <!--<li><a href="footers-minimal.html#footer">Minimal</a></li>-->
+                                <!--<li><a href="footers-navigation.html#footer">Navigation</a></li>-->
+                                <!--<li><a href="footers-simple.html#footer">Simple</a></li>-->
+                                <!--<li><a href="footers-4-columns.html#footer">4 Columns</a></li>-->
+                                <!--<li><a href="footers-3-columns.html#footer">3 Columns</a></li>-->
                             </ul>
                         </nav>
                     </div>
@@ -229,6 +493,11 @@
 
                         <nav>
                             <ul class="nav nav-stacked">
+                                <!--<li><a href="properties-detail.html">Detail Page</a></li>-->
+                                <!--<li><a href="properties-row.html">Row Display</a></li>-->
+                                <!--<li><a href="properties-grid.html">Grid</a></li>-->
+                                <!--<li><a href="properties-table.html">Table Listing</a></li>-->
+                                <!--<li><a href="properties-medium.html">Medium Size</a></li>-->
                             </ul>
                         </nav>
                     </div>
@@ -238,6 +507,11 @@
 
                         <nav>
                             <ul class="nav nav-stacked">
+                                <!--<li><a href="admin-login.html">Login</a></li>-->
+                                <!--<li><a href="admin-dashboard.html">Dashboard</a></li>-->
+                                <!--<li><a href="admin-property-browser.html">Property Browser</a></li>-->
+                                <!--<li><a href="admin-map.html">Google Map</a></li>-->
+                                <!--<li><a href="admin-people.html">People</a></li>-->
                             </ul>
                         </nav>
                     </div>
@@ -245,7 +519,6 @@
             </div><!-- /.footer-top-inner -->
         </div><!-- /.container -->
     </div><!-- /.footer-top -->
-
     <div class="footer-bottom">
         <div class="container">
             <div class="footer-bottom-inner">
