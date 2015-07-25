@@ -4,7 +4,7 @@
 
 
 var portal =angular
-    .module('portalApp', ['openlayers-directive','ui.bootstrap', 'ui.bootstrap.treeview'])
+    .module('portalApp', ['openlayers-directive','ui.bootstrap', 'ui.bootstrap.treeview','datatables','highcharts-ng'])
 
 /**
  * THE BEGINNING OF PORTAL CONTROLLER FUNCTION (MAIN COTROLLER)
@@ -483,7 +483,7 @@ portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSele
             collection: "=collection"
         },
         restrict:"E",
-        templateUrl:"portal-module/mult-select-directive.html"
+        templateUrl:"portal-module/directives/mult-select-directive.html"
     }
 }]);
 portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService','multipleSelectFactory',function($scope,$http,shared,TreeViewService,multipleSelectFactory){
@@ -657,6 +657,11 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
 
     $scope.getReport = function(reportType){
+
+        /// varible to check for current repor format
+        $scope.table = true;
+        $scope.chart = false;
+        $scope.map   = false;
 
         // Getting selected Indicators
         var checker = 0;
