@@ -486,6 +486,21 @@ portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSele
         templateUrl:"portal-module/directives/mult-select-directive.html"
     }
 }]);
+
+portal.directive('analysisTable',['',function(){
+    return {
+        link:function($scope,element,attrs,ngModel){
+
+
+        },
+        scope: {
+            Items: "=itemlist"
+        },
+        restrict:"E",
+        templateUrl:"portal-module/directives/table-directive.html"
+    }
+}]);
+
 portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService','multipleSelectFactory',function($scope,$http,shared,TreeViewService,multipleSelectFactory){
     var indicatorsUrl = "portal-module/indicators.json";
     var orgunitsUrl = "portal-module/organisationUnits_level_1.json";
@@ -494,6 +509,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.arrowDown = true;
     $scope.showForm = false;
     $scope.message = "Show the analysis menu";
+    $scope.filtervariable = "ou";
     $scope.toggleAnalysismenu = function(){
         if($scope.arrowUp){
             $scope.arrowUp = false;
@@ -640,21 +656,59 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         }else{
             orgunitString = selectedlistOrgunit.id;
         }
-        $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
+
+        if($scope.filtervariable=="period"){
+            $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=ou:"+orgunitString+"&filter=pe:"+periodString+"&displayProperty=NAME";
+
+        }else{
+            $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
+
+        }
 
         $http({
             method: 'GET',
-            url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
+            //url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
+            url: "portal-module/analytics.json",
             dataType: "json",
             cache: true,
             ifModified: true
         }).success(
             function(data) {
-                console.log(data);
+                $scope.PrepareTableData(data);
+                $scope.PrepareChartData(data);
             });
 
     }
 
+    $scope.PrepareTableData = function(data){
+        //console.log(data);
+        if($scope.filtervariable=="period"){
+            var orgUnits = [];
+            var dataObject = []
+            //angular.forEach(data.ou,function(value,index){
+            //    dataObject.push({org:names[value],});
+            //});
+            var  markedDx = null;
+            if(data.rows.length>0){
+                angular.forEach(data.rows,function(value,index){
+                    if(value[0]!==markedDx){
+                        markedDx = value[0];
+                    }else{
+                        //{org:names[value[1]],}
+                    }
+                    //dataObject.push({org:names[value[1]],});
+                });
+            }
+
+
+        }else{
+
+        }
+    }
+
+    $scope.PrepareChartData = function(data){
+        //console.log(data);
+    }
 
     $scope.getReport = function(reportType){
 
