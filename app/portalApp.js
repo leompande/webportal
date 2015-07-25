@@ -641,9 +641,18 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             orgunitString = selectedlistOrgunit.id;
         }
         $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
-        console.log($scope.analyticsUrl);
 
-        return data;
+        $http({
+            method: 'GET',
+            url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
+            dataType: "json",
+            cache: true,
+            ifModified: true
+        }).success(
+            function(data) {
+                console.log(data);
+            });
+
     }
 
 
