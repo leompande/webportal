@@ -373,9 +373,6 @@ portal.factory('multipleSelectFactory',function(){
     var factory = {};
     factory.selectedItems =[];
 
-    //factory.availableAction = function(){
-    //    console.log($scope.myOptionAvailable);
-    //}
 
     factory.selectedAction = function(selected){
         factory.selectedItems = selected;
@@ -487,19 +484,6 @@ portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSele
     }
 }]);
 
-portal.directive('analysisTable',function(){
-    return {
-        link:function($scope,element,attrs,ngModel){
-
-
-        },
-        scope: {
-            Items: "=itemlist"
-        },
-        restrict:"E",
-        templateUrl:"portal-module/directives/table-directive.html"
-    }
-});
 
 portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService','multipleSelectFactory',function($scope,$http,shared,TreeViewService,multipleSelectFactory){
     var indicatorsUrl = "portal-module/indicators.json";
@@ -509,6 +493,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.arrowDown = true;
     $scope.showForm = false;
     $scope.message = "Show the analysis menu";
+
     $scope.filtervariable = "ou";
     $scope.toggleAnalysismenu = function(){
         if($scope.arrowUp){
@@ -610,7 +595,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         if(periodlength>1){
             selectedlistPeriods.sort();
             angular.forEach(selectedlistPeriods,function(value,index){
-                console.log(value);
                 if(index==periodlength-1){
                     periodString+=value;
                 }else{
@@ -619,7 +603,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             });
         }else{
             if(selectedlistPeriods[0]){
-
                 periodString += selectedlistPeriods[0];
             }
         }
@@ -629,7 +612,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         if(indicatorlength>1){
             angular.forEach(selectedlistIndicators,function(value,index){
                 if(index==indicatorlength-1){
-                    console.log(value);
                     indicatorString+=value.indicatorId;
                 }else{
                     indicatorString+=value.indicatorId+";"
@@ -647,7 +629,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         if(orgunitlength>1){
             angular.forEach(selectedlistOrgunit,function(value,index){
                 if(index==orgunitlength-1){
-                    console.log(value);
                     orgunitString+=value.id;
                 }else{
                     orgunitString+=value.id+";"
@@ -674,33 +655,58 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 //    dataObject.push({org:names[value],});
                 //});
                 var  markedDx = null;
+                var indicatorLength  = 2;
                 if(data.rows.length>0){
                     //console.log(data.rows);
                     //console.log(data.names);
                     var selectedIndLength = 2;
+                    var orgunitLength = data.metaData.ou.length;
+                    var orgCounter = 0;
+                    var roundCounter = 0;
                     angular.forEach(data.rows,function(value,index){
-                        console.log(value);
-                        if(value[0]!==markedDx){
-                            markedDx = value[0];
+                        orgCounter++
+                        var ob = {};
+                        if(orgCounter<=orgunitLength){
+                            if(roundCounter<=0){
+                                ob['org'] = data.metaData.names[value[1]];
+                                for(var i = 0;i<indicatorLength;i++){
+                                    var indicatorIndex = "indicator"+(i+1);
+                                    ob[indicatorIndex] = null;
+                                    ob["indicator1"] = value[2];
+                                }
+                                dataObject.push(ob);
+                            }else{
+                                angular.forEach(dataObject,function(valueOb,indexOb){
+                                    //var indicatorIndex = "indicator"+(index+2);
+                                    for(var i = 1;i<indicatorLength;i++){
+                                            var indicatorIndex = "indicator"+(i+1);
+                                        if(valueOb['org'] == data.metaData.names[value[1]]){
+                                            valueOb[indicatorIndex] = value[2];
+                                        }else{
+                                        }
+
+                                        }
+                                    dataObject[indexOb] = valueOb;
+                                    });
+
+                            }
+
+
                         }else{
-                            dataObject.push({org:data.metaData.names[value[1]],indicator1:"",indicator2:"",indicator3:""});
+                            orgCounter = 0;
+                            roundCounter++;
                         }
-                        //dataObject.push({org:names[value[1]],})
+
                     });
                 }
-
-                console.log(dataObject);
             }else{
 
             }
-
-            var alreadyIndicators = function(ind){
-                return
-            }
+                    return dataObject;
         }
 
         $scope.PrepareChartData = function(data){
-            //console.log(data);
+
         }
 
 
@@ -714,7 +720,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         }).success(
             function(data) {
 
-                $scope.PrepareTableData(data);
+                $scope.dataForDisplayingTable = $scope.PrepareTableData(data);
                 $scope.PrepareChartData(data);
             });
 
@@ -724,13 +730,22 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.getReport = function(reportType){
 
         /// varible to check for current repor format
-        $scope.table = true;
-        $scope.chart = false;
-        $scope.map   = false;
+        //$scope.table = true;
+        //$scope.chart = false;
+        //$scope.map   = false;
 
+        if(reportType=="table"){
+            $scope.table = true;
+            $scope.chart = false;
+            $scope.map   = false;
+        }
         // Getting selected Indicators
         var checker = 0;
+        $scope.headers = [];
+        $scope.headers[0] = "Organisation Units"
         angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
+
+            $scope.headers[index+1] = $(value).text();
             var indicator = {indicatorId:value.value};
             $scope.selectedlistIndicators.push(indicator);
             checker++;
@@ -739,13 +754,13 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.selectedlistIndicators = [];
         }
 
-        $scope.dataObject =  $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+        $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
 
 
 
     }
 
-
+    $scope.getReport('table');
 
 
 }]);
@@ -848,6 +863,32 @@ portal.directive('multiSelect', function($q) {
     };
 });
 
+portal.directive('analysisTable',function(){
+    return {
+        link:function($scope,element,attrs){
+
+            $scope.$watchCollection($scope[attrs.data], function(val) {
+
+            });
+            $scope.$watch($scope[attrs.title], function(val) {
+
+            });
+            $scope.$watch($scope[attrs.header], function(val) {
+
+            });
+        },
+        scope: {
+            dataTable: "=data",
+            titles: "=title",
+            headers: "=header"
+        },
+        restrict:"E",
+        replace: true,
+        templateUrl:"portal-module/directives/table-directive.html"
+    }
+
+
+});
 /**
  * THE BEGINNING OF DASHBOARDS CONTROLLER FUNCTION
  * */
