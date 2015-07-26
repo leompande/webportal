@@ -4,7 +4,7 @@
 
 
 var portal =angular
-    .module('portalApp', ['openlayers-directive','ui.bootstrap', 'ui.bootstrap.treeview','datatables','highcharts-ng'])
+    .module('portalApp', ['openlayers-directive','ui.bootstrap', 'ui.bootstrap.treeview','highcharts-ng'])
 
 /**
  * THE BEGINNING OF PORTAL CONTROLLER FUNCTION (MAIN COTROLLER)
@@ -487,7 +487,7 @@ portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSele
     }
 }]);
 
-portal.directive('analysisTable',['',function(){
+portal.directive('analysisTable',function(){
     return {
         link:function($scope,element,attrs,ngModel){
 
@@ -499,7 +499,7 @@ portal.directive('analysisTable',['',function(){
         restrict:"E",
         templateUrl:"portal-module/directives/table-directive.html"
     }
-}]);
+});
 
 portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService','multipleSelectFactory',function($scope,$http,shared,TreeViewService,multipleSelectFactory){
     var indicatorsUrl = "portal-module/indicators.json";
@@ -664,6 +664,45 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
 
         }
+        $scope.filtervariable="period"
+        $scope.PrepareTableData = function(data){
+
+            if($scope.filtervariable=="period"){
+                var orgUnits = [];
+                var dataObject = [];
+                //angular.forEach(data.ou,function(value,index){
+                //    dataObject.push({org:names[value],});
+                //});
+                var  markedDx = null;
+                if(data.rows.length>0){
+                    //console.log(data.rows);
+                    //console.log(data.names);
+                    var selectedIndLength = 2;
+                    angular.forEach(data.rows,function(value,index){
+                        console.log(value);
+                        if(value[0]!==markedDx){
+                            markedDx = value[0];
+                        }else{
+                            dataObject.push({org:data.metaData.names[value[1]],indicator1:"",indicator2:"",indicator3:""});
+                        }
+                        //dataObject.push({org:names[value[1]],})
+                    });
+                }
+
+                console.log(dataObject);
+            }else{
+
+            }
+
+            var alreadyIndicators = function(ind){
+                return
+            }
+        }
+
+        $scope.PrepareChartData = function(data){
+            //console.log(data);
+        }
+
 
         $http({
             method: 'GET',
@@ -674,41 +713,13 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             ifModified: true
         }).success(
             function(data) {
+
                 $scope.PrepareTableData(data);
                 $scope.PrepareChartData(data);
             });
 
     }
 
-    $scope.PrepareTableData = function(data){
-        //console.log(data);
-        if($scope.filtervariable=="period"){
-            var orgUnits = [];
-            var dataObject = []
-            //angular.forEach(data.ou,function(value,index){
-            //    dataObject.push({org:names[value],});
-            //});
-            var  markedDx = null;
-            if(data.rows.length>0){
-                angular.forEach(data.rows,function(value,index){
-                    if(value[0]!==markedDx){
-                        markedDx = value[0];
-                    }else{
-                        //{org:names[value[1]],}
-                    }
-                    //dataObject.push({org:names[value[1]],});
-                });
-            }
-
-
-        }else{
-
-        }
-    }
-
-    $scope.PrepareChartData = function(data){
-        //console.log(data);
-    }
 
     $scope.getReport = function(reportType){
 

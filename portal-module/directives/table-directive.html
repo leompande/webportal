@@ -1,5 +1,10 @@
 <div>
-<table datatable="ng" class="row-border hover">
+    <script>
+        $(document).ready(function() {
+            $('#table').dataTable();
+        } );
+    </script>
+<table id="table" class="table table-bordered table-responsive table-simple">
     <thead>
     <tr>
         <th>ID</th>
