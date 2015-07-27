@@ -587,6 +587,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     });
 
     $scope.getDataFromDHISApi = function(selectedlistIndicators,selectedlistPeriods,selectedlistOrgunit){
+
         var data;
         var periodString = "";
         var periodlength = selectedlistPeriods.length;
@@ -649,16 +650,17 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
 
         }
-        $scope.filtervariable="period"
+        $scope.filtervariable="period";
+        console.log($scope.analyticsUrl);
         $scope.PrepareTableData = function(data){
 
             if($scope.filtervariable=="period"){
                 var orgUnits = [];
                 var dataObject = [];
                 var  markedDx = null;
-                var indicatorLength  = 2;
+                var indicatorLength  = $scope.selectedlistIndicators.length;
                 if(data.rows.length>0){
-                    var selectedIndLength = 2;
+                    var selectedIndLength = $scope.selectedlistIndicators.length;
                     var orgunitLength = data.metaData.ou.length;
                     var orgCounter = 0;
                     var roundCounter = 0;
@@ -811,14 +813,13 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         $http({
             method: 'GET',
-            //url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
-            url: "portal-module/analytics.json",
+            url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
+            //url: "portal-module/analytics.json",
             dataType: "json",
             cache: true,
             ifModified: true
         }).success(
             function(data) {
-alert("loaded");
                 $scope.dataForDisplayingTable = $scope.PrepareTableData(data);
                 $scope.chartSeriesArray = $scope.PrepareChartData($scope.dataForDisplayingTable);
                 $scope.chartSeries = $scope.chartSeriesArray.ob;
@@ -911,11 +912,18 @@ alert("loaded");
             $scope.selectedlistIndicators.push(indicator);
             checker++;
         });
+
         if(checker<1){
             $scope.selectedlistIndicators = [];
         }
 
-        $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+
+        $scope.$watch(function() {
+            return $scope.selectedlistIndicators;
+        }, function() {
+            $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+
+        });
 
 
 
