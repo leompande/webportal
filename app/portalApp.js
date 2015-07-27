@@ -624,8 +624,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         var orgunitString = "";
         var orgunitlength = selectedlistOrgunit.length;
-        if(orgunitlength>1){
-            angular.forEach(selectedlistOrgunit,function(value,index){
+        if(orgunitlength>=1){
+                angular.forEach(selectedlistOrgunit,function(value,index){
                 if(index==orgunitlength-1){
                     orgunitString+=value.id;
                 }else{
@@ -635,7 +635,12 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         }else{
             orgunitString = selectedlistOrgunit.id;
         }
-
+        if(!orgunitString){
+            orgunitString = "m0frOspS7JY";
+        }
+        if(!periodString){
+            periodString = "2015";
+        }
         if($scope.filtervariable=="period"){
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=ou:"+orgunitString+"&filter=pe:"+periodString+"&displayProperty=NAME";
 
