@@ -652,8 +652,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var  markedDx = null;
                 var indicatorLength  = 2;
                 if(data.rows.length>0){
-                    //console.log(data.rows);
-                    //console.log(data.names);
                     var selectedIndLength = 2;
                     var orgunitLength = data.metaData.ou.length;
                     var orgCounter = 0;
@@ -683,9 +681,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                                         }
                                     dataObject[indexOb] = valueOb;
                                     });
-
                             }
-
 
                         }else{
                             orgCounter = 0;
@@ -701,6 +697,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         }
 
         $scope.PrepareChartData = function(data){
+            var seriesArray = {ob:"",pie:""};
             var headers = [];
             $scope.categories = [];
             angular.forEach($scope.headers,function(value,index){
@@ -710,11 +707,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 }
 
             });
-            var seriesObject = [];
+            var seriesObjectOther = [];
             angular.forEach(data,function(value,index){
                 var dataValues = [];
                 angular.forEach(value,function(valueInd,indexInd){
-                    console.log(indexInd);
                     if(indexInd!=="org"){
                         if(valueInd==null){
                             valueInd = "0";
@@ -725,11 +721,84 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
                 });
                 var series = {name:value.org,data:dataValues};
-                seriesObject.push(series);
-
-
+                seriesObjectOther.push(series);
             });
-                return seriesObject;
+            seriesArray.ob = seriesObjectOther;
+
+
+            var seriesObjectpie = [];
+             angular.forEach(data,function(value,index){
+                    var dataOb = [];
+                 var colors = 0;
+                 angular.forEach(value,function(valueX,indexX){
+                     if(indexX=='org'){}else{
+                         if(valueX==null){valueX=0;}
+                         data = {
+                             name: $scope.categories[colors],
+                                 y: parseInt(valueX),
+                             color: Highcharts.getOptions().colors[Math.floor((Math.random() * 10) + 1)+colors]
+                         }
+                         dataOb.push(data);
+                         colors++;
+                     }
+
+                 });
+                 var raw = {
+                     type: 'pie',
+                     name: value.org,
+                     data: dataOb,
+                     center: [Math.floor((Math.random() * 200) + 100), Math.floor((Math.random() * 100) + 10)+100],
+                     size: 100,
+                     showInLegend: false,
+                     dataLabels: {
+                         enabled: true
+                     }
+                 };
+                 seriesObjectpie.push(raw);
+             });
+            //console.log(seriesObjectpie);
+            var countCharts = 0;
+            var initialX = 110;
+            var initialY = 30;
+            var rounds = 0;
+            var pieSize = 200;
+            var PreViX = initialX;
+            var PrevY = initialY;
+            angular.forEach(seriesObjectpie,function(valueX,indexX){
+                var center = [initialX,initialY];
+                var testCenter = [initialX,initialY];
+
+                if(countCharts>3){
+
+                    PrevY = PrevY+pieSize;
+                    PreViX = initialX;
+                    testCenter = [PreViX,PrevY];
+                    PrevY = PrevY;
+                    rounds++;
+                    countCharts=0;
+                }else{
+                    testCenter = [PreViX,PrevY];
+                    PreViX = PreViX+pieSize;
+                }
+                console.log(testCenter);
+                valueX.center=testCenter;
+                seriesObjectpie[indexX] = valueX;
+                //if(indexX=='org'){}else{
+                //    if(valueX==null){valueX=0;}
+                //    data = {
+                //        name: $scope.categories[colors],
+                //        y: parseInt(valueX),
+                //        color: Highcharts.getOptions().colors[Math.floor((Math.random() * 10) + 1)+colors]
+                //    }
+                //    dataOb.push(data);
+                //    colors++;
+                //}
+                countCharts++;
+            });
+            seriesArray.pie = seriesObjectpie;
+            console.log();
+            //Algorithm for positioning of pie charts
+                return seriesArray;
         }
 
 
@@ -744,16 +813,18 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             function(data) {
 
                 $scope.dataForDisplayingTable = $scope.PrepareTableData(data);
-                $scope.chartSeries = $scope.PrepareChartData($scope.dataForDisplayingTable);
+                $scope.chartSeriesArray = $scope.PrepareChartData($scope.dataForDisplayingTable);
+                $scope.chartSeries = $scope.chartSeriesArray.ob;
+                $scope.pieSeries = $scope.chartSeriesArray.pie;
 
-                //console.log(testSeries);
+
             });
 
     }
 
 
     $scope.getReport = function(reportType,otherInfo){
-
+        $scope.chartType = otherInfo;
         /// varible to check for current repor format
 
         $scope.chartConfig = {
@@ -786,7 +857,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     }
                 }
             },
-            series: $scope.chartSeries,
+            series:  ((otherInfo=="pie")? $scope.pieSeries : $scope.chartSeries),
             title: {
                 text: 'Hello'
             },
@@ -811,9 +882,13 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.map   = false;
 
             $scope.$watch(function() {
-                return $scope.chartConfig;
+                return $scope.chartSeries;
             }, function() {
-                console.log($scope.chartConfig);
+            });
+
+            $scope.$watch(function() {
+                return $scope.pieSeries;
+            }, function() {
 
             });
 
