@@ -21,8 +21,6 @@ var portal =angular
             }).success(
                 function(data) {
                     $scope.dashboards = data.dashboards;
-                    console.log($scope.dashboards);
-
                 });
         };
 
@@ -651,9 +649,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             if($scope.filtervariable=="period"){
                 var orgUnits = [];
                 var dataObject = [];
-                //angular.forEach(data.ou,function(value,index){
-                //    dataObject.push({org:names[value],});
-                //});
                 var  markedDx = null;
                 var indicatorLength  = 2;
                 if(data.rows.length>0){
@@ -706,7 +701,35 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         }
 
         $scope.PrepareChartData = function(data){
+            var headers = [];
+            $scope.categories = [];
+            angular.forEach($scope.headers,function(value,index){
 
+                if(index>0){
+                    $scope.categories.push(value);
+                }
+
+            });
+            var seriesObject = [];
+            angular.forEach(data,function(value,index){
+                var dataValues = [];
+                angular.forEach(value,function(valueInd,indexInd){
+                    console.log(indexInd);
+                    if(indexInd!=="org"){
+                        if(valueInd==null){
+                            valueInd = "0";
+                        }
+                        dataValues.push(parseInt(valueInd));
+                    }
+
+
+                });
+                var series = {name:value.org,data:dataValues};
+                seriesObject.push(series);
+
+
+            });
+                return seriesObject;
         }
 
 
@@ -721,23 +744,79 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             function(data) {
 
                 $scope.dataForDisplayingTable = $scope.PrepareTableData(data);
-                $scope.PrepareChartData(data);
+                $scope.chartSeries = $scope.PrepareChartData($scope.dataForDisplayingTable);
+
+                //console.log(testSeries);
             });
 
     }
 
 
-    $scope.getReport = function(reportType){
+    $scope.getReport = function(reportType,otherInfo){
 
         /// varible to check for current repor format
-        //$scope.table = true;
-        //$scope.chart = false;
-        //$scope.map   = false;
+
+        $scope.chartConfig = {
+            xAxis: {
+                categories: $scope.categories,
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Population',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' millions'
+            },
+            options: {
+                chart: {
+                    type: otherInfo
+                },
+                plotOptions: {
+                    series: {
+                        stacking: ''
+                    }
+                }
+            },
+            series: $scope.chartSeries,
+            title: {
+                text: 'Hello'
+            },
+            credits: {
+                enabled: true
+            },
+            loading: false,
+            size: {}
+        };
+
+        $scope.chartConfig.title.text = "Text Analysis Report";
 
         if(reportType=="table"){
             $scope.table = true;
             $scope.chart = false;
             $scope.map   = false;
+        }
+
+        if(reportType=="chart"){
+            $scope.table = false;
+            $scope.chart = true;
+            $scope.map   = false;
+
+            $scope.$watch(function() {
+                return $scope.chartConfig;
+            }, function() {
+                console.log($scope.chartConfig);
+
+            });
+
         }
         // Getting selected Indicators
         var checker = 0;

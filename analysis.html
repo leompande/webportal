@@ -439,19 +439,22 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="pull-left" style="margin-top: 10px;">
-                            <button type="button" class="btn" ng-click="getReport('table')">Table</button>
-                            <button type="button" class="btn">Column</button>
-                            <button type="button" class="btn">Line</button>
-                            <button type="button" class="btn">Area</button>
-                            <button type="button" class="btn">Spline</button>
-                            <button type="button" class="btn">Spline Area</button>
-                            <button type="button" class="btn">Pie</button>
-                            <button type="button" class="btn">Map</button>
+                            <button type="button" class="btn" ng-click="getReport('table','')">Table</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','column')">Column</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','line')">Line</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','area')">Area</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','spline')">Spline</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','areaspline')">Spline Area</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','pie')">Pie</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','map')">Map</button>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <analysis-charts ng-if="chart" data="dataForDisplayingTable"></analysis-charts>
+
+                        <div class="col-md-12" style="margin-top: 10px;">
+                            <highchart id="chart1" ng-show="chart" config="chartConfig"  ></highchart>
+                            <!--<highchart id="chart1" ng-show="chart" series="chartSeries" title="chart.title" options="chart.options"></highchart>-->
+                            <analysis-charts ng-show="chart" data="dataForDisplayingTable"></analysis-charts>
                             <analysis-table ng-show="table" data="dataForDisplayingTable" title="titles" header="headers"></analysis-table>
                             <analysis-map ng-if="map" data-object="jsonObject" ></analysis-map>
                             <!--<analysis-column ng-if="column" dataobject="jsonObject"></analysis-column>-->
