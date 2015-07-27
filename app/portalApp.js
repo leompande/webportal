@@ -641,6 +641,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         if(!periodString){
             periodString = "2015";
         }
+        $scope.filtervariable="period";
         if($scope.filtervariable=="period"){
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=ou:"+orgunitString+"&filter=pe:"+periodString+"&displayProperty=NAME";
 
