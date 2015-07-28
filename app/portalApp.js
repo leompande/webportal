@@ -670,15 +670,15 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     console.log($scope.selectedlistOrgunit);
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid = value.id;
-                       var singleOb =  getSingleOrgObject(uid,$scope.selectedlistIndicators,data.rows);
-                        singleOb['org']=value.name;
-                        console.log(singleOb);
-                        dataObject.push(singleOb);
+                        var name = value.name;
+                       var singleOb =  getSingleOrgObject(uid,name,$scope.selectedlistIndicators,data.rows);
+
                     });
 
-                    function getSingleOrgObject(orgUnitUID,selectedInd,dataRows){
+                    function getSingleOrgObject(orgUnitUID,name,selectedInd,dataRows){
                         var ob = {};
                         var indicatorCounter = 1;
+                        ob['name'] = name;
                         angular.forEach($scope.selectedlistIndicators,function(value,index){
                             //objectIndex
                             var indicator  = value.indicatorId;
@@ -730,7 +730,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             }else{
 
             }
-            console.log(dataObject);
                     return dataObject;
         }
 
