@@ -671,7 +671,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid = value.id;
                        var singleOb =  getSingleOrgObject(uid,$scope.selectedlistIndicators,data.rows);
-                        console.log(singleOb);
+                        singleOb['org']=value.name;
+                        console.log(singleOb['org']);
                     });
 
                     function getSingleOrgObject(orgUnitUID,selectedInd,dataRows){
