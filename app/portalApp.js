@@ -664,6 +664,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     var orgunitLength = data.metaData.ou.length;
                     var orgCounter = 0;
                     var roundCounter = 0;
+                    console.log($scope.selectedlistIndicators);
+                    console.log($scope.selectedlistOrgunit);
                     angular.forEach(data.rows,function(value,index){
                         console.log(value);
                     });
