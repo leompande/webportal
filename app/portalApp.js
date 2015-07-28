@@ -709,10 +709,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             var seriesArray = {ob:"",pie:""};
             var headers = [];
             $scope.categories = [];
-            angular.forEach($scope.headers,function(value,index){
+            angular.forEach($scope.selectedlistIndicators,function(value,index){
 
                 if(index>0){
-                    $scope.categories.push(value);
+                    $scope.categories.push(value.name);
                 }
 
             });
@@ -903,8 +903,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var indicator = {name:$(value).text(),indicatorId:value.value};
                 $scope.selectedlistIndicators.push(indicator);
         });
-        console.log("SELECTED INDICATORS");
-        console.log($scope.selectedlistIndicators);
 
 
 
