@@ -661,7 +661,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var dataObject = [];
                 var  markedDx = null;
                 var indicatorLength  = $scope.selectedlistIndicators.length;
-                console.log(data.rows);
                 if(data.rows.length>0){
                     var selectedIndLength = $scope.selectedlistIndicators.length;
                     var orgunitLength = data.metaData.ou.length;
@@ -669,9 +668,29 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     var roundCounter = 0;
                     console.log($scope.selectedlistIndicators);
                     console.log($scope.selectedlistOrgunit);
-                    angular.forEach(data.rows,function(value,index){
-                        console.log(value);
+                    angular.forEach($scope.selectedlistOrgunit,function(value,index){
+                        var uid = value.id;
+                       var singleOb =  getSingleOrgObject(uid,$scope.selectedlistIndicators,data.rows);
+                        console.log(singleOb);
                     });
+
+                    function getSingleOrgObject(orgUnitUID,selectedInd,dataRows){
+                        var ob = {};
+                        var indicatorCounter = 1;
+                        angular.forEach($scope.selectedlistIndicators,function(value,index){
+                            //objectIndex
+                            var indicator  = value.indicatorId;
+                            angular.forEach(data.rows,function(value,index){
+                                    if(value[0]==orgUnitUID&&value[1]==indicator){
+                                        ob['indicator'+indicatorCounter];
+                                        indicatorCounter++;
+                                    }
+                            });
+                        });
+                        return ob;
+                    }
+
+
                     //angular.forEach(data.rows,function(value,index){
                     //    orgCounter++
                     //    var ob = {};
@@ -798,7 +817,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     testCenter = [PreViX,PrevY];
                     PreViX = PreViX+pieSize;
                 }
-                console.log(testCenter);
                 valueX.center=testCenter;
                 seriesObjectpie[indexX] = valueX;
                 countCharts++;
@@ -811,8 +829,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         $http({
             method: 'GET',
-            url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
-            //url: "portal-module/analytics.json",
+            //url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
+            url: "portal-module/analytics.json",
             dataType: "json",
             cache: true,
             ifModified: true
