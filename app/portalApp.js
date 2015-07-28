@@ -572,12 +572,14 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.$watch(function() {
         return TreeViewService.selectedNode;
     }, function() {
+        $scope.selectedlistOrgunit = {};
         $scope.selectedlistOrgunit = TreeViewService.selectedNode;
     });
 
     $scope.$watchCollection(function() {
         return TreeViewService.selectedNodeMultiple;
     }, function() {
+        $scope.selectedlistOrgunit = {};
         $scope.selectedlistOrgunit = TreeViewService.selectedNodeMultiple;
     });
     $scope.$watchCollection(function() {
@@ -659,6 +661,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var dataObject = [];
                 var  markedDx = null;
                 var indicatorLength  = $scope.selectedlistIndicators.length;
+                console.log(data.rows);
                 if(data.rows.length>0){
                     var selectedIndLength = $scope.selectedlistIndicators.length;
                     var orgunitLength = data.metaData.ou.length;

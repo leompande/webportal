@@ -14,27 +14,20 @@ angular.module('ui.bootstrap.treeview', []).factory('TreeViewService', function 
     };
 
     factory.selectNode = function (node,$event) {
+        factory.trackSingle = 0;
+        if(node.selected==true){
+            delete node.selected;
+            angular.forEach(factory.selectedNodeMultiple,function(value,index){
+                if(node.id==value.id){
+                    factory.selectedNodeMultiple.splice(index,1);
+                }
 
-        if (factory.selectedNode){
-            if($event.ctrlKey){
-                factory.selectedNodeMultiple.push(factory.selectedNode);
-                factory.selectedNodeMultiple.push(node);
-            }else{
-                factory.selectedNode.selected = undefined;
-                angular.forEach(factory.selectedNodeMultiple,function(value,index){
-                    factory.selectedNode = value;
-                    factory.selectedNode.selected = undefined;
-
-                });
-                factory.selectedNodeMultiple = [];
-                factory.selectedNode = node;
-            }
+            });
         }else{
-            factory.selectedNode = node;
+            node.selected = true;
+            factory.selectedNodeMultiple.push(node);
         }
 
-
-        node.selected = true;
     };
 
 
