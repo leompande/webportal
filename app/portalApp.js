@@ -904,7 +904,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 $scope.selectedlistIndicators.push(indicator);
         });
 
-
+        console.log($scope.selectedlistIndicators);
 
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
