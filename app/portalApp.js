@@ -681,7 +681,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                             //objectIndex
                             var indicator  = value.indicatorId;
                             angular.forEach(data.rows,function(value,index){
-                                    if(value[0]==orgUnitUID&&value[1]==indicator){
+                                    if(value[0]==indicator&&value[1]==orgUnitUID){
                                         ob['indicator'+indicatorCounter]=value[2];
                                         indicatorCounter++;
                                     }
