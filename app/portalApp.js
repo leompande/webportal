@@ -682,7 +682,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                             var indicator  = value.indicatorId;
                             angular.forEach(data.rows,function(value,index){
                                     if(value[0]==orgUnitUID&&value[1]==indicator){
-                                        ob['indicator'+indicatorCounter];
+                                        ob['indicator'+indicatorCounter]=value[2];
                                         indicatorCounter++;
                                     }
                             });
