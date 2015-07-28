@@ -756,7 +756,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                      type: 'pie',
                      name: value.org,
                      data: dataOb,
-                     center: [Math.floor((Math.random() * 200) + 100), Math.floor((Math.random() * 100) + 10)+100],
+                     center: null,
                      size: 100,
                      showInLegend: false,
                      dataLabels: {
@@ -773,6 +773,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             var pieSize = 200;
             var PreViX = initialX;
             var PrevY = initialY;
+            //Algorithm for positioning of pie charts
             angular.forEach(seriesObjectpie,function(valueX,indexX){
                 var center = [initialX,initialY];
                 var testCenter = [initialX,initialY];
@@ -792,21 +793,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 console.log(testCenter);
                 valueX.center=testCenter;
                 seriesObjectpie[indexX] = valueX;
-                //if(indexX=='org'){}else{
-                //    if(valueX==null){valueX=0;}
-                //    data = {
-                //        name: $scope.categories[colors],
-                //        y: parseInt(valueX),
-                //        color: Highcharts.getOptions().colors[Math.floor((Math.random() * 10) + 1)+colors]
-                //    }
-                //    dataOb.push(data);
-                //    colors++;
-                //}
                 countCharts++;
             });
             seriesArray.pie = seriesObjectpie;
-            console.log();
-            //Algorithm for positioning of pie charts
+
                 return seriesArray;
         }
 
@@ -830,7 +820,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
     }
 
-
+    var checker = 0;
     $scope.getReport = function(reportType,otherInfo){
         $scope.chartType = otherInfo;
         /// varible to check for current repor format
@@ -902,31 +892,32 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         }
         // Getting selected Indicators
-        var checker = 0;
+
         $scope.headers = [];
-        $scope.headers[0] = "Organisation Units"
-        angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
-
-            $scope.headers[index+1] = $(value).text();
-            var indicator = {indicatorId:value.value};
-            $scope.selectedlistIndicators.push(indicator);
-            checker++;
-        });
-
-        if(checker<1){
+        $scope.headers[0] = "Organisation Units";
+        if(checker>1){
             $scope.selectedlistIndicators = [];
         }
+        angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
+                //$scope.headers[index+1] = $(value).text();
+                var indicator = {name:$(value).text(),indicatorId:value.value};
+                $scope.selectedlistIndicators.push(indicator);
+        });
+        console.log("SELECTED INDICATORS");
+        console.log($scope.selectedlistIndicators);
+
 
 
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
         }, function() {
+
             $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
 
         });
 
 
-
+        checker++;
     }
 
     $scope.getReport('table');
