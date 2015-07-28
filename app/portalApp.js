@@ -665,38 +665,41 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     var orgCounter = 0;
                     var roundCounter = 0;
                     angular.forEach(data.rows,function(value,index){
-                        orgCounter++
-                        var ob = {};
-                        if(orgCounter<=orgunitLength){
-                            if(roundCounter<=0){
-                                ob['org'] = data.metaData.names[value[1]];
-                                for(var i = 0;i<indicatorLength;i++){
-                                    var indicatorIndex = "indicator"+(i+1);
-                                    ob[indicatorIndex] = null;
-                                    ob["indicator1"] = value[2];
-                                }
-                                dataObject.push(ob);
-                            }else{
-                                angular.forEach(dataObject,function(valueOb,indexOb){
-                                    //var indicatorIndex = "indicator"+(index+2);
-                                    for(var i = 0;i<indicatorLength;i++){
-                                            var indicatorIndex = "indicator"+(i+1);
-                                        if(valueOb['org'] == data.metaData.names[value[1]]){
-                                            valueOb[indicatorIndex] = value[2];
-                                        }else{
-                                        }
-
-                                        }
-                                    dataObject[indexOb] = valueOb;
-                                    });
-                            }
-
-                        }else{
-                            orgCounter = 0;
-                            roundCounter++;
-                        }
-
+                        console.log(value);
                     });
+                    //angular.forEach(data.rows,function(value,index){
+                    //    orgCounter++
+                    //    var ob = {};
+                    //    if(orgCounter<=orgunitLength){
+                    //        if(roundCounter<=0){
+                    //            ob['org'] = data.metaData.names[value[1]];
+                    //            for(var i = 0;i<indicatorLength;i++){
+                    //                var indicatorIndex = "indicator"+(i+1);
+                    //                ob[indicatorIndex] = null;
+                    //                ob["indicator1"] = value[2];
+                    //            }
+                    //            dataObject.push(ob);
+                    //        }else{
+                    //            angular.forEach(dataObject,function(valueOb,indexOb){
+                    //                //var indicatorIndex = "indicator"+(index+2);
+                    //                for(var i = 0;i<indicatorLength;i++){
+                    //                        var indicatorIndex = "indicator"+(i+1);
+                    //                    if(valueOb['org'] == data.metaData.names[value[1]]){
+                    //                        valueOb[indicatorIndex] = value[2];
+                    //                    }else{
+                    //                    }
+                    //
+                    //                    }
+                    //                dataObject[indexOb] = valueOb;
+                    //                });
+                    //        }
+                    //
+                    //    }else{
+                    //        orgCounter = 0;
+                    //        roundCounter++;
+                    //    }
+                    //
+                    //});
                 }
             }else{
 
