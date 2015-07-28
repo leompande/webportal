@@ -694,6 +694,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             }else{
 
             }
+                    console.log(dataObject);
                     return dataObject;
         }
 
