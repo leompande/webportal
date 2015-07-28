@@ -679,9 +679,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                             }else{
                                 angular.forEach(dataObject,function(valueOb,indexOb){
                                     //var indicatorIndex = "indicator"+(index+2);
-                                    for(var i = 1;i<=indicatorLength;i++){
-                                        console.log(i);
-                                        console.log(indicatorLength);
+                                    for(var i = 0;i<indicatorLength;i++){
                                             var indicatorIndex = "indicator"+(i+1);
                                         if(valueOb['org'] == data.metaData.names[value[1]]){
                                             valueOb[indicatorIndex] = value[2];
