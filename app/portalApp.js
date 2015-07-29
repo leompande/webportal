@@ -674,14 +674,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                             "name":"MOH - Tanzania"
                         });
                     }
-
-                    if($scope.selectedlistIndicators.length<=0){
-                        $scope.selectedlistIndicators.push({name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"});
-                        $scope.selectedlistIndicators.push({name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"});
-                        $scope.selectedlistIndicators.push({name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"});
-                        $scope.selectedlistIndicators.push({name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"});
-                        $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
-                    }
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid = value.id;
                         var name = value.name;
@@ -904,8 +896,23 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
                 var indicator = {name:$(value).text(),indicatorId:value.value};
         });
+console.log($scope.selectedlistIndicators.length);
+        // hardcoding default indicators
+        if($scope.selectedlistIndicators.length<=0){
+            $scope.selectedlistIndicators.push({name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"});
+            $scope.selectedlistIndicators.push({name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"});
+            $scope.selectedlistIndicators.push({name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"});
+            $scope.selectedlistIndicators.push({name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"});
+            $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
+        }
 
-
+        //if($scope.selectedlistOrgunit.length<=0){
+        //
+        //    $scope.selectedlistOrgunit.push({
+        //        "id":"m0frOspS7JY",
+        //        "name":"MOH - Tanzania"
+        //    });
+        //}
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
         }, function() {
