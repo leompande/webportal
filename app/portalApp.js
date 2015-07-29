@@ -740,7 +740,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
 
                 });
-                var series = {type:"line",name:value.org,data:dataValues};
+                var series = {pointPlacement:"on",name:value.org,data:dataValues};
                 seriesObjectPolar.push(series);
             });
             seriesArray.polar = seriesObjectPolar;
