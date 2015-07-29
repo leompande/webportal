@@ -846,7 +846,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.getReport = function(reportType,otherInfo){
         $scope.chartType = otherInfo;
         /// varible to check for current repor format
-        if(otherInfo=="radar"){
+        if(otherInfo=="spider"){
             console.log($scope.polarSeries);
             $scope.chartConfig = {
 
