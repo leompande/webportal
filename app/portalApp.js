@@ -712,11 +712,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             var headers = [];
             $scope.categories = [];
             angular.forEach($scope.selectedlistIndicators,function(value,index){
-console.log(value);
-                //if(index>0){
                     $scope.categories.push(value.name);
-                //}
-
             });
             var seriesObjectOther = [];
             angular.forEach(data,function(value,index){
@@ -752,9 +748,10 @@ console.log(seriesArray);
                              color:'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')'
 
                      }
+
+                         indcIndex++;
                          dataOb.push(data);
                      }
-                     indcIndex++;
                  });
                  var raw = {
                      type: 'pie',
