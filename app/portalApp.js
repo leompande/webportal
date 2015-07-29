@@ -491,7 +491,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.arrowDown = true;
     $scope.showForm = false;
     $scope.message = "Show the analysis menu";
-    $scope.loading = false;
+    $scope.loading = true;
     $scope.filtervariable = "ou";
     $scope.toggleAnalysismenu = function(){
         if($scope.arrowUp){
@@ -703,7 +703,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             }else{
 
             }
-                    $scope.loading = true;
+                    $scope.loading = false;
                     return dataObject;
         }
 
