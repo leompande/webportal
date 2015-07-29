@@ -12,6 +12,7 @@
     <tr ng-repeat="data in dataTable">
         <td ng-repeat="item in data">{{ item }}</td>
     </tr>
+    <tr ng-show="loading" style="background-color: #E8E8E8;"><td colspan="6"><i class="fa fa-spin fa-spinner fa-2x"></i>&nbsp;loading</td></tr>
 </tbody>
 </table>
 </div>
