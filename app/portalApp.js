@@ -491,7 +491,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.arrowDown = true;
     $scope.showForm = false;
     $scope.message = "Show the analysis menu";
-    $scope.loading = true;
     $scope.filtervariable = "ou";
     $scope.toggleAnalysismenu = function(){
         if($scope.arrowUp){
@@ -1037,9 +1036,9 @@ portal.directive('multiSelect', function($q) {
 portal.directive('analysisTable',function(){
     return {
         link:function($scope,element,attrs){
-
+            $scope.loading = true;
             $scope.$watchCollection($scope[attrs.data], function(val) {
-
+                $scope.loading = false;
             });
             $scope.$watch($scope[attrs.title], function(val) {
 
