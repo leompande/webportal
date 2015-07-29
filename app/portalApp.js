@@ -666,15 +666,11 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     var orgunitLength = data.metaData.ou.length;
                     var orgCounter = 0;
                     var roundCounter = 0;
-                    console.log($scope.selectedlistOrgunit);
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid = value.id;
                         var name = value.name;
-                        console.log(name);
-                        console.log(data.rows);
                        var singleOb =  getSingleOrgObject(uid,name,$scope.selectedlistIndicators,data.rows);
                         dataObject.push(singleOb);
-                        console.log(singleOb);
                     });
 
                     function getSingleOrgObject(orgUnitUID,name,selectedInd,dataRows){
@@ -698,7 +694,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             }else{
 
             }
-                    console.log(dataObject);
+
                     return dataObject;
         }
 
@@ -905,6 +901,14 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.selectedlistIndicators.push({name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"});
             $scope.selectedlistIndicators.push({name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"});
             $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
+        }
+
+        if($scope.selectedlistOrgunit.length<=0){
+
+            $scope.selectedlistOrgunit.push({
+                "id":"m0frOspS7JY",
+                "name":"MOH - Tanzania"
+            });
         }
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
