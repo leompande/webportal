@@ -851,8 +851,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.chartConfig = {
 
                 chart: {
-                    polar: true,
-                    type: 'line'
+                    polar: true
                 },
 
                 title: {
