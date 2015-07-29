@@ -385,7 +385,7 @@
                             <button type="button" class="btn" ng-click="getReport('chart','spline')">Spline</button>
                             <button type="button" class="btn" ng-click="getReport('chart','areaspline')">Spline Area</button>
                             <button type="button" class="btn" ng-click="getReport('chart','pie')">Pie</button>
-                            <button type="button" class="btn" ng-click="getReport('spider','spider')">Spider</button>
+                            <button type="button" class="btn" ng-click="getReport('chart','spider')">Spider</button>
                             <button type="button" class="btn" ng-click="getReport('chart','map')">Map</button>
                         </div>
                     </div>
@@ -394,9 +394,8 @@
                         <div class="col-md-12" style="margin-top: 10px;">
                             <highchart id="chart1" class="row" ng-show="chart" config="chartConfig"  ></highchart>
                             <analysis-charts class="row" ng-show="chart" data="dataForDisplayingTable"></analysis-charts>
-                            <analysis-charts class="row" ng-show="spider" data="dataForDisplayingTable"></analysis-charts>
-                            <analysis-table class="row" ng-show="table" data="dataForDisplayingTable" load="loading" title="titles" periods="selectedlistPeriods" header="selectedlistIndicators"></analysis-table>
-                            <analysis-map class="row" ng-show="map" data-object="jsonObject" ></analysis-map>
+                            <analysis-table  class="row" ng-show="table" data="dataForDisplayingTable" load="loading" title="titles" periods="selectedlistPeriods" header="selectedlistIndicators"></analysis-table>
+                            <analysis-map    class="row" ng-show="map" data-object="jsonObject" ></analysis-map>
                         </div>
                     </div>
                 </div>
