@@ -729,7 +729,21 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 seriesObjectOther.push(series);
             });
             seriesArray.ob = seriesObjectOther;
-            seriesArray.polar = seriesObjectOther;
+
+            var seriesObjectPolar = [];
+            angular.forEach(data,function(value,index){
+                var dataValues = [];
+                angular.forEach(value,function(valueInd,indexInd){
+                    if(indexInd!=="org"){
+                        dataValues.push(parseInt(valueInd));
+                    }
+
+
+                });
+                var series = {type:"line",name:value.org,data:dataValues};
+                seriesObjectPolar.push(series);
+            });
+            seriesArray.polar = seriesObjectPolar;
             var seriesObjectpie = [];
             $scope.lengthD = data.length;
              angular.forEach(data,function(value,index){
@@ -765,7 +779,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
                  }
                  console.log($scope.lengthD);
-                 console.log(raw);
                  seriesObjectpie.push(raw);
              });
             var countCharts = 0;
@@ -936,6 +949,11 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
             $scope.$watch(function() {
                 return $scope.chartSeries;
+            }, function() {
+            });
+
+            $scope.$watch(function() {
+                return $scope.polarSeries;
             }, function() {
             });
 
