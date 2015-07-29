@@ -740,17 +740,16 @@ console.log(seriesArray);
             var seriesObjectpie = [];
              angular.forEach(data,function(value,index){
                     var dataOb = [];
-                 var colors = 0;
                  angular.forEach(value,function(valueX,indexX){
                      if(indexX=='org'){}else{
                          if(valueX==null){valueX=0;}
                          data = {
-                             name: $scope.categories[colors],
+                             name: $scope.categories[indexX],
                                  y: parseInt(valueX),
-                             color: Highcharts.getOptions().colors[Math.floor((Math.random() * 10) + 1)+colors]
-                         }
+                             color:'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')'
+
+                     }
                          dataOb.push(data);
-                         colors++;
                      }
 
                  });
