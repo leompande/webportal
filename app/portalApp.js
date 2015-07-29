@@ -760,7 +760,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                  if(value.length<=1){
                      raw = raw.size = 400;
                  }
-                 console.log(value);
+                 console.log(data.length);
                  seriesObjectpie.push(raw);
              });
             //console.log(seriesObjectpie);
