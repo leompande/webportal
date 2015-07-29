@@ -806,7 +806,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 $scope.chartSeriesArray = $scope.PrepareChartData($scope.dataForDisplayingTable);
                 $scope.chartSeries = $scope.chartSeriesArray.ob;
                 $scope.pieSeries = $scope.chartSeriesArray.pie;
-
+                console.log($scope.dataForDisplayingTable);
+                console.log($scope.chartSeriesArray);
 
             });
 
