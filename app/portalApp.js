@@ -741,6 +741,8 @@ console.log(seriesArray);
              angular.forEach(data,function(value,index){
                     var dataOb = [];
                  angular.forEach(value,function(valueX,indexX){
+                     console.log($scope.categories);
+                     console.log(indexX);
                      if(indexX=='org'){}else{
                          if(valueX==null){valueX=0;}
                          data = {
