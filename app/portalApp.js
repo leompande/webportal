@@ -831,47 +831,93 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.getReport = function(reportType,otherInfo){
         $scope.chartType = otherInfo;
         /// varible to check for current repor format
+        if(otherInfo=="radar"){
+            $scope.chartConfig = {
 
-        $scope.chartConfig = {
-            xAxis: {
-                categories: $scope.categories,
-                title: {
-                    text: null
-                }
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Population',
-                    align: 'high'
-                },
-                labels: {
-                    overflow: 'justify'
-                }
-            },
-            tooltip: {
-                valueSuffix: ' millions'
-            },
-            options: {
                 chart: {
-                    type: otherInfo
+                    polar: true,
+                    type: 'line'
                 },
-                plotOptions: {
-                    series: {
-                        stacking: ''
+
+                title: {
+                    text: null,
+                    x: -80
+                },
+
+                pane: {
+                    size: '80%'
+                },
+
+                xAxis: {
+                    categories:$scope.categories,
+                    tickmarkPlacement: 'on',
+                    lineWidth: 0
+                },
+
+                yAxis: {
+                    gridLineInterpolation: 'polygon',
+                    lineWidth: 0,
+                    min: 0
+                },
+
+                tooltip: {
+                    shared: true,
+                    pointFormat: '<span style="color:red"><b>bg</b><br/>'
+                },
+
+                legend: {
+                    align: 'right',
+                    verticalAlign: 'top',
+                    y: 70,
+                    layout: 'vertical'
+                },
+
+                series:((otherInfo=="radar")? $scope.pieSeries : $scope.chartSeries)
+
+            };
+        }else{
+            $scope.chartConfig = {
+                xAxis: {
+                    categories: $scope.categories,
+                    title: {
+                        text: null
                     }
-                }
-            },
-            series:  ((otherInfo=="pie")? $scope.pieSeries : $scope.chartSeries),
-            title: {
-                text: 'Hello'
-            },
-            credits: {
-                enabled: true
-            },
-            loading: false,
-            size: {}
-        };
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Population',
+                        align: 'high'
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    valueSuffix: ' millions'
+                },
+                options: {
+                    chart: {
+                        type: otherInfo
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: ''
+                        }
+                    }
+                },
+                series:  ((otherInfo=="pie")? $scope.pieSeries : $scope.chartSeries),
+                title: {
+                    text: 'Hello'
+                },
+                credits: {
+                    enabled: true
+                },
+                loading: false,
+                size: {}
+            };
+        }
+
 
         $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
 
