@@ -846,7 +846,16 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.getReport = function(reportType,otherInfo){
         $scope.chartType = otherInfo;
         /// varible to check for current repor format
+        $scope.series = "";
+        switch(otherInfo){
+            case 'chart':
+                $scope.series = $scope.chartSeries;
+                break;
+            case 'polar':
+                $scope.series = $scope.polarSeries;
+                break;
 
+        }
             $scope.spiderChartConfig = {
 
                 chart: {
@@ -894,7 +903,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     layout: 'vertical'
                 },
 
-                series:$scope.polarSeries
+                series:$scope.series
 
             };
 
@@ -929,7 +938,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                         }
                     }
                 },
-                series:$scope.chartSeries,
+                series:  $scope.series,
                 title: {
                     text: 'Hello'
                 },
