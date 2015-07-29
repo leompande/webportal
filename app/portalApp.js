@@ -487,11 +487,11 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     var indicatorsUrl = "portal-module/indicators.json";
     var orgunitsUrl = "portal-module/organisationUnits_level_1.json";
     $scope.analyticsUrl = null;;
-    $scope.arrowUp = false;
+    $scope.arrowUp   = false;
     $scope.arrowDown = true;
-    $scope.loading = true;
-    $scope.showForm = false;
-    $scope.message = "Show the analysis menu";
+    $scope.loading   = true;
+    $scope.showForm  = false;
+    $scope.message   = "Show the analysis menu";
     $scope.filtervariable = "ou";
     $scope.toggleAnalysismenu = function(){
         if($scope.arrowUp){
@@ -723,9 +723,9 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var dataValues = [];
                 angular.forEach(value,function(valueInd,indexInd){
                     if(indexInd!=="org"){
-                        if(valueInd==null){
-                            valueInd = "0";
-                        }
+                        //if(valueInd==null){
+                        //    valueInd = "0";
+                        //}
                         dataValues.push(parseInt(valueInd));
                     }
 
@@ -735,7 +735,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 seriesObjectOther.push(series);
             });
             seriesArray.ob = seriesObjectOther;
-
+console.log(seriesArray);
 
             var seriesObjectpie = [];
              angular.forEach(data,function(value,index){
