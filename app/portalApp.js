@@ -569,6 +569,13 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.selectedlistOrgunit = {};
     $scope.jsonObject = {};
 
+    if($scope.selectedlistOrgunit.length<=0){
+
+        $scope.selectedlistOrgunit.push({
+            "id":"m0frOspS7JY",
+            "name":"MOH - Tanzania"
+        });
+    }
     $scope.$watch(function() {
         return TreeViewService.selectedNode;
     }, function() {
@@ -666,7 +673,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     var orgunitLength = data.metaData.ou.length;
                     var orgCounter = 0;
                     var roundCounter = 0;
-                    console.log($scope.selectedlistOrgunit);
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid = value.id;
                         var name = value.name;
@@ -905,13 +911,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
         }
 
-        if($scope.selectedlistOrgunit.length<=0){
 
-            $scope.selectedlistOrgunit.push({
-                "id":"m0frOspS7JY",
-                "name":"MOH - Tanzania"
-            });
-        }
         //$scope.$watch(function() {
         //    return $scope.selectedlistIndicators;
         //}, function() {
