@@ -846,69 +846,60 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.getReport = function(reportType,otherInfo){
         $scope.chartType = otherInfo;
         /// varible to check for current repor format
-        $scope.series = "";
-        switch(otherInfo){
-            case 'chart':
-                $scope.series = $scope.chartSeries;
-                break;
-            case 'polar':
-                $scope.series = $scope.polarSeries;
-                break;
-
-        }
-            $scope.spiderChartConfig = {
-
-                chart: {
-                    polar: true,
-                    type:'line'
-                },
-
-                title: {
-                    text: "abcd",
-                    x: -80
-                },
-
-                pane: {
-                    size: '80%'
-                },
-
-                xAxis: {
-                    categories:$scope.categories,
-                    tickmarkPlacement: 'on',
-                    lineWidth: 0,
-                    labels: {
-                    align: 'center',
-                    distance: 43
-                    }
-                },
-
-                yAxis: {
-                    gridLineInterpolation: 'polygon',
-                    lineWidth: 0,
-                    min: 0,
-                    endOnTick: true
-                },
-
-                tooltip: {
-                    shared: true,
-                    pointFormat: '',
-                    useHTML:true
-                },
-
-                legend: {
-                    enabled: true,
-                    align: 'right',
-                    verticalAlign: 'top',
-                    y: 70,
-                    layout: 'vertical'
-                },
-
-                series:$scope.series
-
-            };
-
-
-            $scope.otherChartConfig = {
+        //
+        //    $scope.spiderChartConfig = {
+        //
+        //        chart: {
+        //            polar: true,
+        //            type:'line'
+        //        },
+        //
+        //        title: {
+        //            text: "abcd",
+        //            x: -80
+        //        },
+        //
+        //        pane: {
+        //            size: '80%'
+        //        },
+        //
+        //        xAxis: {
+        //            categories:$scope.categories,
+        //            tickmarkPlacement: 'on',
+        //            lineWidth: 0,
+        //            labels: {
+        //            align: 'center',
+        //            distance: 43
+        //            }
+        //        },
+        //
+        //        yAxis: {
+        //            gridLineInterpolation: 'polygon',
+        //            lineWidth: 0,
+        //            min: 0,
+        //            endOnTick: true
+        //        },
+        //
+        //        tooltip: {
+        //            shared: true,
+        //            pointFormat: '',
+        //            useHTML:true
+        //        },
+        //
+        //        legend: {
+        //            enabled: true,
+        //            align: 'right',
+        //            verticalAlign: 'top',
+        //            y: 70,
+        //            layout: 'vertical'
+        //        },
+        //
+        //        series:((otherInfo=="radar")? $scope.polarSeries : $scope.chartSeries)
+        //
+        //    };
+        //
+        //
+            $scope.chartConfig = {
                 xAxis: {
                     categories: $scope.categories,
                     title: {
@@ -938,7 +929,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                         }
                     }
                 },
-                series:  $scope.series,
+                series:  ((otherInfo=="pie")? $scope.pieSeries : $scope.chartSeries),
                 title: {
                     text: 'Hello'
                 },
@@ -949,17 +940,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 size: {}
             };
 
-            if($scope.chartType=="chart"){
-                $scope.chartConfig = $scope.otherChartConfig;
-                $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
 
-            }
-
-            if($scope.chartType=="spider"){
-                $scope.chartConfig = $scope.spiderChartConfig;
-                $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
-
-            }
+        $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
 
         if(reportType=="table"){
             $scope.table = true;
@@ -983,14 +965,23 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
             });
 
+        } if(reportType=="chart"){
+            $scope.table = false;
+            $scope.chart = true;
+            $scope.map   = false;
+
             $scope.$watch(function() {
-                return $scope.polarSeries;
+                return $scope.chartSeries;
             }, function() {
             });
 
+            $scope.$watch(function() {
+                return $scope.pieSeries;
+            }, function() {
+
+            });
 
         }
-
         // Getting selected Indicators
 
         $scope.headers = [];
