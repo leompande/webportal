@@ -493,6 +493,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.showForm  = false;
     $scope.message   = "Show the analysis menu";
     $scope.filtervariable = "ou";
+    $scope.periods = [];
     $scope.toggleAnalysismenu = function(){
         if($scope.arrowUp){
             $scope.arrowUp = false;
@@ -658,7 +659,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             if($scope.filtervariable=="period"){
                 var orgUnits = [];
                 var dataObject = [];
-                var  markedDx = null;
+                var markedDx = null;
                 var indicatorLength  = $scope.selectedlistIndicators.length;
 
                 if(data.rows.length>0){
@@ -675,9 +676,9 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                         });
                     }
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
-                        var uid = value.id;
+                        var uid  = value.id;
                         var name = value.name;
-                       var singleOb =  getSingleOrgObject(uid,name,$scope.selectedlistIndicators,data.rows);
+                        var singleOb =  getSingleOrgObject(uid,name,$scope.selectedlistIndicators,data.rows);
                         dataObject.push(singleOb);
                     });
 
@@ -766,11 +767,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                  console.log(raw);
                  seriesObjectpie.push(raw);
              });
-            //console.log(seriesObjectpie);
             var countCharts = 0;
             if($scope.lengthD<=1){
-                //raw.size = 200;
-                //raw.center = [200,100];
                 var initialX = 500;
                 var initialY = 100;
 
@@ -1053,6 +1051,7 @@ portal.directive('analysisTable',function(){
             dataTable: "=data",
             titles: "=title",
             loading: "=load",
+            periods: "=periods",
             headers: "=header"
         },
         restrict:"E",
