@@ -759,7 +759,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                      }
                  };
                  if($scope.lengthD<=1){
-                     raw.size = 400;
+                     raw.size = 200;
+                     raw.center = [200,100];
 
                  }
                  console.log($scope.lengthD);
@@ -768,8 +769,17 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
              });
             //console.log(seriesObjectpie);
             var countCharts = 0;
-            var initialX = 110;
-            var initialY = 30;
+            if($scope.lengthD<=1){
+                //raw.size = 200;
+                //raw.center = [200,100];
+                var initialX = 200;
+                var initialY = 100;
+
+            }else{
+                var initialX = 110;
+                var initialY = 30;
+            }
+
             var rounds = 0;
             var pieSize = 200;
             var PreViX = initialX;
