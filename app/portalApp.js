@@ -921,7 +921,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         checker++;
     }
 
-    $scope.getReport('table');
+    $scope.getReport('table','');
 
 
 }]);
