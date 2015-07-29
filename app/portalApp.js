@@ -712,10 +712,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             var headers = [];
             $scope.categories = [];
             angular.forEach($scope.selectedlistIndicators,function(value,index){
-
-                if(index>0){
+console.log(value);
+                //if(index>0){
                     $scope.categories.push(value.name);
-                }
+                //}
 
             });
             var seriesObjectOther = [];
@@ -740,20 +740,21 @@ console.log(seriesArray);
             var seriesObjectpie = [];
              angular.forEach(data,function(value,index){
                     var dataOb = [];
+                 var indcIndex = 0;
                  angular.forEach(value,function(valueX,indexX){
-                     console.log($scope.categories);
+                     console.log($scope.categories[indcIndex]);
                      console.log(indexX);
                      if(indexX=='org'){}else{
                          if(valueX==null){valueX=0;}
                          data = {
-                             name: $scope.categories[indexX],
+                             name: $scope.categories[indcIndex],
                                  y: parseInt(valueX),
                              color:'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')'
 
                      }
                          dataOb.push(data);
                      }
-
+                     indcIndex++;
                  });
                  var raw = {
                      type: 'pie',
