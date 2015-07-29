@@ -759,8 +759,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                      }
                  };
                  if($scope.lengthD<=1){
-                     var newRaw =  raw.size = 400;
-                     raw = newRaw;
+                     raw.size = 400;
+
                  }
                  console.log($scope.lengthD);
                  console.log(raw);
