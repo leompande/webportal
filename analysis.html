@@ -394,7 +394,7 @@
                         <div class="col-md-12" style="margin-top: 10px;">
                             <highchart id="chart1" ng-show="chart" config="chartConfig"  ></highchart>
                             <analysis-charts ng-show="chart" data="dataForDisplayingTable"></analysis-charts>
-                            <analysis-table ng-show="table" data="dataForDisplayingTable" title="titles" header="selectedlistIndicators"></analysis-table>
+                            <analysis-table ng-show="table" data="dataForDisplayingTable" load="loading" title="titles" header="selectedlistIndicators"></analysis-table>
                             <analysis-map ng-if="map" data-object="jsonObject" ></analysis-map>
                         </div>
                     </div>

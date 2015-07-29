@@ -489,6 +489,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.analyticsUrl = null;;
     $scope.arrowUp = false;
     $scope.arrowDown = true;
+    $scope.loading = true;
     $scope.showForm = false;
     $scope.message = "Show the analysis menu";
     $scope.filtervariable = "ou";
@@ -1036,9 +1037,9 @@ portal.directive('multiSelect', function($q) {
 portal.directive('analysisTable',function(){
     return {
         link:function($scope,element,attrs){
-            $scope.loading = true;
+
             $scope.$watchCollection($scope[attrs.data], function(val) {
-                $scope.loading = false;
+
             });
             $scope.$watch($scope[attrs.title], function(val) {
 
@@ -1050,6 +1051,7 @@ portal.directive('analysisTable',function(){
         scope: {
             dataTable: "=data",
             titles: "=title",
+            loading: "=load",
             headers: "=header"
         },
         restrict:"E",
