@@ -654,7 +654,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         }
         $scope.filtervariable="period";
         $scope.PrepareTableData = function(data){
-
+                console.log(data);
             if($scope.filtervariable=="period"){
                 var orgUnits = [];
                 var dataObject = [];
@@ -806,8 +806,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 $scope.chartSeriesArray = $scope.PrepareChartData($scope.dataForDisplayingTable);
                 $scope.chartSeries = $scope.chartSeriesArray.ob;
                 $scope.pieSeries = $scope.chartSeriesArray.pie;
-                console.log($scope.dataForDisplayingTable);
-                console.log($scope.chartSeriesArray);
+
 
             });
 
