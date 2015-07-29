@@ -392,10 +392,11 @@
                     <div class="row">
 
                         <div class="col-md-12" style="margin-top: 10px;">
-                            <highchart id="chart1" ng-show="chart" config="chartConfig"  ></highchart>
-                            <analysis-charts ng-show="chart" data="dataForDisplayingTable"></analysis-charts>
-                            <analysis-table ng-show="table" data="dataForDisplayingTable" load="loading" title="titles" periods="selectedlistPeriods" header="selectedlistIndicators"></analysis-table>
-                            <analysis-map ng-if="map" data-object="jsonObject" ></analysis-map>
+                            <highchart id="chart1" class="row" ng-show="chart" config="chartConfig"  ></highchart>
+                            <analysis-charts class="row" ng-show="chart" data="dataForDisplayingTable"></analysis-charts>
+                            <analysis-charts class="row" ng-show="spider" data="dataForDisplayingTable"></analysis-charts>
+                            <analysis-table class="row" ng-show="table" data="dataForDisplayingTable" load="loading" title="titles" periods="selectedlistPeriods" header="selectedlistIndicators"></analysis-table>
+                            <analysis-map class="row" ng-show="map" data-object="jsonObject" ></analysis-map>
                         </div>
                     </div>
                 </div>
