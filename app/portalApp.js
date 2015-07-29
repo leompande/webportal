@@ -757,7 +757,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                          enabled: false
                      }
                  };
-                 if(data.length<=1){
+                 if(value.length<=1){
                      raw = raw.size = 400;
                  }
                  seriesObjectpie.push(raw);
