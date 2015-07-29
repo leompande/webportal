@@ -942,7 +942,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
 
         $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
-        $scope.spiderChartConfigtitle.text = "Indicator Distribution based on Organisation units for the year :";
+        $scope.spiderChartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
 
         if(reportType=="table"){
             $scope.table = true;
