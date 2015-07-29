@@ -235,16 +235,6 @@
                     items:[]
                 });
 
-        // Example of adding a regular item after picklist creation.
-        // Note there is no "element" property as that's for rich content only.
-//        $("#advanced").pickList("insert",
-//                {
-//                    value: 7,
-//                    label: "Afterwards #2",
-//                    selected: true
-//                });
-
-
     });
 
     function scrollTo( id ) {
@@ -333,58 +323,9 @@
     <div class="fullwidth background-grey  block center mb0">
         <div class="container">
             <div class="row" >
-                <!-- Standard button -->
-                <!--<div class="col-md-12" style="float: left;">
-                    <div class="col-md-2">
-                        <label>Data Group</label>
-                        <select class="form-control">
-                            <option disabled >--Data Group--</option>
-                            <option selected>Population</option>
-                            <option>Completeness</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label>Category</label>
-                        <select class="form-control">
-                            <option>Human Resource</option>
-                            <option selected>Facility</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label>Organisation Unit (Regions)</label>
-                        <select class="form-control">
-                            <option selected>Tanzania</option>
-                            <option>abcd</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <label>Period</label>
-                        <select class="form-control">
-                            <option>2015</option>
-                            <option>2014</option>
-                        </select>
-                    </div>
 
-
-                </div>-->
             </div>
             <br/>
-            <!---div class="row" >
-                <div class="col-md-12" >
-                    <div style="float: left;">
-                        <button type="button" class="btn">Table</button>
-                        <button type="button" class="btn">Column</button>
-                        <button type="button" class="btn">Line</button>
-                        <button type="button" class="btn">Area</button>
-                        <button type="button" class="btn">Spline</button>
-                        <button type="button" class="btn">Spline Area</button>
-                        <button type="button" class="btn">Pie</button>
-                        <button type="button" class="btn">Map</button>
-                    </div>
-
-                </div>
-
-        </div-->
             <div class="row">
                 <div class="row">
                     <h1> HMIS - Web Portal Data Analysis</h1>
@@ -452,15 +393,9 @@
 
                         <div class="col-md-12" style="margin-top: 10px;">
                             <highchart id="chart1" ng-show="chart" config="chartConfig"  ></highchart>
-                            <!--<highchart id="chart1" ng-show="chart" series="chartSeries" title="chart.title" options="chart.options"></highchart>-->
                             <analysis-charts ng-show="chart" data="dataForDisplayingTable"></analysis-charts>
                             <analysis-table ng-show="table" data="dataForDisplayingTable" title="titles" header="selectedlistIndicators"></analysis-table>
                             <analysis-map ng-if="map" data-object="jsonObject" ></analysis-map>
-                            <!--<analysis-column ng-if="column" dataobject="jsonObject"></analysis-column>-->
-                            <!--<analysis-area ng-if="area" dataobject="jsonObject"> </analysis-area>-->
-                            <!--<analysis-pie ng-if="pie" dataobject="jsonObject"></analysis-pie>-->
-                            <!--<analysis-spline ng-if="spline" dataobject="jsonObject"></analysis-spline>-->
-                            <!--<analysis-splinearea ng-if="splinearea" dataobject="jsonObject"></analysis-splinearea>-->
                         </div>
                     </div>
                 </div>
@@ -492,11 +427,6 @@
 
                         <nav>
                             <ul class="nav nav-stacked">
-                                <!--<li><a href="footers-minimal.html#footer">Minimal</a></li>-->
-                                <!--<li><a href="footers-navigation.html#footer">Navigation</a></li>-->
-                                <!--<li><a href="footers-simple.html#footer">Simple</a></li>-->
-                                <!--<li><a href="footers-4-columns.html#footer">4 Columns</a></li>-->
-                                <!--<li><a href="footers-3-columns.html#footer">3 Columns</a></li>-->
                             </ul>
                         </nav>
                     </div>
@@ -506,11 +436,6 @@
 
                         <nav>
                             <ul class="nav nav-stacked">
-                                <!--<li><a href="properties-detail.html">Detail Page</a></li>-->
-                                <!--<li><a href="properties-row.html">Row Display</a></li>-->
-                                <!--<li><a href="properties-grid.html">Grid</a></li>-->
-                                <!--<li><a href="properties-table.html">Table Listing</a></li>-->
-                                <!--<li><a href="properties-medium.html">Medium Size</a></li>-->
                             </ul>
                         </nav>
                     </div>
@@ -520,11 +445,6 @@
 
                         <nav>
                             <ul class="nav nav-stacked">
-                                <!--<li><a href="admin-login.html">Login</a></li>-->
-                                <!--<li><a href="admin-dashboard.html">Dashboard</a></li>-->
-                                <!--<li><a href="admin-property-browser.html">Property Browser</a></li>-->
-                                <!--<li><a href="admin-map.html">Google Map</a></li>-->
-                                <!--<li><a href="admin-people.html">People</a></li>-->
                             </ul>
                         </nav>
                     </div>

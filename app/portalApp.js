@@ -653,7 +653,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         }
         $scope.filtervariable="period";
-        console.log($scope.analyticsUrl);
         $scope.PrepareTableData = function(data){
 
             if($scope.filtervariable=="period"){
@@ -661,6 +660,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var dataObject = [];
                 var  markedDx = null;
                 var indicatorLength  = $scope.selectedlistIndicators.length;
+                console.log(data.rows);
                 if(data.rows.length>0){
                     var selectedIndLength = $scope.selectedlistIndicators.length;
                     var orgunitLength = data.metaData.ou.length;
@@ -891,13 +891,21 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.selectedlistIndicators = [];
         }
         angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
-                //$scope.headers[index+1] = $(value).text();
                 var indicator = {name:$(value).text(),indicatorId:value.value};
                 $scope.selectedlistIndicators.push(indicator);
+            console.log(indicator);
         });
+        console.log($scope.selectedlistIndicators);
+        console.log($scope.selectedlistIndicators.length);
 
-
-
+        // hardcoding default indicators
+        if($scope.selectedlistIndicators.length<=0){
+            $scope.selectedlistIndicators.push({name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"});
+            $scope.selectedlistIndicators.push({name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"});
+            $scope.selectedlistIndicators.push({name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"});
+            $scope.selectedlistIndicators.push({name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"});
+            $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
+        }
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
         }, function() {
@@ -905,7 +913,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
 
         });
-
 
         checker++;
     }
