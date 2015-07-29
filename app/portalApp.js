@@ -910,20 +910,20 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 "name":"MOH - Tanzania"
             });
         }
-        $scope.$watch(function() {
-            return $scope.selectedlistIndicators;
-        }, function() {
-
+        //$scope.$watch(function() {
+        //    return $scope.selectedlistIndicators;
+        //}, function() {
+        //
             $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
-
-        });
-        $scope.$watch(function() {
-            return $scope.selectedlistOrgunit;
-        }, function() {
-
-            $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
-
-        });
+        //
+        //});
+        //$scope.$watch(function() {
+        //    return $scope.selectedlistOrgunit;
+        //}, function() {
+        //
+        //    $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+        //
+        //});
 
         checker++;
     }
