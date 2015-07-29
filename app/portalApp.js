@@ -894,7 +894,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     layout: 'vertical'
                 },
 
-                series:((otherInfo=="radar")? $scope.polarSeries : $scope.chartSeries)
+                series:$scope.polarSeries
 
             };
 
@@ -929,7 +929,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                         }
                     }
                 },
-                series:  ((otherInfo=="pie")? $scope.pieSeries : $scope.chartSeries),
+                series:$scope.chartSeries,
                 title: {
                     text: 'Hello'
                 },
@@ -945,6 +945,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
 
             }
+
             if($scope.chartType=="spider"){
                 $scope.chartConfig = $scope.spiderChartConfig;
                 $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
@@ -961,7 +962,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             $scope.table = false;
             $scope.chart = true;
             $scope.map   = false;
-            $scope.spider  = false;
 
             $scope.$watch(function() {
                 return $scope.chartSeries;
