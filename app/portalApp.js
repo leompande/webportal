@@ -660,7 +660,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var dataObject = [];
                 var  markedDx = null;
                 var indicatorLength  = $scope.selectedlistIndicators.length;
-                console.log(data.rows);
+
                 if(data.rows.length>0){
                     var selectedIndLength = $scope.selectedlistIndicators.length;
                     var orgunitLength = data.metaData.ou.length;
@@ -669,8 +669,11 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid = value.id;
                         var name = value.name;
+                        console.log(name);
+                        console.log(data.rows);
                        var singleOb =  getSingleOrgObject(uid,name,$scope.selectedlistIndicators,data.rows);
                         dataObject.push(singleOb);
+                        console.log(singleOb);
                     });
 
                     function getSingleOrgObject(orgUnitUID,name,selectedInd,dataRows){
@@ -892,11 +895,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         }
         angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
                 var indicator = {name:$(value).text(),indicatorId:value.value};
-                $scope.selectedlistIndicators.push(indicator);
-            console.log(indicator);
         });
-        console.log($scope.selectedlistIndicators);
-        console.log($scope.selectedlistIndicators.length);
 
         // hardcoding default indicators
         if($scope.selectedlistIndicators.length<=0){
