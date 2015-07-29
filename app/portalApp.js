@@ -674,6 +674,14 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                             "name":"MOH - Tanzania"
                         });
                     }
+
+                    if($scope.selectedlistIndicators.length<=0){
+                        $scope.selectedlistIndicators.push({name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"});
+                        $scope.selectedlistIndicators.push({name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"});
+                        $scope.selectedlistIndicators.push({name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"});
+                        $scope.selectedlistIndicators.push({name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"});
+                        $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
+                    }
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid = value.id;
                         var name = value.name;
@@ -719,9 +727,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 var dataValues = [];
                 angular.forEach(value,function(valueInd,indexInd){
                     if(indexInd!=="org"){
-                        //if(valueInd==null){
-                        //    valueInd = "0";
-                        //}
                         dataValues.push(parseInt(valueInd));
                     }
 
@@ -731,8 +736,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 seriesObjectOther.push(series);
             });
             seriesArray.ob = seriesObjectOther;
-console.log(seriesArray);
-
             var seriesObjectpie = [];
              angular.forEach(data,function(value,index){
                     var dataOb = [];
@@ -759,9 +762,9 @@ console.log(seriesArray);
                      data: dataOb,
                      center: null,
                      size: 100,
-                     showInLegend: false,
+                     showInLegend: true,
                      dataLabels: {
-                         enabled: true
+                         enabled: false
                      }
                  };
                  seriesObjectpie.push(raw);
@@ -902,22 +905,7 @@ console.log(seriesArray);
                 var indicator = {name:$(value).text(),indicatorId:value.value};
         });
 
-        // hardcoding default indicators
-        if($scope.selectedlistIndicators.length<=0){
-            $scope.selectedlistIndicators.push({name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"});
-            $scope.selectedlistIndicators.push({name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"});
-            $scope.selectedlistIndicators.push({name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"});
-            $scope.selectedlistIndicators.push({name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"});
-            $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
-        }
 
-        //if($scope.selectedlistOrgunit.length<=0){
-        //
-        //    $scope.selectedlistOrgunit.push({
-        //        "id":"m0frOspS7JY",
-        //        "name":"MOH - Tanzania"
-        //    });
-        //}
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
         }, function() {
