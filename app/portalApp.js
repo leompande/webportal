@@ -729,6 +729,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             });
             seriesArray.ob = seriesObjectOther;
             var seriesObjectpie = [];
+            $scope.lengthD = data.length;
              angular.forEach(data,function(value,index){
                     var dataOb = [];
                  var indcIndex = 0;
@@ -757,10 +758,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                          enabled: false
                      }
                  };
-                 if(value.length<=1){
+                 if($scope.lengthD.length<=1){
                      raw = raw.size = 400;
                  }
-                 console.log(data.length);
+                 console.log($scope.lengthD);
                  seriesObjectpie.push(raw);
              });
             //console.log(seriesObjectpie);
