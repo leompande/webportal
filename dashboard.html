@@ -112,6 +112,19 @@
     }
 
 
+    li {
+        /*float: left;*/
+    }
+
+    .map {
+        border: 0;
+        margin: 10px;
+    }
+    .map.wide {
+        width: 900px;
+        height: 500px;
+    }
+
 </style>
 <body class="open hide-secondary-sidebar" ng-app="portalApp">
 <div class="page-wrapper" ng-controller="portalController">
@@ -371,9 +384,9 @@
         <div id="antenatal" >
             <ul>
                 <li><div id="antenatalA1" class="chart wide"></div></li>
-                <li><div id="antenatalA2" class="chart wide"></div></li>
+                <li><div id="antenatalA2" class="map wide"></div></li>
                 <li><div id="antenatalA3" class="chart wide"></div></li>
-                <li><div id="antenatalA4" class="chart wide"></div></li>
+                <li><div id="antenatalA4" class="map wide"></div></li>
                 <li><div id="antenatalA5" class="chart wide"></div></li>
             </ul>
 
