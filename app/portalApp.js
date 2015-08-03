@@ -29,47 +29,7 @@ var portal =angular
         $scope.antenatal = true;
 
         $scope.particularDashboard = function(menu,id){
-            //var el = document.body.querySelector("li");
-            //
-            //angular.element(".dashboard_menus").parent().removeClass("active");
-            //var link = angular.element("#"+id).parent();
-            //link.addClass("active");
-            //if(menu.indexOf("Immunization")>=0){
-            //
-            //    $scope.antenatal = false;
-            //    $scope.completenes = false;
-            //    $scope.death = false;
-            //    $scope.resource = false;
-            //    $scope.immunization = true;
-            //}
-            //if(menu.indexOf("Resource")>=0){
-            //    $scope.antenatal = false;
-            //    $scope.completenes = false;
-            //    $scope.death = false;
-            //    $scope.resource = true;
-            //    $scope.immunization = false;
-            //}
-            //if(menu.indexOf("Death")>=0){
-            //    $scope.antenatal = false;
-            //    $scope.completenes = false;
-            //    $scope.death = true;
-            //    $scope.resource = false;
-            //    $scope.immunization = false;
-            //}
-            //if(menu.indexOf("Completeness")>=0){
-            //    $scope.antenatal = false;
-            //    $scope.completenes = true;
-            //    $scope.death = false;
-            //    $scope.resource = false;
-            //    $scope.immunization = false;
-            //}
-            //if(menu.indexOf("Antenatal")>=0){
-            //    $scope.antenatal = true;
-            //    $scope.completenes = false;
-            //    $scope.death = false;
-            //    $scope.resource = false;
-            //    $scope.immunization = false;
-            //}
+
         }
         $scope.particularDashboard("Antenatal Care","Vlw8KFHG4cV");
 
