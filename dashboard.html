@@ -190,7 +190,7 @@
             <ul class="menu">
 
                 <li ng-repeat="dashboard in dashboards" class="">
-                    <a href="#" ng-click="particularDashboard(dashboard.name,dashboard.id)" class="dashboard_menus" id="{{dashboard.id}}">
+                    <a href="#"  class="dashboard_menus" id="{{dashboard.id}}"><!--ng-click="particularDashboard(dashboard.name,dashboard.id)"-->
                         <strong><i class="fa fa-dashboard"></i></strong>
                         <span>{{dashboard.name}}</span>
                     </a>
@@ -220,100 +220,113 @@
         });
 
             function setLinks() {
-            /**
-             * Antinatal
-             * */
-            DHIS.getTable({
-                url: base,
-                "id": "sgwYc0KgE0I",
-                "el": "antenatalA1"
-            });
 
-            DHIS.getMap({
-                url: base,
-                "id": "sH8VxKeS9If",
-                "el": "antenatalA2"
-            });
-
-            DHIS.getChart({
-                url: base,
-                "id": "RRLvv7ReFPd",
-                "el": "antenatalA3"
-            });
-            DHIS.getMap({
-                url: base,
-                "id": "gqIrjvP3VyL",
-                "el": "antenatalA4"
-            });
-            DHIS.getChart({
-                url: base,
-                "id": "YcVdlhgPTBS",
-                "el": "antenatalA5"
-            });
+                var menuObject = $(".dashboard_menus");
 
 
-            /**
-             * Death
-             * */
+                menuObject.bind("click",function(){
+                    menuObject.parent().removeClass("active");
+                    var link = $("#"+$(this).attr("id")).parent();
+                    var menu = $(this).find("span").text();
+                    link.addClass("active");
+                    if(menu.indexOf("Immunization")>=0){
 
+                    }
+                    if(menu.indexOf("Resource")>=0){
+                        /**
+                         * human resource
+                         * */
 
-            /**
-             * human resource
-             * */
-
-            DHIS.getChart({
-                url: base,
-                "id": "gF5I2uQnIB8",
-                "el": "resourceA1"
-            });
-            DHIS.getTable({
-                url: base,
-                "id": "g5GCAdLi8nu",
-                "el": "resourceA2"
-            });
+                        DHIS.getChart({
+                            url: base,
+                            "id": "gF5I2uQnIB8",
+                            "el": "resourceA1"
+                        });
+                        DHIS.getTable({
+                            url: base,
+                            "id": "g5GCAdLi8nu",
+                            "el": "resourceA2"
+                        });
 //            DHIS.getMap({
 //                url: base,
 //                "id": "gF5I2uQnIB8",
 //                "el": "resourceA3"
 //            });
 
-            /**
-             * immunisation
-             * */
+                    }
+                    if(menu.indexOf("Death")>=0){
 
-            /**
-             * completenes
-             * */
+                    }
+                    if(menu.indexOf("Completeness")>=0){
+                        /**
+                         * completenes
+                         * */
 
-            DHIS.getChart({
-                url: base,
-                "id": "Y5n66a4iUHz",
-                "el": "completenesA1"
-            });
+                        DHIS.getChart({
+                            url: base,
+                            "id": "Y5n66a4iUHz",
+                            "el": "completenesA1"
+                        });
 
-            DHIS.getChart({
-                url: base,
-                "id": "H7g7IN0LmBc",
-                "el": "completenesA2"
-            });
+                        DHIS.getChart({
+                            url: base,
+                            "id": "H7g7IN0LmBc",
+                            "el": "completenesA2"
+                        });
 
-            DHIS.getTable({
-                url: base,
-                "id": "lO4OwYxdZa8",
-                "el": "completenesA3"
-            });
+                        DHIS.getTable({
+                            url: base,
+                            "id": "lO4OwYxdZa8",
+                            "el": "completenesA3"
+                        });
 
-            DHIS.getTable({
-                url: base,
-                "id": "nnlnLnnqCaY",
-                "el": "completenesA4"
-            });
+                        DHIS.getTable({
+                            url: base,
+                            "id": "nnlnLnnqCaY",
+                            "el": "completenesA4"
+                        });
+                    }
+                    if(menu.indexOf("Antenatal")>=0){
+
+                        /**
+                         * Antinatal
+                         * */
+                        DHIS.getTable({
+                            url: base,
+                            "id": "sgwYc0KgE0I",
+                            "el": "antenatalA1"
+                        });
+
+                        DHIS.getMap({
+                            url: base,
+                            "id": "sH8VxKeS9If",
+                            "el": "antenatalA2"
+                        });
+
+                        DHIS.getChart({
+                            url: base,
+                            "id": "RRLvv7ReFPd",
+                            "el": "antenatalA3"
+                        });
+                        DHIS.getMap({
+                            url: base,
+                            "id": "gqIrjvP3VyL",
+                            "el": "antenatalA4"
+                        });
+                        DHIS.getChart({
+                            url: base,
+                            "id": "YcVdlhgPTBS",
+                            "el": "antenatalA5"
+                        });
+
+                    }
+                });
 
          }
     </script>
     
     <div class="col-sm-12 " >
-        <div id="antenatal" ng-show="antenatal">
+        <div id="antenatal" >
             <ul>
                 <li><div id="antenatalA1" class="chart wide"></div></li>
                 <li><div id="antenatalA2" class="chart wide"></div></li>
@@ -325,7 +338,7 @@
             <p style="clear:both"></p>
         </div>
 
-        <div id="completenes" ng-show="completenes">
+        <div id="completenes" >
             <ul>
                 <li><div id="completenesA1" class="chart wide"></div></li>
                 <li><div id="completenesA2" class="chart wide"></div></li>
@@ -335,7 +348,7 @@
 
             <p style="clear:both"></p>
         </div>
-        <div id="death" ng-show="death">
+        <div id="death" >
             <div><p style="text-align: center;vertical-align: middle">-- No dashboard --</p></div>
 
             <!--<ul>-->
@@ -346,7 +359,7 @@
 
             <p style="clear:both"></p>
         </div>
-        <div id="resource" ng-show="resource">
+        <div id="resource" >
             <ul>
                 <li><div id="resourceA1" class="chart wide"></div></li>
                 <li><div id="resourceA2" class="chart wide"></div></li>
@@ -355,7 +368,7 @@
 
             <p style="clear:both"></p>
         </div>
-        <div id="immunization" ng-show="immunization">
+        <div id="immunization" >
             <!--<ul>-->
                 <!--<li><div id="immunizationA1" class="chart wide"></div></li>-->
                 <!--<li><div id="immunizationA2" class="chart wide"></div></li>-->
