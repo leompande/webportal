@@ -220,7 +220,16 @@
         });
 
             function setLinks() {
+                /*
+                * DIVS
+                * */
+                var antenal = $("#antenatal");
+                var completenes = $("#completenes");
+                var death = $("#death");
+                var resource = $("#resource");
+                var immunization = $("#immunization");
 
+                // Menus
                 var menuObject = $(".dashboard_menus");
 
 
@@ -230,12 +239,23 @@
                     var menu = $(this).find("span").text();
                     link.addClass("active");
                     if(menu.indexOf("Immunization")>=0){
-
+                        antenal.css({"display":"none"});
+                        completenes.css({"display":"none"});
+                        death.css({"display":"none"});
+                        resource.css({"display":"none"});
+                        immunization.css({"display":"block"});
                     }
                     if(menu.indexOf("Resource")>=0){
+
                         /**
                          * human resource
                          * */
+
+                        antenal.css({"display":"none"});
+                        completenes.css({"display":"none"});
+                        death.css({"display":"none"});
+                        resource.css({"display":"block"});
+                        immunization.css({"display":"none"});
 
                         DHIS.getChart({
                             url: base,
@@ -255,12 +275,23 @@
 
                     }
                     if(menu.indexOf("Death")>=0){
-
+                        antenal.css({"display":"none"});
+                        completenes.css({"display":"none"});
+                        death.css({"display":"block"});
+                        resource.css({"display":"none"});
+                        immunization.css({"display":"none"});
                     }
                     if(menu.indexOf("Completeness")>=0){
                         /**
                          * completenes
                          * */
+
+
+                        antenal.css({"display":"none"});
+                        completenes.css({"display":"block"});
+                        death.css({"display":"none"});
+                        resource.css({"display":"none"});
+                        immunization.css({"display":"none"});
 
                         DHIS.getChart({
                             url: base,
@@ -291,7 +322,14 @@
                         /**
                          * Antinatal
                          * */
-                        DHIS.getTable({
+
+                        antenal.css({"display":"block"});
+                        completenes.css({"display":"none"});
+                        death.css({"display":"none"});
+                        resource.css({"display":"none"});
+                        immunization.css({"display":"none"});
+
+                         DHIS.getTable({
                             url: base,
                             "id": "sgwYc0KgE0I",
                             "el": "antenatalA1"
@@ -321,7 +359,7 @@
 
                     }
                 });
-
+                antenal.trigger("click");
          }
     </script>
     
@@ -337,7 +375,6 @@
 
             <p style="clear:both"></p>
         </div>
-
         <div id="completenes" >
             <ul>
                 <li><div id="completenesA1" class="chart wide"></div></li>
