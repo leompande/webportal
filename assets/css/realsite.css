@@ -5832,11 +5832,12 @@ p.text {
 
 .block {
   margin: 0px 0px 30px 0px;
-  padding: 60px 0px; }
+  /*padding: 60px 0px; */
+}
   .block h1 {
     color: #616161;
     font-size: 30px;
-    margin: 0px 0px 50px 0px;
+    /*margin: 0px 0px 50px 0px;*/
     padding: 0px; }
   .block p {
     color: #616161;
@@ -7698,7 +7699,8 @@ button.btn, button.btn-secondary {
 .header-topbar {
   background-color: #1565C0;
   color: #E3F2FD;
-  padding: 3px 0px; }
+  /*padding: 3px 0px;*/
+}
 
 .header-topbar-left {
   float: left; }
