@@ -50,7 +50,7 @@
 
     <link rel="stylesheet" href="https://dhis2-cdn.org/v218/ext/resources/css/ext-plugin-gray.css" />
     <script src="https://dhis2-cdn.org/v218/ext/ext-all.js"></script>
-    <!--<script src="https://maps.google.com/maps/api/js?sensor=false"></script>-->
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="https://dhis2-cdn.org/v218/openlayers/OpenLayers.js"></script>
     <script src="https://dhis2-cdn.org/v218/plugin/map.js"></script>
     <script src="http://dhis2-cdn.org/v218/plugin/chart.js"></script>
@@ -284,7 +284,9 @@ Ext.onReady( function() {
 });
 
 function setLinks() {
-
+    setInterval(function(){
+        $(".olLayerDiv").css({position: "absolute",width: "433px",height: "355px", "z-index":"725",display: "block", left: "0px", top: "0px"});
+    }, 3000);
 //    DHIS.getMap({
     GIS.plugin.getMap({
         url: base,
