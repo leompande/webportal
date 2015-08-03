@@ -44,27 +44,17 @@
 
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
-    
-
-    <!--<script src="https://dhis2-cdn.org/v217/openlayers/OpenLayers.js"></script>-->
-    <!--<script src="https://dhis2-cdn.org/v217/plugin/table.js"></script>-->
 
 
+    <link href="https://dhis2-cdn.org/v218/openlayers/theme/default/style.css" rel="stylesheet" type="text/css" />
 
-    <link href="https://dhis2-cdn.org/v217/openlayers/theme/default/style.css" rel="stylesheet" type="text/css" />
-    <script src="https://maps.google.com/maps/api/js?sensor=false&callback=initialize"></script>
-    <link rel="stylesheet" href="https://dhis2-cdn.org/v217/ext/resources/css/ext-plugin-gray.css" />
-    <script src="https://dhis2-cdn.org/v217/ext/ext-all.js"></script>
-    <script src="https://dhis2-cdn.org/v217/openlayers/OpenLayers.js"></script>
-    <script src="https://dhis2-cdn.org/v217/plugin/map.js"></script>
-    <script src="http://dhis2-cdn.org/v217/plugin/chart.js"></script>
-    <script src="http://dhis2-cdn.org/v217/plugin/table.js"></script>
-
-
-    <link rel="stylesheet" type="text/css" href="//apps.dhis2.org/demo/dhis-web-commons/javascripts/ext-ux/carousel/css/carousel.css">
- 
-    <!--<script src="//apps.dhis2.org/demo/dhis-web-commons/javascripts/ext-ux/carousel/Carousel.js"></script>-->
-   
+    <link rel="stylesheet" href="https://dhis2-cdn.org/v218/ext/resources/css/ext-plugin-gray.css" />
+    <script src="https://dhis2-cdn.org/v218/ext/ext-all.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="https://dhis2-cdn.org/v218/openlayers/OpenLayers.js"></script>
+    <script src="https://dhis2-cdn.org/v218/plugin/map.js"></script>
+    <script src="http://dhis2-cdn.org/v218/plugin/chart.js"></script>
+    <script src="http://dhis2-cdn.org/v218/plugin/table.js"></script>
     <script type="text/javascript" src="assets/js/resources/ext-ux/carousel/Carousel.js"></script>
 
 
@@ -283,53 +273,54 @@
 <script>
 var base = 'http://hrhis.moh.go.tz:9090/';
 //var base = 'https://dhis.moh.go.tz/';
-function initialize() {
 
-    Ext.onReady( function() {
-        Ext.Ajax.request({
-            url: base + "dhis-web-commons-security/login.action?authOnly=true",
-            method: 'POST',
-            params: { j_username: "portal", j_password: "Portal123" },
-            success: setLinks
-        });
+Ext.onReady( function() {
+  Ext.Ajax.request({
+    url: base + "dhis-web-commons-security/login.action?authOnly=true",
+    method: 'POST',
+    params: { j_username: "portal", j_password: "Portal123" },
+    success: setLinks
+  });
+});
+
+function setLinks() {
+
+    DHIS.getMap({
+        url: base,
+        "id": "gqIrjvP3VyL",
+        "el": "mapA1"
     });
 
-    function setLinks() {
+    DHIS.getMap({
+        url: base,
+        "id": "sH8VxKeS9If",
+        "el": "mapB1"
+    });
 
-        DHIS.getMap({
-            url: base,
-            "id": "gqIrjvP3VyL",
-            "el": "mapA1"
-        });
+    DHIS.getMap({
+        url: base,
+        "id": "jkjF3z75ul5",
+        "el": "table1"
+    });
 
-        DHIS.getMap({
-            url: base,
-            "id": "sH8VxKeS9If",
-            "el": "mapB1"
-        });
+    DHIS.getChart({
+        url: base,
+        "id": "gF5I2uQnIB8",
+        "el": "map3"
+    });
 
-        DHIS.getMap({
-            url: base,
-            "id": "jkjF3z75ul5",
-            "el": "table1"
-        });
+    DHIS.getTable({
+        url: base,
+        el: 'table2',
+        "id": "lO4OwYxdZa8"
+    });
 
-        DHIS.getChart({
-            url: base,
-            "id": "gF5I2uQnIB8",
-            "el": "map3"
-        });
-
-        DHIS.getTable({
-            url: base,
-            el: 'table2',
-            "id": "lO4OwYxdZa8"
-        });
-
-
-    }
 
 }
+
+
+
+
 </script>
 
       
