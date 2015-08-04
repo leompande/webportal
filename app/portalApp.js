@@ -487,16 +487,14 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         if(!orgunitString){
             orgunitString = "m0frOspS7JY";
         }
-        if(!periodString){
-            periodString = "2015";
-        }
+
         $scope.filtervariable="period";
         if($scope.filtervariable=="period"){
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=ou:"+orgunitString+"&filter=pe:"+periodString+"&displayProperty=NAME";
-
+            console.log($scope.analyticsUrl);
         }else{
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
-
+            console.log($scope.analyticsUrl);
         }
         $scope.filtervariable="period";
         $scope.PrepareTableData = function(data){
