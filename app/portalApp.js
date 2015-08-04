@@ -461,10 +461,11 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         var indicatorlength = selectedlistIndicators.length;
         //if(indicatorlength>1){
             angular.forEach(selectedlistIndicators,function(value,index){
+                console.log(value);
                 if(index==indicatorlength-1){
-                    indicatorString+=value.indicatorId;
+                    indicatorString+=value.id;
                 }else{
-                    indicatorString+=value.indicatorId+";"
+                    indicatorString+=value.id+";"
                 }
             });
         //}else{
