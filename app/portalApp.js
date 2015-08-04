@@ -459,9 +459,9 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         angular.forEach(selectedlistIndicators,function(value,index){
             console.log(value);
             if(index==indicatorlength-1){
-                indicatorString+=value.id;
+                indicatorString+=value.indicatorId;
             }else{
-                indicatorString+=value.id+";"
+                indicatorString+=value.indicatorId+";"
             }
         });
 
