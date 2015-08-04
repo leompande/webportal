@@ -776,7 +776,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         //    return $scope.selectedlistIndicators;
         //}, function() {
         //
-        //    $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+            $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
         //
         //});
 
