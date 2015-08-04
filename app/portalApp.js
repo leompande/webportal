@@ -459,7 +459,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         //}
         var indicatorString = "";
         var indicatorlength = selectedlistIndicators.length;
-        if(indicatorlength>1){
+        //if(indicatorlength>1){
             angular.forEach(selectedlistIndicators,function(value,index){
                 if(index==indicatorlength-1){
                     indicatorString+=value.indicatorId;
@@ -467,12 +467,12 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     indicatorString+=value.indicatorId+";"
                 }
             });
-        }else{
-            if(selectedlistIndicators[0]){
-                indicatorString = selectedlistIndicators[0].indicatorId;
-            }
-
-        }
+        //}else{
+        //    if(selectedlistIndicators[0]){
+        //        indicatorString = selectedlistIndicators[0].indicatorId;
+        //    }
+        //
+        //}
 
         var orgunitString = "";
         var orgunitlength = selectedlistOrgunit.length;
@@ -493,6 +493,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         $scope.filtervariable="period";
         if($scope.filtervariable=="period"){
+
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=ou:"+orgunitString+"&filter=pe:"+periodString+"&displayProperty=NAME";
             console.log($scope.analyticsUrl);
         }else{
