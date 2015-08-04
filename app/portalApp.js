@@ -442,17 +442,18 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             selectedlistPeriods.sort();
             angular.forEach(selectedlistPeriods,function(value,index){
                 if(index==periodlength-1){
-                    periodString+=value;
+
+                    periodString+=value.value;
                 }else{
-                    periodString+=value+";"
+                    periodString+=value.value+";"
                 }
             });
         }else{
             if(selectedlistPeriods[0]){
                 periodString += selectedlistPeriods[0];
             }
-        }
 
+        }
         var indicatorString = "";
         var indicatorlength = selectedlistIndicators.length;
         if(indicatorlength>1){
