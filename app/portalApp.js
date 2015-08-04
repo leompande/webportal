@@ -409,16 +409,19 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         $scope.listOrganisationUnits = orgunits;
     });
 
-    $scope.selectedlistIndicators = [
-        {name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"},
-        {name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"},
-        {name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"},
-        {name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"},
-        {name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"}
-    ];
-    $scope.selectedlistPeriods = [{"id":2015,"value":2015}];
+    $scope.selectedlistIndicators = [];
+    $scope.selectedlistPeriods = [];
     $scope.selectedlistOrgunit = {};
     $scope.jsonObject = {};
+
+    //
+    //{name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"},
+    //{name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"},
+    //{name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"},
+    //{name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"},
+    //{name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"}
+    //
+    //{"id":2015,"value":2015}
 
     $scope.$watch(function() {
         return TreeViewService.selectedNode;
