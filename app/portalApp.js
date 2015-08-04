@@ -327,121 +327,7 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
  * THE BEGINNING OF ANALYSIS CONTROLLER FUNCTION
  * */
 
-//portal.factory('multipleSelectFactory',function(){
-//    var factory = {};
-//    factory.selectedItems =[];
-//
-//
-//    factory.selectedAction = function(selected){
-//        factory.selectedItems = selected;
-//    }
-//    return factory;
-//
-//});
-//portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSelectFactory){
-//    return {
-//        link:function($scope,element,attrs,ngModel){
-//            $scope.myOptionSelected=[];
-//            $scope.myOptionAvailable=[];
-//            $scope.Selects=[];
-//            var single_select = angular.element(document.querySelector('#single_select'));
-//            var single_return = angular.element(document.querySelector('#single_return'));
-//            var mult_select = angular.element(document.querySelector('#mult_select'));
-//            var mult_return = angular.element(document.querySelector('#mult_return'));
-//            var available_selection = angular.element(document.querySelector('#available_selection'));
-//
-//            single_select.on("click",function(){
-//                $scope.$apply(function() {
-//                    angular.forEach($scope.myOptionAvailable,function(value,index){
-//                        angular.forEach($scope.Items,function(valueI,indexI){
-//                            if(valueI.id==value){
-//                                $scope.myOptionAvailable.splice(index,1);
-//                                $scope.Items.splice(indexI,1);
-//                                $scope.myOptionSelected=[];
-//                                $scope.Selects.push(valueI);
-//                                angular.forEach($scope.Selects,function(valueS,indexS){
-//                                    $scope.myOptionSelected.push(valueS.id);
-//                                });
-//
-//                            }
-//                        });
-//                    });
-//                });
-//            });
-//
-//            single_return.on("click",function(){
-//                $scope.$apply(function() {
-//                    angular.forEach($scope.myOptionSelected,function(value,index){
-//                        angular.forEach($scope.Selects,function(valueI,indexI){
-//                            if(valueI.id==value){
-//                                $scope.myOptionSelected.splice(index,1);
-//                                $scope.Selects.splice(indexI,1);
-//                                $scope.myOptionAvailable=[];
-//                                $scope.myOptionAvailable.push(value);
-//                                $scope.Items.push(valueI);
-//                                angular.forEach($scope.Items,function(valueS,indexS){
-//                                    $scope.myOptionAvailable.push(valueS.id);
-//                                });
-//
-//                            }
-//                        });
-//                    });
-//                });
-//            });
-//
-//
-//            mult_select.on("click",function(){
-//                $scope.$apply(function() {
-//                    if($scope.Items.length>0){
-//                        $scope.Selects = $scope.Items;
-//                        angular.forEach($scope.Selects,function(value,index){
-//                            $scope.myOptionSelected.push(value.id);
-//                        });
-//                        $scope.Items = {};
-//                        $scope.myOptionAvailable=[];
-//                    }else{
-//
-//                    }
-//                });
-//
-//            });
-//
-//            mult_return.on("click",function(){
-//                $scope.$apply(function() {
-//                    if($scope.Selects.length>0){
-//                        $scope.Items = $scope.Selects;
-//                        angular.forEach($scope.Selects,function(value,index){
-//                            $scope.myOptionAvailable.push(value.id);
-//                        });
-//                        $scope.Selects = {};
-//                        $scope.myOptionSelected =[];
-//                    }
-//                    var available_selection = angular.element(document.querySelector('#available_selection'));
-//
-//                });
-//
-//            });
-//
-//            $scope.availableAction = function(){
-//            }
-//
-//            $scope.$watch(function() {
-//                return $scope.myOptionSelected;
-//            }, function() {
-//                multipleSelectFactory.selectedAction($scope.myOptionSelected);
-//            });
-//
-//        },
-//        scope: {
-//            Items: "=itemlist",
-//            Selects: "=ItemsSelected",
-//            collection: "=collection"
-//        },
-//        restrict:"E",
-//        templateUrl:"portal-module/directives/mult-select-directive.html"
-//    }
-//}]);
-//
+
 
 portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService',function($scope,$http,shared,TreeViewService){
     var indicatorsUrl = "portal-module/indicators.json";
@@ -523,8 +409,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         $scope.listOrganisationUnits = orgunits;
     });
 
-
-
     $scope.selectedlistIndicators = [
         {name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"},
         {name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"},
@@ -549,12 +433,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         $scope.selectedlistOrgunit = {};
         $scope.selectedlistOrgunit = TreeViewService.selectedNodeMultiple;
     });
-    //$scope.$watchCollection(function() {
-    //    return multipleSelectFactory.selectedItems;
-    //}, function() {
-    //    $scope.selectedlistPeriods = multipleSelectFactory.selectedItems;
-    //});
-
     $scope.getDataFromDHISApi = function(selectedlistIndicators,selectedlistPeriods,selectedlistOrgunit){
 
         var data;
@@ -811,60 +689,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     var checker = 0;
     $scope.getReport = function(reportType,otherInfo){
         $scope.chartType = otherInfo;
-        /// varible to check for current repor format
-        //
-        //    $scope.spiderChartConfig = {
-        //
-        //        chart: {
-        //            polar: true,
-        //            type:'line'
-        //        },
-        //
-        //        title: {
-        //            text: "abcd",
-        //            x: -80
-        //        },
-        //
-        //        pane: {
-        //            size: '80%'
-        //        },
-        //
-        //        xAxis: {
-        //            categories:$scope.categories,
-        //            tickmarkPlacement: 'on',
-        //            lineWidth: 0,
-        //            labels: {
-        //            align: 'center',
-        //            distance: 43
-        //            }
-        //        },
-        //
-        //        yAxis: {
-        //            gridLineInterpolation: 'polygon',
-        //            lineWidth: 0,
-        //            min: 0,
-        //            endOnTick: true
-        //        },
-        //
-        //        tooltip: {
-        //            shared: true,
-        //            pointFormat: '',
-        //            useHTML:true
-        //        },
-        //
-        //        legend: {
-        //            enabled: true,
-        //            align: 'right',
-        //            verticalAlign: 'top',
-        //            y: 70,
-        //            layout: 'vertical'
-        //        },
-        //
-        //        series:((otherInfo=="radar")? $scope.polarSeries : $scope.chartSeries)
-        //
-        //    };
-        //
-        //
             $scope.chartConfig = {
                 xAxis: {
                     categories: $scope.categories,
@@ -971,105 +795,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
 
 }]);
-
-portal.directive('multiSelect', function($q) {
-    return {
-        restrict: 'E',
-        require: 'ngModel',
-        scope: {
-            selectedLabel: "@",
-            availableLabel: "@",
-            displayAttr: "@",
-            available: "=",
-            model: "=ngModel"
-        },
-        template: '<div class="multiSelect">' +
-        '<div class="select">' +
-        '<label class="control-label" for="multiSelectSelected" style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">{{ selectedLabel }} ' +
-        '</label>' +
-        '<select style="display:block!important;" class="form-control" id="currentRoles" ng-model="selected.current" multiple ' +
-        'class="pull-left" ><option ng-repeat="opt in model" value="{{opt}}">{{opt.value}}</option>' +
-        '</select>' +
-        '</div>' +
-        '<div class="select buttons">' +
-        '<button class="btn mover left btn-block" ng-click="add()" title="Add selected" ' +
-        'ng-disabled="selected.available.length == 0">' +
-        '<i class="glyphicon glyphicon-chevron-left"></i>' +
-        '</button>' +
-        '<button class="btn mover right btn-block " ng-click="remove()" title="Remove selected" ' +
-        'ng-disabled="selected.current.length == 0">' +
-        '<i class="glyphicon glyphicon-chevron-right"></i>' +
-        '</button>' +
-        '</div>' +
-        '<div class="select">' +
-        '<label class="control-label" for="multiSelectAvailable" style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">{{ availableLabel }} ' +
-        '</label>' +
-        '<select style="display:block!important;" class="form-control" id="multiSelectAvailable" ng-model="selected.available" multiple ' +
-        '><option ng-repeat="opt in available" value="{{opt}}">{{opt.value}}</option></select>' +
-        '</div>' +
-        '</div>',
-        link: function(scope, elm, attrs) {
-            scope.selected = {
-                available: [],
-                current: []
-            };
-
-            /* Handles cases where scope data hasn't been initialized yet */
-            var dataLoading = function(scopeAttr) {
-                var loading = $q.defer();
-                if(scope[scopeAttr]) {
-                    loading.resolve(scope[scopeAttr]);
-                } else {
-                    scope.$watch(scopeAttr, function(newValue, oldValue) {
-                        if(newValue !== undefined)
-                            loading.resolve(newValue);
-                    });
-                }
-                return loading.promise;
-            };
-
-            /* Filters out items in original that are also in toFilter. Compares by reference. */
-            var filterOut = function(original, toFilter) {
-                var filtered = [];
-                angular.forEach(original, function(entity) {
-                    var match = false;
-                    for(var i = 0; i < toFilter.length; i++) {
-                        if(toFilter[i][attrs.displayAttr] == entity) {
-                            match = true;
-                            break;
-                        }
-                    }
-                    if(!match) {
-                        filtered.push(entity);
-                    }
-                });
-                return filtered;
-            };
-
-            scope.refreshAvailable = function() {
-                scope.available = filterOut(scope.available, scope.model);
-                scope.selected.available = [];
-                scope.selected.current = [];
-            };
-
-            scope.add = function() {
-                scope.model = scope.model.concat(scope.selected.available);
-                scope.refreshAvailable();
-            };
-            scope.remove = function() {
-                scope.available = JSON.parse(scope.selected.current);//scope.available.concat(scope.selected.current);
-                var Item = filterOut(scope.model, JSON.parse(scope.selected.current));
-                scope.model = {id:Item,value:Item};
-                scope.refreshAvailable();
-            };
-
-            $q.all([dataLoading("model"), dataLoading("available")]).then(function(results) {
-                scope.refreshAvailable();
-            });
-        }
-    };
-});
-
 portal.directive('analysisTable',function(){
     return {
         link:function($scope,element,attrs){
