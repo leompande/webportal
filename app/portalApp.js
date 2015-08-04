@@ -397,6 +397,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         var pagerInfo = data.pager;
         var Indicators = data.indicators;
         angular.forEach(Indicators,function(value,index){
+            console.log(value);
         });
         $scope.listIndicators = Indicators
         $scope.listperiods = getPeriods();
@@ -442,32 +443,32 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         var periodString = "";
         var periodlength = selectedlistPeriods.length;
 
-            selectedlistPeriods.sort();
-            angular.forEach(selectedlistPeriods,function(value,index){
-                if(index==periodlength-1){
+        selectedlistPeriods.sort();
+        angular.forEach(selectedlistPeriods,function(value,index){
+            if(index==periodlength-1){
 
-                    periodString+=value.value;
-                }else{
-                    periodString+=value.value+";"
-                }
-            });
+                periodString+=value.value;
+            }else{
+                periodString+=value.value+";"
+            }
+        });
         var indicatorString = "";
 
         var indicatorlength = selectedlistIndicators.length;
-            angular.forEach(selectedlistIndicators,function(value,index){
-                console.log(value);
-                if(index==indicatorlength-1){
-                    indicatorString+=value.id;
-                }else{
-                    indicatorString+=value.id+";"
-                }
-            });
+        angular.forEach(selectedlistIndicators,function(value,index){
+            console.log(value);
+            if(index==indicatorlength-1){
+                indicatorString+=value.id;
+            }else{
+                indicatorString+=value.id+";"
+            }
+        });
 
 
         var orgunitString = "";
         var orgunitlength = selectedlistOrgunit.length;
         if(orgunitlength>=1){
-                angular.forEach(selectedlistOrgunit,function(value,index){
+            angular.forEach(selectedlistOrgunit,function(value,index){
                 if(index==orgunitlength-1){
                     orgunitString+=value.id;
                 }else{
@@ -527,10 +528,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                             //objectIndex
                             var indicator  = value.indicatorId;
                             angular.forEach(data.rows,function(value,index){
-                                    if(value[0]==indicator&&value[1]==orgUnitUID){
-                                        ob['indicator'+indicatorCounter]=value[2];
-                                        indicatorCounter++;
-                                    }
+                                if(value[0]==indicator&&value[1]==orgUnitUID){
+                                    ob['indicator'+indicatorCounter]=value[2];
+                                    indicatorCounter++;
+                                }
                             });
                         });
 
@@ -541,8 +542,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             }else{
 
             }
-                    $scope.loading = false;
-                    return dataObject;
+            $scope.loading = false;
+            return dataObject;
         }
 
         $scope.PrepareChartData = function(data){
@@ -550,7 +551,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             var headers = [];
             $scope.categories = [];
             angular.forEach($scope.selectedlistIndicators,function(value,index){
-                    $scope.categories.push(value.name);
+                $scope.categories.push(value.name);
             });
             var seriesObjectOther = [];
             angular.forEach(data,function(value,index){
@@ -583,41 +584,41 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             seriesArray.polar = seriesObjectPolar;
             var seriesObjectpie = [];
             $scope.lengthD = data.length;
-             angular.forEach(data,function(value,index){
-                    var dataOb = [];
-                 var indcIndex = 0;
-                 angular.forEach(value,function(valueX,indexX){
-                     if(indexX=='org'){}else{
-                         if(valueX==null){valueX=0;}
-                         data = {
-                             name: $scope.categories[indcIndex],
-                                 y: parseInt(valueX),
-                             color:'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')'
+            angular.forEach(data,function(value,index){
+                var dataOb = [];
+                var indcIndex = 0;
+                angular.forEach(value,function(valueX,indexX){
+                    if(indexX=='org'){}else{
+                        if(valueX==null){valueX=0;}
+                        data = {
+                            name: $scope.categories[indcIndex],
+                            y: parseInt(valueX),
+                            color:'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')'
 
-                     }
+                        }
 
-                         indcIndex++;
-                         dataOb.push(data);
-                     }
-                 });
-                 var raw = {
-                     type: 'pie',
-                     name: value.org,
-                     data: dataOb,
-                     center: null,
-                     size: 100,
-                     showInLegend: true,
-                     dataLabels: {
-                         enabled: false
-                     }
-                 };
-                 if($scope.lengthD<=1){
-                     raw.size = 250;
+                        indcIndex++;
+                        dataOb.push(data);
+                    }
+                });
+                var raw = {
+                    type: 'pie',
+                    name: value.org,
+                    data: dataOb,
+                    center: null,
+                    size: 100,
+                    showInLegend: true,
+                    dataLabels: {
+                        enabled: false
+                    }
+                };
+                if($scope.lengthD<=1){
+                    raw.size = 250;
 
-                 }
-                 console.log($scope.lengthD);
-                 seriesObjectpie.push(raw);
-             });
+                }
+                console.log($scope.lengthD);
+                seriesObjectpie.push(raw);
+            });
             var countCharts = 0;
             if($scope.lengthD<=1){
                 var initialX = 500;
@@ -655,7 +656,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             });
             seriesArray.pie = seriesObjectpie;
 
-                return seriesArray;
+            return seriesArray;
         }
 
 
@@ -682,46 +683,46 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     var checker = 0;
     $scope.getReport = function(reportType,otherInfo){
         $scope.chartType = otherInfo;
-            $scope.chartConfig = {
-                xAxis: {
-                    categories: $scope.categories,
-                    title: {
-                        text: null
-                    }
-                },
-                yAxis: {
-                    min: 0,
-                    title: {
-                        text: 'Population',
-                        align: 'high'
-                    },
-                    labels: {
-                        overflow: 'justify'
-                    }
-                },
-                tooltip: {
-                    valueSuffix: ' millions'
-                },
-                options: {
-                    chart: {
-                        type: otherInfo
-                    },
-                    plotOptions: {
-                        series: {
-                            stacking: ''
-                        }
-                    }
-                },
-                series:  ((otherInfo=="pie")? $scope.pieSeries : $scope.chartSeries),
+        $scope.chartConfig = {
+            xAxis: {
+                categories: $scope.categories,
                 title: {
-                    text: 'Hello'
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Population',
+                    align: 'high'
                 },
-                credits: {
-                    enabled: true
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' millions'
+            },
+            options: {
+                chart: {
+                    type: otherInfo
                 },
-                loading: false,
-                size: {}
-            };
+                plotOptions: {
+                    series: {
+                        stacking: ''
+                    }
+                }
+            },
+            series:  ((otherInfo=="pie")? $scope.pieSeries : $scope.chartSeries),
+            title: {
+                text: 'Hello'
+            },
+            credits: {
+                enabled: true
+            },
+            loading: false,
+            size: {}
+        };
 
 
         $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
@@ -776,7 +777,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         //    return $scope.selectedlistIndicators;
         //}, function() {
         //
-            $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+        $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
         //
         //});
 
