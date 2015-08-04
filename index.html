@@ -212,11 +212,6 @@
             <ol-layer ol-layer-properties="layer" name="test" ng-repeat="layer in layers"></ol-layer>
         </openlayers>
 
-        <!--<div id="countrybox" class="info country f32">-->
-        <!--<div ng-show="selectedCountry" class="flag" ng-class="selectedCountry['alpha-2']|lowercase"></div>-->
-        <!--{{ selectedCountry.name || 'No country'}}-->
-        <!--</div>-->
-
         <div id="districtbox" ng-if="selectedDistrict" class="info district f32">
             <table >
                 <caption class="invoice-header" style="text-align: center">{{selectedDistrict.name}}&nbsp;<b>{{selectedDistrict.year}}</b></caption>
@@ -430,7 +425,7 @@ function setLinks() {
 </div>
     </div><!-- /.main -->
 
-    <div id="footer" class="footer footer-simple">is
+    <div id="footer" class="footer footer-simple">
     <div class="footer-bottom">
         <div class="container">
             <div class="footer-bottom-inner">

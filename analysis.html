@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/realsite.css">
     <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/ol.css">
     <link rel="stylesheet" type="text/css" href="assets/js/openlayermaps/angular-openlayers-directive.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/two-sided-discarded/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/js/datatables/media/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/mult-select/style.css">
 
     <link rel="stylesheet" type="text/css" href="assets/js/mult-select-plugin/jquery-picklist.css">
     <link rel="stylesheet" type="text/css" href="assets/js/mult-select-plugin/jquery-picklist-ie7.css">
@@ -63,7 +63,7 @@
     <script type="text/javascript" src="assets/js/highcharts/exporting.js"></script>
     <script type="text/javascript" src="assets/js/highcharts/bower_components/highcharts-ng/src/highcharts-ng.js"></script>
 
-    <script type="text/javascript" src="assets/js/two-sided-discarded/js/multiselect.js"></script>
+    <script type="text/javascript" src="assets/js/mult-select/multiselect.js"></script>
     <script type="text/javascript" src="assets/js/portal.js"></script>
     <script type="text/javascript" src="assets/js/charts.js"></script>
     <script type="text/javascript" src="assets/js/crossdomain/jquery.ajax-cross-origin.min.js"></script>
@@ -117,133 +117,133 @@
 
 <div class="page-wrapper" ng-controller="portalController">
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#table').dataTable();
-        $(".bootstrap-select").remove();
-        // make code pretty
-        window.prettyPrint && prettyPrint();
-
-        if ( window.location.hash ) {
-            scrollTo(window.location.hash);
-        }
+//    $(document).ready(function() {
+//        $('#table').dataTable();
+//        $(".bootstrap-select").remove();
+//        // make code pretty
+//        window.prettyPrint && prettyPrint();
 //
-        $('.nav').on('click', 'a', function(e) {
-            scrollTo($(this).attr('href'));
-        });
+//        if ( window.location.hash ) {
+//            scrollTo(window.location.hash);
+//        }
+////
+//        $('.nav').on('click', 'a', function(e) {
+//            scrollTo($(this).attr('href'));
+//        });
+////
+//        $('#multiselect').multiselect();
+//        $('#multiselect2').multiselect();
+//        $('.multiselect').multiselect();
+//        $('.js-multiselect').multiselect({
+//            right: '#js_multiselect_to_1_2',
+//            rightAll: '#js_right_All_1_2',
+//            rightSelected: '#js_right_Selected_1_2',
+//            leftSelected: '#js_left_Selected_1_2',
+//            leftAll: '#js_left_All_1_2'
+//        });
+////
+//        $('#keepRenderingSort').multiselect({
+//            keepRenderingSort: false
+//        });
+//        $('#undo_redo').multiselect();
+//        $('#multi_d').multiselect({
+//            right: '.multi_d_to, .multi_d_to_2',
+//            rightSelected: '.multi_d_rightSelected, .multi_d_rightSelected_2',
+//            leftSelected: '.multi_d_leftSelected, .multi_d_leftSelected_2',
+//            rightAll: '.multi_d_rightAll, .multi_d_rightAll_2',
+//            leftAll: '.multi_d_leftAll, .multi_d_leftAll_2',
 //
-        $('#multiselect').multiselect();
-        $('#multiselect2').multiselect();
-        $('.multiselect').multiselect();
-        $('.js-multiselect').multiselect({
-            right: '#js_multiselect_to_1_2',
-            rightAll: '#js_right_All_1_2',
-            rightSelected: '#js_right_Selected_1_2',
-            leftSelected: '#js_left_Selected_1_2',
-            leftAll: '#js_left_All_1_2'
-        });
+//            moveToRight: function(Multiselect, options, event, silent, skipStack) {
+//                var button = $(event.currentTarget).attr('class');
 //
-        $('#keepRenderingSort').multiselect({
-            keepRenderingSort: false
-        });
-        $('#undo_redo').multiselect();
-        $('#multi_d').multiselect({
-            right: '.multi_d_to, .multi_d_to_2',
-            rightSelected: '.multi_d_rightSelected, .multi_d_rightSelected_2',
-            leftSelected: '.multi_d_leftSelected, .multi_d_leftSelected_2',
-            rightAll: '.multi_d_rightAll, .multi_d_rightAll_2',
-            leftAll: '.multi_d_leftAll, .multi_d_leftAll_2',
-
-            moveToRight: function(Multiselect, options, event, silent, skipStack) {
-                var button = $(event.currentTarget).attr('class');
-
-                if (button == 'multi_d_rightSelected') {
-                    var left_options = Multiselect.left.find('option:selected');
-                    Multiselect.right.eq(0).append(left_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.right.eq(0).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(0));
-                    }
-                } else if (button == 'multi_d_rightAll') {
-                    var left_options = Multiselect.left.find('option');
-                    Multiselect.right.eq(0).append(left_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.right.eq(0).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(0));
-                    }
-                } else if (button == 'multi_d_rightSelected_2') {
-                    var left_options = Multiselect.left.find('option:selected');
-                    Multiselect.right.eq(1).append(left_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.right.eq(1).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(1));
-                    }
-                } else if (button == 'multi_d_rightAll_2') {
-                    var left_options = Multiselect.left.find('option');
-                    Multiselect.right.eq(1).append(left_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.right.eq(1).eq(1).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(1));
-                    }
-                }
-            },
-
-            moveToLeft: function(Multiselect, options, event, silent, skipStack) {
-                var button = $(event.currentTarget).attr('class');
-
-                if (button == 'multi_d_leftSelected') {
-                    var right_options = Multiselect.right.eq(0).find('option:selected');
-                    Multiselect.left.append(right_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
-                    }
-                } else if (button == 'multi_d_leftAll') {
-                    var right_options = Multiselect.right.eq(0).find('option');
-                    Multiselect.left.append(right_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
-                    }
-                } else if (button == 'multi_d_leftSelected_2') {
-                    var right_options = Multiselect.right.eq(1).find('option:selected');
-                    Multiselect.left.append(right_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
-                    }
-                } else if (button == 'multi_d_leftAll_2') {
-                    var right_options = Multiselect.right.eq(1).find('option');
-                    Multiselect.left.append(right_options);
-
-                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
-                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
-                    }
-                }
-            }
-        });
-
-
-
-
-        $("#advanced").pickList(
-                {
-                    sourceListLabel:	"Unadded",
-                    targetListLabel:	"Added",
-                    addAllLabel:		"Add All",
-                    addLabel:			"Add",
-                    removeAllLabel:		"Remove All",
-                    removeLabel:		"Remove",
-                    sortAttribute:		"value",
-                    items:[]
-                });
-
-    });
-
-    function scrollTo( id ) {
-        if ( $(id).length ) {
-            $('html,body').animate({scrollTop: $(id).offset().top - 40},'slow');
-        }
-    }
+//                if (button == 'multi_d_rightSelected') {
+//                    var left_options = Multiselect.left.find('option:selected');
+//                    Multiselect.right.eq(0).append(left_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.right.eq(0).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(0));
+//                    }
+//                } else if (button == 'multi_d_rightAll') {
+//                    var left_options = Multiselect.left.find('option');
+//                    Multiselect.right.eq(0).append(left_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.right.eq(0).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(0));
+//                    }
+//                } else if (button == 'multi_d_rightSelected_2') {
+//                    var left_options = Multiselect.left.find('option:selected');
+//                    Multiselect.right.eq(1).append(left_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.right.eq(1).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(1));
+//                    }
+//                } else if (button == 'multi_d_rightAll_2') {
+//                    var left_options = Multiselect.left.find('option');
+//                    Multiselect.right.eq(1).append(left_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.right.eq(1).eq(1).find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.right.eq(1));
+//                    }
+//                }
+//            },
+//
+//            moveToLeft: function(Multiselect, options, event, silent, skipStack) {
+//                var button = $(event.currentTarget).attr('class');
+//
+//                if (button == 'multi_d_leftSelected') {
+//                    var right_options = Multiselect.right.eq(0).find('option:selected');
+//                    Multiselect.left.append(right_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+//                    }
+//                } else if (button == 'multi_d_leftAll') {
+//                    var right_options = Multiselect.right.eq(0).find('option');
+//                    Multiselect.left.append(right_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+//                    }
+//                } else if (button == 'multi_d_leftSelected_2') {
+//                    var right_options = Multiselect.right.eq(1).find('option:selected');
+//                    Multiselect.left.append(right_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+//                    }
+//                } else if (button == 'multi_d_leftAll_2') {
+//                    var right_options = Multiselect.right.eq(1).find('option');
+//                    Multiselect.left.append(right_options);
+//
+//                    if ( typeof Multiselect.callbacks.sort == 'function' && !silent ) {
+//                        Multiselect.left.find('option').sort(Multiselect.callbacks.sort).appendTo(Multiselect.left);
+//                    }
+//                }
+//            }
+//        });
+//
+//
+//
+//
+//        $("#advanced").pickList(
+//                {
+//                    sourceListLabel:	"Unadded",
+//                    targetListLabel:	"Added",
+//                    addAllLabel:		"Add All",
+//                    addLabel:			"Add",
+//                    removeAllLabel:		"Remove All",
+//                    removeLabel:		"Remove",
+//                    sortAttribute:		"value",
+//                    items:[]
+//                });
+//
+//    });
+//
+//    function scrollTo( id ) {
+//        if ( $(id).length ) {
+//            $('html,body').animate({scrollTop: $(id).offset().top - 40},'slow');
+//        }
+//    }
 </script>
 <div class="header header-standard">
     <div class="header-topbar">
@@ -331,7 +331,12 @@
             <div class="row">
                 <div class="row">
                     <h1> HMIS - Web Portal Data Analysis</h1>
-                    <a class="btn btn-xs pull-left " ng-click="toggleAnalysismenu()" title="{{message}}"><i class="glyphicon glyphicon-arrow-up" ng-if="arrowUp"></i><i class="glyphicon glyphicon-arrow-down" ng-if="arrowDown"></i></a>
+                    </div>
+                <div class="row">
+                   <div class="row ">
+                       <a class="btn btn-xs pull-left " ng-click="toggleAnalysismenu()" title="{{message}}"><i class="glyphicon glyphicon-arrow-up" ng-if="arrowUp"></i><i class="glyphicon glyphicon-arrow-down" ng-if="arrowDown"></i></a>
+
+                   </div>
                 </div>
                 <div class="row" ng-show="showForm">
                     <!--ng-if="showForm"-->
@@ -339,25 +344,10 @@
                         <div class="col-md-4 col-xs-12">
                             <label style="padding:20px;font-size: 16px;font-weight: bolder;">Indicators</label>
                             <div class="row">
-                                <div class="col-xs-5">
-                                    <label style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">Available</label>
-                                    <select name="from" id="keepRenderingSort" style="display: block !important;font-size: 12px;overflow: auto;" class="form-control" size="8" multiple="multiple">
-                                        <option ng-repeat="indicator in listIndicators" value="{{indicator.id}}" data-position="1">{{indicator.name}}</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-xs-2">
-                                    <button type="button" id="keepRenderingSort_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
-                                    <button type="button" id="keepRenderingSort_rightSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
-                                    <button type="button" id="keepRenderingSort_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
-                                    <button type="button" id="keepRenderingSort_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
-                                </div>
-
-                                <div class="col-xs-5">
-                                    <label style="padding-bottom: 5px;border-bottom: 1px solid #ccc;">Selected</label>
-                                    <select name="to" ng-model="selectedlistIndicators" id="keepRenderingSort_to" style="display: block !important;font-size: 12px;overflow: auto;" class="form-control" size="8" multiple="multiple">
-                                    </select>
-                                </div>
+                                <multiselect class="input-xlarge" multiple="true"
+                                             ng-model="selectedlistIndicators"
+                                             options="c.name for c in listIndicators"
+                                             change="selected()" ></multiselect>
                             </div>
                         </div>
                         <div class="col-md-4 col-xs-12">
@@ -369,14 +359,17 @@
                         </div>
                         <div class="col-md-4 col-xs-12">
                             <label style="padding:20px;font-size: 16px;font-weight: bolder;">Period</label>
-                            <multiple-select itemlist="listperiods" ItemsSelected="" collection="periods"></multiple-select>
+                            <multiselect class="input-xlarge" multiple="true"
+                                         ng-model="selectedlistPeriods"
+                                         options="c.value for c in listperiods"
+                                         change="selected()" ></multiselect>
                         </div>
                     </div>
 
 
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="row">
                         <div class="pull-left" style="margin-top: 10px;">
                             <button type="button" class="btn" ng-click="getReport('table','')">Table</button>
                             <button type="button" class="btn" ng-click="getReport('chart','column')">Column</button>

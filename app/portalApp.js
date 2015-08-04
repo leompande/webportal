@@ -4,7 +4,7 @@
 
 
 var portal =angular
-    .module('portalApp', ['openlayers-directive','ui.bootstrap', 'ui.bootstrap.treeview','highcharts-ng'])
+    .module('portalApp', ['openlayers-directive','ui.bootstrap', 'ui.bootstrap.treeview','highcharts-ng','ui.multiselect'])
 
 /**
  * THE BEGINNING OF PORTAL CONTROLLER FUNCTION (MAIN COTROLLER)
@@ -327,123 +327,123 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
  * THE BEGINNING OF ANALYSIS CONTROLLER FUNCTION
  * */
 
-portal.factory('multipleSelectFactory',function(){
-    var factory = {};
-    factory.selectedItems =[];
+//portal.factory('multipleSelectFactory',function(){
+//    var factory = {};
+//    factory.selectedItems =[];
+//
+//
+//    factory.selectedAction = function(selected){
+//        factory.selectedItems = selected;
+//    }
+//    return factory;
+//
+//});
+//portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSelectFactory){
+//    return {
+//        link:function($scope,element,attrs,ngModel){
+//            $scope.myOptionSelected=[];
+//            $scope.myOptionAvailable=[];
+//            $scope.Selects=[];
+//            var single_select = angular.element(document.querySelector('#single_select'));
+//            var single_return = angular.element(document.querySelector('#single_return'));
+//            var mult_select = angular.element(document.querySelector('#mult_select'));
+//            var mult_return = angular.element(document.querySelector('#mult_return'));
+//            var available_selection = angular.element(document.querySelector('#available_selection'));
+//
+//            single_select.on("click",function(){
+//                $scope.$apply(function() {
+//                    angular.forEach($scope.myOptionAvailable,function(value,index){
+//                        angular.forEach($scope.Items,function(valueI,indexI){
+//                            if(valueI.id==value){
+//                                $scope.myOptionAvailable.splice(index,1);
+//                                $scope.Items.splice(indexI,1);
+//                                $scope.myOptionSelected=[];
+//                                $scope.Selects.push(valueI);
+//                                angular.forEach($scope.Selects,function(valueS,indexS){
+//                                    $scope.myOptionSelected.push(valueS.id);
+//                                });
+//
+//                            }
+//                        });
+//                    });
+//                });
+//            });
+//
+//            single_return.on("click",function(){
+//                $scope.$apply(function() {
+//                    angular.forEach($scope.myOptionSelected,function(value,index){
+//                        angular.forEach($scope.Selects,function(valueI,indexI){
+//                            if(valueI.id==value){
+//                                $scope.myOptionSelected.splice(index,1);
+//                                $scope.Selects.splice(indexI,1);
+//                                $scope.myOptionAvailable=[];
+//                                $scope.myOptionAvailable.push(value);
+//                                $scope.Items.push(valueI);
+//                                angular.forEach($scope.Items,function(valueS,indexS){
+//                                    $scope.myOptionAvailable.push(valueS.id);
+//                                });
+//
+//                            }
+//                        });
+//                    });
+//                });
+//            });
+//
+//
+//            mult_select.on("click",function(){
+//                $scope.$apply(function() {
+//                    if($scope.Items.length>0){
+//                        $scope.Selects = $scope.Items;
+//                        angular.forEach($scope.Selects,function(value,index){
+//                            $scope.myOptionSelected.push(value.id);
+//                        });
+//                        $scope.Items = {};
+//                        $scope.myOptionAvailable=[];
+//                    }else{
+//
+//                    }
+//                });
+//
+//            });
+//
+//            mult_return.on("click",function(){
+//                $scope.$apply(function() {
+//                    if($scope.Selects.length>0){
+//                        $scope.Items = $scope.Selects;
+//                        angular.forEach($scope.Selects,function(value,index){
+//                            $scope.myOptionAvailable.push(value.id);
+//                        });
+//                        $scope.Selects = {};
+//                        $scope.myOptionSelected =[];
+//                    }
+//                    var available_selection = angular.element(document.querySelector('#available_selection'));
+//
+//                });
+//
+//            });
+//
+//            $scope.availableAction = function(){
+//            }
+//
+//            $scope.$watch(function() {
+//                return $scope.myOptionSelected;
+//            }, function() {
+//                multipleSelectFactory.selectedAction($scope.myOptionSelected);
+//            });
+//
+//        },
+//        scope: {
+//            Items: "=itemlist",
+//            Selects: "=ItemsSelected",
+//            collection: "=collection"
+//        },
+//        restrict:"E",
+//        templateUrl:"portal-module/directives/mult-select-directive.html"
+//    }
+//}]);
+//
 
-
-    factory.selectedAction = function(selected){
-        factory.selectedItems = selected;
-    }
-    return factory;
-
-});
-portal.directive('multipleSelect',['multipleSelectFactory',function(multipleSelectFactory){
-    return {
-        link:function($scope,element,attrs,ngModel){
-            $scope.myOptionSelected=[];
-            $scope.myOptionAvailable=[];
-            $scope.Selects=[];
-            var single_select = angular.element(document.querySelector('#single_select'));
-            var single_return = angular.element(document.querySelector('#single_return'));
-            var mult_select = angular.element(document.querySelector('#mult_select'));
-            var mult_return = angular.element(document.querySelector('#mult_return'));
-            var available_selection = angular.element(document.querySelector('#available_selection'));
-
-            single_select.on("click",function(){
-                $scope.$apply(function() {
-                    angular.forEach($scope.myOptionAvailable,function(value,index){
-                        angular.forEach($scope.Items,function(valueI,indexI){
-                            if(valueI.id==value){
-                                $scope.myOptionAvailable.splice(index,1);
-                                $scope.Items.splice(indexI,1);
-                                $scope.myOptionSelected=[];
-                                $scope.Selects.push(valueI);
-                                angular.forEach($scope.Selects,function(valueS,indexS){
-                                    $scope.myOptionSelected.push(valueS.id);
-                                });
-
-                            }
-                        });
-                    });
-                });
-            });
-
-            single_return.on("click",function(){
-                $scope.$apply(function() {
-                    angular.forEach($scope.myOptionSelected,function(value,index){
-                        angular.forEach($scope.Selects,function(valueI,indexI){
-                            if(valueI.id==value){
-                                $scope.myOptionSelected.splice(index,1);
-                                $scope.Selects.splice(indexI,1);
-                                $scope.myOptionAvailable=[];
-                                $scope.myOptionAvailable.push(value);
-                                $scope.Items.push(valueI);
-                                angular.forEach($scope.Items,function(valueS,indexS){
-                                    $scope.myOptionAvailable.push(valueS.id);
-                                });
-
-                            }
-                        });
-                    });
-                });
-            });
-
-
-            mult_select.on("click",function(){
-                $scope.$apply(function() {
-                    if($scope.Items.length>0){
-                        $scope.Selects = $scope.Items;
-                        angular.forEach($scope.Selects,function(value,index){
-                            $scope.myOptionSelected.push(value.id);
-                        });
-                        $scope.Items = {};
-                        $scope.myOptionAvailable=[];
-                    }else{
-
-                    }
-                });
-
-            });
-
-            mult_return.on("click",function(){
-                $scope.$apply(function() {
-                    if($scope.Selects.length>0){
-                        $scope.Items = $scope.Selects;
-                        angular.forEach($scope.Selects,function(value,index){
-                            $scope.myOptionAvailable.push(value.id);
-                        });
-                        $scope.Selects = {};
-                        $scope.myOptionSelected =[];
-                    }
-                    var available_selection = angular.element(document.querySelector('#available_selection'));
-
-                });
-
-            });
-
-            $scope.availableAction = function(){
-            }
-
-            $scope.$watch(function() {
-                return $scope.myOptionSelected;
-            }, function() {
-                multipleSelectFactory.selectedAction($scope.myOptionSelected);
-            });
-
-        },
-        scope: {
-            Items: "=itemlist",
-            Selects: "=ItemsSelected",
-            collection: "=collection"
-        },
-        restrict:"E",
-        templateUrl:"portal-module/directives/mult-select-directive.html"
-    }
-}]);
-
-
-portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService','multipleSelectFactory',function($scope,$http,shared,TreeViewService,multipleSelectFactory){
+portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService',function($scope,$http,shared,TreeViewService){
     var indicatorsUrl = "portal-module/indicators.json";
     var orgunitsUrl = "portal-module/organisationUnits_level_1.json";
     $scope.analyticsUrl = null;;
@@ -525,8 +525,14 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
 
 
-    $scope.selectedlistIndicators = [];
-    $scope.selectedlistPeriods = [];
+    $scope.selectedlistIndicators = [
+        {name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"},
+        {name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"},
+        {name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"},
+        {name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"},
+        {name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"}
+    ];
+    $scope.selectedlistPeriods = [{"id":2015,"value":2015}];
     $scope.selectedlistOrgunit = {};
     $scope.jsonObject = {};
 
@@ -543,11 +549,11 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         $scope.selectedlistOrgunit = {};
         $scope.selectedlistOrgunit = TreeViewService.selectedNodeMultiple;
     });
-    $scope.$watchCollection(function() {
-        return multipleSelectFactory.selectedItems;
-    }, function() {
-        $scope.selectedlistPeriods = multipleSelectFactory.selectedItems;
-    });
+    //$scope.$watchCollection(function() {
+    //    return multipleSelectFactory.selectedItems;
+    //}, function() {
+    //    $scope.selectedlistPeriods = multipleSelectFactory.selectedItems;
+    //});
 
     $scope.getDataFromDHISApi = function(selectedlistIndicators,selectedlistPeriods,selectedlistOrgunit){
 
@@ -949,18 +955,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         if(checker>1){
             $scope.selectedlistIndicators = [];
         }
-        angular.forEach(angular.element($("#keepRenderingSort_to option")),function(value,index){
-                var indicator = {name:$(value).text(),indicatorId:value.value};
-        });
-        // hardcoding default indicators
-        if($scope.selectedlistIndicators.length<=0){
-            $scope.selectedlistIndicators.push({name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"});
-            $scope.selectedlistIndicators.push({name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"});
-            $scope.selectedlistIndicators.push({name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"});
-            $scope.selectedlistIndicators.push({name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"});
-            $scope.selectedlistIndicators.push({name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"});
-        }
-
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
         }, function() {
