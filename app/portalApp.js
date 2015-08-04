@@ -438,7 +438,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         var data;
         var periodString = "";
         var periodlength = selectedlistPeriods.length;
-        if(periodlength>1){
+        //if(periodlength>1){
             selectedlistPeriods.sort();
             angular.forEach(selectedlistPeriods,function(value,index){
                 if(index==periodlength-1){
@@ -448,12 +448,12 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     periodString+=value.value+";"
                 }
             });
-        }else{
-            if(selectedlistPeriods[0]){
-                periodString += selectedlistPeriods[0];
-            }
-
-        }
+        //}else{
+        //    if(selectedlistPeriods[0]){
+        //        periodString += selectedlistPeriods[0];
+        //    }
+        //
+        //}
         var indicatorString = "";
         var indicatorlength = selectedlistIndicators.length;
         if(indicatorlength>1){
