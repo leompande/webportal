@@ -395,9 +395,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     }
     $scope.getIndicators(indicatorsUrl,function(data) {
         var pagerInfo = data.pager;
-        var Indicators = data.indicators;
-        angular.forEach(Indicators,function(value,index){
-            console.log(value);
+        var Indicators = [];
+        angular.forEach(data.indicators,function(value,index){
+
+            Indicators.push({name: value.name, indicatorId:value.id});
         });
         $scope.listIndicators = Indicators
         $scope.listperiods = getPeriods();
