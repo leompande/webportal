@@ -712,9 +712,12 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             loading: false,
             size: {}
         };
-
-
-        $scope.chartConfig.title.text = "Indicator Distribution based on Organisation units for the year :";
+var periodString = "";
+angular.forEach($scope.selectedlistPeriods,function(value,index){
+    console.log(value);
+    periodString +=value.value+";"
+});
+        $scope.chartConfig.title.text = "Indicator Distribution based on Organisation unit(s) for the year(s) :"+periodString;
 
         if(reportType=="table"){
             $scope.table = true;
