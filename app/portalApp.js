@@ -12,7 +12,6 @@ var portal =angular
     .controller("portalController",['$scope','$http','shared',function($scope,$http,shared){
 
         var url = "http://hrhis.moh.go.tz:9090/api/dashboards.json?paging=false";
-        //var url = "https://dhis.moh.go.tz/api/dashboards.json?paging=false";
         $scope.dashboards = null;
         $scope.dashboards = function(){
             $http({
@@ -33,8 +32,7 @@ var portal =angular
         }
         $scope.particularDashboard("Antenatal Care","Vlw8KFHG4cV");
 
-        //http://localhost:8000/api/geoFeatures.json?ou=ou:LEVEL-4;m0frOspS7JY&displayProperty=NAME&viewClass=detailed
-    }]);
+        }]);
 /**
  * THE BEGINNING OF MAP CONTROLLER FUNCTION
  * */
@@ -603,7 +601,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     raw.size = 250;
 
                 }
-                console.log($scope.lengthD);
                 seriesObjectpie.push(raw);
             });
             var countCharts = 0;
