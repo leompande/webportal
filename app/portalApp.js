@@ -416,14 +416,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
     $scope.selectedlistOrgunit = {};
     $scope.jsonObject = {};
 
-    //
-    //{name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"},
-    //{name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"},
-    //{name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"},
-    //{name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"},
-    //{name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"}
-    //
-    //{"id":2015,"value":2015}
+
 
     $scope.$watch(function() {
         return TreeViewService.selectedNode;
@@ -507,13 +500,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                     var orgCounter = 0;
                     var roundCounter = 0;
 
-                    if($scope.selectedlistOrgunit.length<=0){
 
-                        $scope.selectedlistOrgunit.push({
-                            "id":"m0frOspS7JY",
-                            "name":"MOH - Tanzania"
-                        });
-                    }
                     angular.forEach($scope.selectedlistOrgunit,function(value,index){
                         var uid  = value.id;
                         var name = value.name;
@@ -750,7 +737,8 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
             });
 
-        } if(reportType=="chart"){
+        }
+        if(reportType=="chart"){
             $scope.table = false;
             $scope.chart = true;
             $scope.map   = false;
@@ -767,23 +755,44 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             });
 
         }
-        // Getting selected Indicators
 
+        // Getting selected Indicators
         $scope.headers = [];
         $scope.headers[0] = "Organisation Units";
-        //if(checker>1){
-        //    $scope.selectedlistIndicators = [];
-        //}
         $scope.$watch(function() {
             return $scope.selectedlistIndicators;
         }, function() {
 
             });
+
+        if($scope.selectedlistIndicators.length<1){
+
+            $scope.selectedlistIndicators = [
+                {name: "ANC 1st visit coverage", indicatorId: "oazOp512ShT"},
+                {name: "ANC 4th visits Coverage", indicatorId: "QiA9L6tNHFy"},
+                {name: "ANC Anaemia Prevalance", indicatorId: "JT9AlIbDl1H"},
+                {name: "ANC IPT 1 coverage", indicatorId: "aw1jQ1tJTmE"},
+                {name: "ANC IPT 2 coverage", indicatorId: "i47jm4Pkkq6"}];
+
+        }
+        if($scope.selectedlistPeriods.length<1){
+
+            $scope.selectedlistPeriods = [{"id":2015,"value":2015}];
+
+        }
+
+
+        if($scope.selectedlistOrgunit.length<1){
+
+            $scope.selectedlistOrgunit = [{
+                "id":"m0frOspS7JY",
+                "name":"MOH - Tanzania"
+            }];
+
+        }
         $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
 
 
-
-        //checker++;
     }
 
     $scope.getReport('table','');
