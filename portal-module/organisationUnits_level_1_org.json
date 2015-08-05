@@ -1,0 +1,557 @@
+{"organisationUnits":[
+    {
+        "id":"m0frOspS7JY",
+        "name":"MOH - Tanzania",
+        "children": [
+            {
+                "id": "lnOyHhoLzre",
+                "name": "Kilimanjaro Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                        "geometry": {
+                    "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                "properties": {
+                    "code": null,
+                "name": "Kilimanjaro Region",
+                "level": "2",
+                "parent": "m0frOspS7JY",
+                "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "Cpd5l15XxwA",
+                "name": "Dodoma Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "yyW17iCz9As",
+                "name": "Pwani Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "qg5ySBw9X5l",
+                "name": "Manyara Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "LGTVRhKSn1V",
+                "name": "Singida Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "Crkg9BoUo5w",
+                "name": "Kagera Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "qarQhOt2OEh",
+                "name": "Njombe Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "DWSo42hunXH",
+                "name": "Katavi Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "vYT08q7Wo33",
+                "name": "Mara Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "EO3Ps3ny0Nr",
+                "name": "Shinyanga Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "vU0Qt1A5IDz",
+                "name": "Tanga Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "RD96nI1JXVV",
+                "name": "Kigoma Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "ZYYX8Q9SGoV",
+                "name": "Ruvuma Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "acZHYslyJLt",
+                "name": "Dar Es Salaam Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "MAL4cfZoFhJ",
+                "name": "Geita Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "VMgrQWSVIYn",
+                "name": "Lindi Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "bN5q5k5DgLA",
+                "name": "Mtwara Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "Sj50oz9EHvD",
+                "name": "Morogoro Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "IgTAEKMqKRe",
+                "name": "Simiyu Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "YtVMnut7Foe",
+                "name": "Arusha Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "sWOWPBvwNY2",
+                "name": "Iringa Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "hAFRrgDK0fy",
+                "name": "Mwanza Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "kZ6RlMnt2bp",
+                "name": "Tabora Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "A3b5mw8DJYC",
+                "name": "Mbeya Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            },
+            {
+                "id": "vAtZ8a924Lx",
+                "name": "Rukwa Region",
+                "children": [
+
+                ],
+                "geojson":{
+                    "type": "Feature",
+                    "id": "lnOyHhoLzre",
+                    "geometry": {
+                        "type": "MultiPolygon",
+                        "coordinates": []
+                    },
+                    "properties": {
+                        "code": null,
+                        "name": "Kilimanjaro Region",
+                        "level": "2",
+                        "parent": "m0frOspS7JY",
+                        "parentGraph": "/m0frOspS7JY"
+                    }
+                }
+            }
+        ]
+    }]}

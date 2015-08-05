@@ -827,6 +827,16 @@ angular.forEach($scope.selectedlistPeriods,function(value,index){
     $scope.getReport('table','');
 
 
+    $scope.mapIndicators = $scope.selectedlistIndicators;
+    $scope.getMap = function(){
+        $scope.table = false;
+        $scope.chart = false;
+        $scope.map   = true;
+            $scope.mapIndicators = $scope.selectedlistIndicators;
+
+    }
+
+
 
 }]);
 portal.directive('analysisTable',function(){
@@ -856,6 +866,24 @@ portal.directive('analysisTable',function(){
     }
 
 
+});
+portal.directive('analysisMap',function(){
+    return {
+        link:function($scope,element,attrs){
+            $scope.$watch(function() {
+                return $scope.indicators;
+            }, function() {
+                console.log("indicators");
+                console.log($scope.indicators);
+            });
+        },
+        scope: {
+            indicators: "=selectedDx"
+        },
+        restrict:"E",
+        replace: true,
+        templateUrl:"portal-module/directives/map-directive.html"
+    }
 });
 /**
  * THE BEGINNING OF DASHBOARDS CONTROLLER FUNCTION
