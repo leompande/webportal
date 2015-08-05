@@ -811,6 +811,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         });
 
+        $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
 
     }
 
