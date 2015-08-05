@@ -487,10 +487,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         if($scope.filtervariable=="period"){
 
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=ou:"+orgunitString+"&filter=pe:"+periodString+"&displayProperty=NAME";
-            console.log($scope.analyticsUrl);
+
         }else{
             $scope.analyticsUrl = "/api/analytics.json?dimension=dx:"+indicatorString+"&dimension=pe:"+periodString+"&filter=ou:"+orgunitString+"&displayProperty=NAME";
-            console.log($scope.analyticsUrl);
+
         }
         $scope.filtervariable="period";
         $scope.PrepareTableData = function(data){
@@ -771,19 +771,19 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         $scope.headers = [];
         $scope.headers[0] = "Organisation Units";
-        if(checker>1){
-            $scope.selectedlistIndicators = [];
-        }
-        //$scope.$watch(function() {
-        //    return $scope.selectedlistIndicators;
-        //}, function() {
-        //
+        //if(checker>1){
+        //    $scope.selectedlistIndicators = [];
+        //}
+        $scope.$watch(function() {
+            return $scope.selectedlistIndicators;
+        }, function() {
+
+            });
         $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
-        //
-        //});
 
 
-        checker++;
+
+        //checker++;
     }
 
     $scope.getReport('table','');
