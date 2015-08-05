@@ -828,18 +828,18 @@ portal.directive('analysisTable',function(){
     return {
         link:function($scope,element,attrs){
 
-            $scope.$watchCollection($scope[attrs.data], function(val) {
+            $scope.$watchCollection(function() {return $scope.dataTabs;}, function(val) {
 
             });
-            $scope.$watch($scope[attrs.title], function(val) {
+            $scope.$watch(function() {return $scope.titles;}, function(val) {
 
             });
-            $scope.$watch($scope[attrs.header], function(val) {
+            $scope.$watch(function() {return $scope.headers;}, function(val) {
 
             });
         },
         scope: {
-            dataTable: "=data",
+            dataTabs: "=data",
             titles: "=title",
             loading: "=load",
             periods: "=periods",

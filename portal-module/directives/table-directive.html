@@ -1,4 +1,5 @@
 <div >
+    {{dataTabs}}
 <table id="table" class="table table-bordered table-responsive table-simple table-hover">
     <caption style="text-align: center;font-weight: bolder;font-size: 16px;">Indicator Distribution based on Organisation units for the year :<span ng-repeat="period in periods"><span></span></caption>
     <thead>
@@ -8,7 +9,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="data in dataTable">
+    <tr ng-repeat="data in dataTabs">
         <td ng-repeat="item in data">{{ item }}</td>
     </tr>
     <tr ng-show="loading" style="background-color: #E8E8E8;"><td colspan="6"><i class="fa fa-spin fa-spinner fa-2x"></i>&nbsp;loading</td></tr>
