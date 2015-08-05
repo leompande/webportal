@@ -450,7 +450,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
         var indicatorlength = selectedlistIndicators.length;
         angular.forEach(selectedlistIndicators,function(value,index){
-            console.log(value);
             if(index==indicatorlength-1){
                 indicatorString+=value.indicatorId;
             }else{
@@ -790,7 +789,27 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
             }];
 
         }
-        $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+
+        $scope.$watch(function() {
+            return $scope.selectedlistOrgunit;
+        }, function() {
+            $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+
+        });
+
+        $scope.$watch(function() {
+            return $scope.selectedlistPeriods;
+        }, function() {
+            $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+
+        });
+
+        $scope.$watch(function() {
+            return $scope.selectedlistIndicators;
+        }, function() {
+            $scope.getDataFromDHISApi($scope.selectedlistIndicators,$scope.selectedlistPeriods,$scope.selectedlistOrgunit);
+
+        });
 
 
     }
