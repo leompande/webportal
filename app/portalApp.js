@@ -650,7 +650,6 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
         $http({
             method: 'GET',
             url: "http://hrhis.moh.go.tz:9090"+$scope.analyticsUrl,
-            //url: "portal-module/analytics.json",
             dataType: "json",
             cache: true,
             ifModified: true
@@ -661,6 +660,12 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
                 $scope.chartSeries = $scope.chartSeriesArray.ob;
                 $scope.pieSeries = $scope.chartSeriesArray.pie;
                 $scope.polarSeries = $scope.chartSeriesArray.polar;
+
+
+                $scope.$watch(function() {
+                    return $scope.dataForDisplayingTable;
+                }, function() {
+                });
 
 
             });
