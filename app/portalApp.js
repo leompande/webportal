@@ -329,7 +329,7 @@ portal.controller("mapController", [ '$scope', '$http', 'olData','olHelpers','sh
 
 
 
-portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService',function($scope,$http,shared,TreeViewService){
+portal.controller("analysisController",['$scope','$http','shared', 'TreeViewService','$timeout',function($scope,$http,shared,TreeViewService,$timeout){
     var indicatorsUrl = "portal-module/indicators.json";
     var orgunitsUrl = "portal-module/organisationUnits_level_1.json";
     $scope.analyticsUrl = null;;
@@ -820,7 +820,10 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
     }
 
-    $scope.getReport('table','');
+
+    $timeout(function () {
+        $scope.getReport('table','');
+    }, 3000);
 
 
 }]);
