@@ -817,7 +817,7 @@ portal.controller("analysisController",['$scope','$http','shared', 'TreeViewServ
 
     }
 
-
+    $scope.getReport('table','');
     $timeout(function () {
         $scope.getReport('table','');
     }, 3000);
